@@ -1,101 +1,227 @@
-import Image from "next/image";
+import MultiDimensionAnalysis from '@/components/MultiDimensionAnalysis'
+import ScenarioAnalysis from '@/components/ScenarioAnalysis'
+import TopicAnalysis from '@/components/TopicAnalysis'
+import UserReviewsTable from '@/components/UserReviewsTable'
+import {
+  ChartFiled,
+  PostInfo,
+  RawAdvantage,
+  RawThemeAnalysis,
+  ReviewProp,
+  ThemeAnalysisData,
+  ThemeCount,
+  ScenarioData,
+  ScenarioRawData
+} from '@/types'
+import fs from 'fs'
+import path from 'path'
 
-export default function Home() {
+
+async function getData() {
+  const res_module = JSON.parse(
+    fs.readFileSync(
+      path.join(process.cwd(), 'data', 'res_module1.json'),
+      'utf8',
+    ),
+  )
+
+  //  getting theme count and scenario count
+  const scenarioCount: Record<string, number> = {}
+  const themeCount: Record<string, number> = {}
+  const themeCountArray: ThemeCount[] = []
+
+  const dimensionRating: Record<string, number> = {}
+  const dimensionRatingChart: ChartFiled[] = []
+  const trendingChart: ChartFiled[] = []
+
+  const posts: Record<string, string> = {}
+
+  const reviews: ReviewProp[] = []
+
+  const trending: Record<string, number> = {}
+
+  res_module.forEach((item: PostInfo) => {
+    // getting theme count
+    item.themes.forEach((theme: string) => {
+      if (themeCount[theme]) {
+        themeCount[theme] += 1
+      } else {
+        themeCount[theme] = 1
+      }
+    })
+
+    // getting scenario count 
+    if(scenarioCount[item.scenario]) {
+      scenarioCount[item.scenario] += 1
+    } else {
+      scenarioCount[item.scenario] = 1
+    }
+
+    // getting dimension rating
+    for (const theme of item.themes) {
+      if(!dimensionRating[theme]) {
+        dimensionRating[theme] = 0
+      }
+      if (item.sentiment === 'positive') {
+        dimensionRating[theme] += 100
+      } else if (item.sentiment === 'neutral') {
+        dimensionRating[theme] += 50
+      }
+    }
+
+    // getting posts object
+    posts[item.uuid] = item.post
+
+    // Get reviews with no empty field
+    let skip = false
+    Object.entries(item).forEach(([, value]) => {
+      if(value.length === 0) skip = true
+    })
+
+    if(!skip) {
+      let sentiment: '中立' | '正面' | '负面' = '中立'
+      if (item.sentiment === 'negative') {
+        sentiment = '负面'
+      } else if (item.sentiment === 'positive') {
+        sentiment = '正面'
+      }
+
+      const review: ReviewProp = {
+        username: item.username,
+        user_type: item.user_type,
+        content: item.post,
+        keywords: item.keywords,
+        themes: item.themes,
+        sentiment,
+        language: item.language,
+        hasNoMeaningComment: item.is_valuable ? '否' : '是',
+        url: item.url,
+      }
+      reviews.push(review)
+    }
+
+    // get the trending chart filed
+    const yearMonth = item.timestamp.substring(0, 7)
+    if(!trending[yearMonth]) {
+      trending[yearMonth] = 1
+    } else {
+      trending[yearMonth] += 1
+    }
+
+  })
+
+  Object.entries(trending).forEach(([yearMonth, count]) => {
+    trendingChart.push({
+      name:yearMonth,
+      value: count
+    })
+  })
+
+  Object.entries(themeCount).forEach(([theme, count]) => {
+    themeCountArray.push({
+      theme: theme,
+      percentage: Math.round((count / res_module.length) * 100),
+    })
+  })
+
+  Object.entries(dimensionRating).forEach(([theme, score]) => {
+    dimensionRatingChart.push({
+      name: theme,
+      value: Math.ceil(score / themeCount[theme]),
+    })
+  })
+
+
+  // getting theme analysis data
+  const theme_analysis_raw = JSON.parse(
+    fs.readFileSync(
+      path.join(process.cwd(), 'data', 'theme_analysis.json'),
+      'utf8',
+    ),
+  )
+
+  const theme_analysis_data: ThemeAnalysisData[] = theme_analysis_raw.map(
+    (item: RawThemeAnalysis) => {
+      return {
+        theme: item.theme,
+        advantages: item.advantage.map((advantage: RawAdvantage) => {
+          return {
+            summary: advantage.summary,
+            content: advantage.uuid
+              .slice(0, 3)
+              .map((uuid: string) => posts[uuid]),
+            keywords: advantage.keywords,
+          }
+        }),
+        disadvantages: item.disadvantage.map((disadvantage: RawAdvantage) => {
+          return {
+            summary: disadvantage.summary,
+            content: disadvantage.uuid
+              .slice(0, 3)
+              .map((uuid: string) => posts[uuid]),
+            keywords: disadvantage.keywords,
+          }
+        }),
+      }
+    },
+  )
+
+  const sortedThemeCountArray = themeCountArray.sort(
+    (a, b) => b.percentage - a.percentage,
+  )
+  const sortedDiscussionHeatChart = sortedThemeCountArray.map((item) => {
+    return {
+      name: item.theme,
+      value: item.percentage,
+    }
+  })
+
+
+  // Get scenario analysis data
+  const scenario_analysis_raw = JSON.parse(
+    fs.readFileSync(path.join(process.cwd(), 'data', 'scenario_analysis.json'), 'utf-8')
+  )
+
+  const postsCount = res_module.length
+
+  const scenario_analysis_array: ScenarioData[] = scenario_analysis_raw.map((item:ScenarioRawData) => {
+      const scenarioPosts = item.uuid.map((uuid:string) => posts[uuid])
+
+      return {
+        'scenario': item.scenario,
+        'percentage': Math.ceil(scenarioCount[item.scenario] / postsCount * 100),
+        'description': item.description,
+        'overall_score': item.overall_score,
+        'keywords': item.keywords,
+        'dimensions': item.dimensions,
+        'posts': scenarioPosts
+      }
+  })
+
+  return {
+    'themeCount': sortedThemeCountArray,
+    'chartData': {
+      'discussionHeatChart': sortedDiscussionHeatChart,
+      'dimensionRatingChart': dimensionRatingChart.sort((a, b) => b.value - a.value),
+      'trendingChart': trendingChart.reverse()
+    },
+    'themeAnalysisData': theme_analysis_data,
+    'scenarioDataArray': scenario_analysis_array,
+    'reviews': reviews
+  }
+}
+
+export default async function Home() {
+  const { themeCount, chartData, themeAnalysisData, reviews, scenarioDataArray } = await getData()
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div className="flex flex-col gap-8 px-16 py-8">
+      <UserReviewsTable reviews={reviews} />
+      <TopicAnalysis themeCount={themeCount} />
+      <MultiDimensionAnalysis
+        chartData={chartData}
+        themeAnalysisData={themeAnalysisData}
+      />
+      <ScenarioAnalysis scenarioDataArray={scenarioDataArray} />
     </div>
-  );
+  )
 }

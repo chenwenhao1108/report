@@ -1,0 +1,125 @@
+[
+    {
+        "overall_score": 85,
+        "dimensions": [
+            {
+                "dimension": "驾驶感受",
+                "score": 90
+            },
+            {
+                "dimension": "续航",
+                "score": 85
+            },
+            {
+                "dimension": "外观",
+                "score": 95
+            },
+            {
+                "dimension": "科技感",
+                "score": 80
+            },
+            {
+                "dimension": "性价比",
+                "score": 90
+            }
+        ],
+        "keywords": [
+            "驾驶乐趣",
+            "外观",
+            "续航",
+            "大屏",
+            "性价比"
+        ],
+        "uuid": [
+            "6b2f2bb4-c2a8-45ad-aada-fff9f5e3cc0a",
+            "9818d0ff-7abb-4b8f-a473-455448f41989",
+            "f0e1b737-9a05-4816-9d8e-46d3883fbb57",
+            "9f8f7dc9-6c4c-4a61-848b-50ec7727b147",
+            "d06ca632-c7ca-4365-939b-9654dba83d02"
+        ],
+        "scenario": "独行侠",
+        "description": "追求个性与驾驶乐趣的都市通勤族，注重个⼈驾驶体验，对后排空间要求不⾼"
+    },
+    {
+        "overall_score": 85,
+        "dimensions": [
+            {
+                "dimension": "空间",
+                "score": 90
+            },
+            {
+                "dimension": "续航",
+                "score": 85
+            },
+            {
+                "dimension": "操控",
+                "score": 80
+            },
+            {
+                "dimension": "舒适性",
+                "score": 75
+            },
+            {
+                "dimension": "性价比",
+                "score": 90
+            }
+        ],
+        "keywords": [
+            "空间",
+            "续航",
+            "大屏",
+            "底盘",
+            "家用"
+        ],
+        "uuid": [
+            "921e2d4f-d493-40f9-a6b9-cd8ff5c24c14",
+            "6cc7a578-0d63-403c-9f15-cb610ef37b6f",
+            "9f8f7dc9-6c4c-4a61-848b-50ec7727b147",
+            "0f7bea83-41ac-41a6-8b30-d07a8f02be92",
+            "f0e1b737-9a05-4816-9d8e-46d3883fbb57"
+        ],
+        "scenario": "家庭出行",
+        "description": "家庭⽇常⽤⻋，注重空间和实⽤性"
+    },
+    {
+        "overall_score": 75,
+        "dimensions": [
+            {
+                "dimension": "续航里程",
+                "score": 80
+            },
+            {
+                "dimension": "驾驶感受",
+                "score": 85
+            },
+            {
+                "dimension": "空间",
+                "score": 70
+            },
+            {
+                "dimension": "车机",
+                "score": 75
+            },
+            {
+                "dimension": "能耗",
+                "score": 70
+            }
+        ],
+        "keywords": [
+            "续航",
+            "驾驶",
+            "空间",
+            "车机",
+            "电耗"
+        ],
+        "uuid": [
+            "f0e1b737-9a05-4816-9d8e-46d3883fbb57",
+            "d06ca632-c7ca-4365-939b-9654dba83d02",
+            "9f8f7dc9-6c4c-4a61-848b-50ec7727b147",
+            "0f7bea83-41ac-41a6-8b30-d07a8f02be92",
+            "15f3d346-357a-4509-946c-3057b3db6399"
+        ],
+        "scenario": "周末休闲",
+        "description": "双⼈出游为主，注重驾驶乐趣和实⽤性"
+    }
+]
