@@ -1,10 +1,10 @@
-import { ThemeCount } from '@/types'
+import { TopicCount } from '@/types'
 import Image from 'next/image'
 
 export default function TopicAnalysis({
-  themeCount,
+  topicDiscussionArray,
 }: {
-  themeCount: ThemeCount[]
+  topicDiscussionArray: TopicCount[]
 }) {
   return (
     <div>
@@ -13,10 +13,10 @@ export default function TopicAnalysis({
         <div className="w-1/5 min-w-[400px] rounded-lg p-4 ring-2 ring-gray-200">
           <h2 className="text-xl font-bold">热点话题讨论度</h2>
           <ul>
-            {themeCount.map((item) => (
-              <li key={item.theme} className="flex w-full justify-between py-4">
-                <span>{item.theme}</span>
-                <span>{item.percentage}%</span>
+            {topicDiscussionArray.slice(0, 10).map((item) => (
+              <li key={item.topic} className="flex w-full justify-between py-4">
+                <span>{item.topic}</span>
+                <span>{Math.ceil(item.percentage)}%</span>
               </li>
             ))}
           </ul>

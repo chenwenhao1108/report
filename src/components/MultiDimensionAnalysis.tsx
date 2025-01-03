@@ -1,48 +1,50 @@
 'use client'
 
 import { ChartFiled, ThemeAnalysisData } from '@/types'
-import { Bar } from '@ant-design/plots'
 import { Line } from '@ant-design/charts'
-
+import { Bar } from '@ant-design/plots'
+import ThemeAttitudeTrendingChart from './ThemeAttitudeTrendingChart'
+import ThemeDiscussionTrendingChart from './ThemeDiscussionTrendingChart'
 
 export default function MultiDimensionAnalysis({
   chartData,
   themeAnalysisData,
+  themeTrendingChart,
 }: {
   chartData: Record<string, ChartFiled[]>
   themeAnalysisData: ThemeAnalysisData[]
+  themeTrendingChart: Record<string, number | string>[][]
 }) {
-
   const discussionHeatConfig = {
     data: chartData.discussionHeatChart,
-    xField: 'name',
-    yField: 'value',
+    xField: 'x',
+    yField: 'y',
     barSize: 70,
     maxBarWidth: 70,
   }
 
   const dimensionRatingConfig = {
     data: chartData.dimensionRatingChart,
-    xField: 'name',
-    yField: 'value',
-    barSize: 70,
-    maxBarWidth: 70
+    xField: 'x',
+    yField: 'y',
+    barSize: 100,
+    maxBarWidth: 100,
   }
 
   const trendingConfig = {
     data: chartData.trendingChart,
-    xField: 'name',
-    yField: 'value',
+    xField: 'x',
+    yField: 'y',
   }
 
   const themeRating: Record<string, number> = {}
   chartData.dimensionRatingChart.forEach((item: ChartFiled) => {
-    themeRating[item.name] = item.value
+    themeRating[item.x] = item.y
   })
 
   return (
-    <div className='flex flex-col items-center justify-center gap-4'>
-      <h1 className="my-4 text-2xl font-bold self-start">银河E8多维度分析</h1>
+    <div className="flex flex-col items-center justify-center gap-4">
+      <h1 className="my-4 self-start text-2xl font-bold">银河E8多维度分析</h1>
       <div className="grid grid-cols-2 gap-4">
         <div className="min-w-[400px] overflow-hidden rounded-lg p-4 ring-2 ring-gray-200">
           <h2 className="text-xl font-bold">维度评分</h2>
@@ -83,7 +85,7 @@ export default function MultiDimensionAnalysis({
                       <h3 className="text-base font-bold">
                         {advantage.summary}
                       </h3>
-                      <span className="rounded-xl px-2 font-semibold ring-1 ring-gray-300 text-nowrap h-fit ml-2">
+                      <span className="ml-2 h-fit text-nowrap rounded-xl px-2 font-semibold ring-1 ring-gray-300">
                         讨论度
                         {Math.ceil(
                           (advantage.content.length / discussionCount) * 100,
@@ -92,7 +94,7 @@ export default function MultiDimensionAnalysis({
                       </span>
                     </div>
                     <div className="flex gap-2 overflow-auto py-1 pl-2">
-                      {advantage.keywords.map((keyword) => (
+                      {advantage.keywords.slice(0, 5).map((keyword) => (
                         <span
                           key={keyword}
                           className="flex items-center justify-center text-nowrap rounded-xl px-2 text-sm font-semibold ring-1 ring-gray-300"
@@ -122,7 +124,7 @@ export default function MultiDimensionAnalysis({
                       <h3 className="text-base font-bold">
                         {disadvantage.summary}
                       </h3>
-                      <span className="rounded-xl px-2 font-semibold ring-1 ring-gray-300 text-nowrap h-fit ml-2">
+                      <span className="ml-2 h-fit text-nowrap rounded-xl px-2 font-semibold ring-1 ring-gray-300">
                         讨论度
                         {Math.ceil(
                           (disadvantage.content.length / discussionCount) * 100,
@@ -131,7 +133,7 @@ export default function MultiDimensionAnalysis({
                       </span>
                     </div>
                     <div className="flex gap-2 overflow-auto py-1 pl-2">
-                      {disadvantage.keywords.map((keyword) => (
+                      {disadvantage.keywords.slice(0, 5).map((keyword) => (
                         <span
                           key={keyword}
                           className="flex items-center justify-center text-nowrap rounded-xl px-2 text-sm font-semibold ring-1 ring-gray-300"
@@ -157,6 +159,14 @@ export default function MultiDimensionAnalysis({
       <div className="flex w-full flex-col gap-4 rounded-lg p-4 ring-2 ring-gray-200">
         <h2 className="text-xl font-bold">银河E8讨论度趋势</h2>
         <Line {...trendingConfig} />
+      </div>
+      <div className="flex w-full flex-col gap-4 rounded-lg p-4 ring-2 ring-gray-200">
+        <h2 className="text-xl font-bold">主题讨论度趋势</h2>
+        <ThemeDiscussionTrendingChart data={themeTrendingChart[0]} />
+      </div>
+      <div className="flex w-full flex-col gap-4 rounded-lg p-4 ring-2 ring-gray-200">
+        <h2 className="text-xl font-bold">讨论态度趋势</h2>
+        <ThemeAttitudeTrendingChart data={themeTrendingChart[1]} />
       </div>
     </div>
   )

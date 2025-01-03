@@ -31,9 +31,14 @@ export interface ThemeCount {
   percentage: number
 }
 
+export interface TopicCount {
+  topic: string
+  percentage: number
+}
+
 export interface ChartFiled {
-  name: string
-  value: number
+  x: string
+  y: number
 }
 
 export interface RawPost {
@@ -43,6 +48,7 @@ export interface RawPost {
 
 export interface RawAdvantage {
   summary: string
+  summary_topic: string
   uuid: string[]
   keywords: string[]
 }
@@ -72,10 +78,10 @@ export interface ScenarioData {
   overall_score: number
   keywords: string[]
   dimensions: [
-      {
-          dimension:string
-          score: number
-      }
+    {
+      dimension: string
+      score: number
+    },
   ]
   posts: string[]
 }
@@ -86,10 +92,10 @@ export interface ScenarioRawData {
   overall_score: number
   keywords: string[]
   dimensions: [
-      {
-          dimension:string
-          score: number
-      }
+    {
+      dimension: string
+      score: number
+    },
   ]
   uuid: string[]
 }

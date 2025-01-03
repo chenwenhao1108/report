@@ -6,7 +6,7 @@ import { useState } from 'react'
 const UserReviewsTable = ({ reviews }: { reviews: ReviewProp[] }) => {
   const [filteredReviews, setFilteredReviews] = useState<ReviewProp[]>(reviews)
   const [currentPage, setCurrentPage] = useState(2)
-  const [reviewsPerPage] = useState(10)
+  const [reviewsPerPage] = useState(8)
 
   const selectOwner = () => {
     setFilteredReviews(reviews.filter((review) => review.user_type === '车主'))
@@ -141,7 +141,7 @@ const UserReviewsTable = ({ reviews }: { reviews: ReviewProp[] }) => {
                     {review.user_type}
                   </span>
                 </td>
-                <td className="line-clamp-5 max-w-xl px-4 py-5">
+                <td className="line-clamp-3 max-w-xl px-4 py-5">
                   {review.content}
                 </td>
                 <td className="px-4 py-5">
