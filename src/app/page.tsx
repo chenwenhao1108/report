@@ -92,8 +92,8 @@ export default function Page() {
 
   return (
     <div className="flex flex-col gap-8 px-16 py-8">
-      <div className='flex flex-col gap-4'>
-        <div className='flex items-center gap-4'>
+      <div className="flex flex-col gap-4">
+        <div className="flex items-center gap-4">
           <h2 className="text-lg font-medium">选择平台：</h2>
           <div className="flex items-center gap-4 space-y-1">
             {options.map((option) => (
@@ -111,7 +111,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className='flex items-center gap-4'>
+        <div className="flex items-center gap-4">
           <h2 className="text-lg font-medium">选择车型：</h2>
           <div className="flex items-center gap-4 space-y-1">
             <button
