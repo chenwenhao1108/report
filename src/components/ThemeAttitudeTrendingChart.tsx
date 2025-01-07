@@ -25,7 +25,7 @@ const ThemeAttitudeTrendingChart = ({
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="yearMonth" />
+      <XAxis dataKey="date" />
       <YAxis />
       <Tooltip />
       <Legend />

@@ -1,0 +1,548 @@
+[
+    {
+        "overall_score": 63.75,
+        "dimensions": [
+            {
+                "dimension": "适用性",
+                "score": 75
+            },
+            {
+                "dimension": "安全性",
+                "score": 70
+            },
+            {
+                "dimension": "便捷性",
+                "score": 60
+            },
+            {
+                "dimension": "舒适性",
+                "score": 50
+            }
+        ],
+        "keywords": [
+            "就医",
+            "代步",
+            "购物",
+            "老年人",
+            "出行"
+        ],
+        "uuid": [
+            "c687161f-0856-42cf-a4c4-c5c44fd83dc4",
+            "efccd673-bd8b-4dfe-a73c-a6ad5c869711",
+            "b6b8b3d6-9b63-4f8a-85e4-4ef953a023ea"
+        ],
+        "scenario": "老年人代步",
+        "description": "用于老年人日常出行、购物、就医等。"
+    },
+    {
+        "overall_score": 72.0,
+        "dimensions": [
+            {
+                "dimension": "舒适性",
+                "score": 80
+            },
+            {
+                "dimension": "商务形象",
+                "score": 75
+            },
+            {
+                "dimension": "稳定性",
+                "score": 70
+            },
+            {
+                "dimension": "续航能力",
+                "score": 70
+            },
+            {
+                "dimension": "操控性",
+                "score": 65
+            }
+        ],
+        "keywords": [
+            "稳定性",
+            "续航",
+            "商务形象",
+            "舒适性",
+            "商务接待"
+        ],
+        "uuid": [
+            "2c118bcf-3865-4a45-9095-d2119b647656",
+            "da4c99bd-d6e9-4d03-9e62-f9ef403c3c1a",
+            "bec764a6-1705-4661-976f-017c747d3549",
+            "8b58f1e6-f954-4d15-8056-b741fb854251",
+            "0b85192e-6a6d-48a2-9d1a-3b1ac9adf76c"
+        ],
+        "scenario": "商务接待",
+        "description": "用于接送客户、商务会议、出差等正式场合。"
+    },
+    {
+        "overall_score": 71.0,
+        "dimensions": [
+            {
+                "dimension": "油耗表现",
+                "score": 80
+            },
+            {
+                "dimension": "舒适性",
+                "score": 75
+            },
+            {
+                "dimension": "越野能力",
+                "score": 70
+            },
+            {
+                "dimension": "适应复杂路况",
+                "score": 70
+            },
+            {
+                "dimension": "安全性",
+                "score": 60
+            }
+        ],
+        "keywords": [
+            "舒适",
+            "路况",
+            "越野",
+            "安全",
+            "油耗"
+        ],
+        "uuid": [
+            "ed8a0731-ade5-4f7e-a6af-992f1242b7e6",
+            "f7cb5a68-c9e6-47e9-bceb-2563ba18fc43",
+            "ea426efe-55e5-4dfd-acdb-a9fd09804fc6",
+            "d9d613b2-ec14-4d2a-8896-423c2570a068",
+            "c910506f-cdd5-4305-969f-9fba865bfaf1"
+        ],
+        "scenario": "户外探险",
+        "description": "用于越野、露营、长途自驾等户外活动。"
+    },
+    {
+        "overall_score": 82.9,
+        "dimensions": [
+            {
+                "dimension": "个性化设计",
+                "score": 90
+            },
+            {
+                "dimension": "个性化",
+                "score": 90
+            },
+            {
+                "dimension": "外观设计吸引力",
+                "score": 88
+            },
+            {
+                "dimension": "年轻人审美",
+                "score": 85
+            },
+            {
+                "dimension": "外观设计",
+                "score": 85
+            }
+        ],
+        "keywords": [
+            "个性",
+            "个性化",
+            "氛围灯",
+            "短途旅行",
+            "性价比"
+        ],
+        "uuid": [
+            "d7dd3a01-dbaa-4e7e-80fa-2056a86c4e27",
+            "c06e24a3-2b07-46e7-b6b5-cb6c4f5e2e59",
+            "88cb81f7-6820-4ef7-b701-cdef0fa53eca",
+            "450f9905-12f5-426b-8ed5-8260e69f0f4b",
+            "f9892380-8562-4834-833b-1f344d97db87",
+            "3e8e8c6b-3d1c-4b3b-b6c2-5f3e2e5f1e9a",
+            "c46ef6be-746f-4384-a18b-0dd7d5231aa8",
+            "5fd18d0c-6ef9-4060-a0b1-3b9030efdce1",
+            "eb822758-4474-49cd-8b31-679cb57e582d",
+            "54d3941d-db66-4535-8bad-cf8eb418f30e",
+            "e1e951d0-a7ab-43c5-850c-c6d3ac515f2c",
+            "e16a9fd0-e2d7-4240-b000-6cab7c993fa7",
+            "f2ce5028-98b4-4d37-9fa0-6deb15e7d184",
+            "1b1d4190-5b26-465b-88cb-8e889e905244",
+            "660a0202-697c-44b2-ab7f-9f5a4a44ec00",
+            "170d50fa-5164-4e1e-8e62-18daf7f75f3c",
+            "7f01cae8-e019-42a1-bb4b-88c0361262ea",
+            "cd261b18-393d-4fc9-922a-2f46441ce8a4",
+            "e2b125fc-3669-462d-af67-cb47cade0097",
+            "c095c702-b543-4b9e-95f6-9dca93894cd2",
+            "b4daf3e5-395c-49aa-a5cf-9ec78cd77a96",
+            "3cf74c3b-5b71-474b-acf9-7c9f4b12dac4",
+            "49c6a14d-dbee-4b72-8a31-396558fe1e46",
+            "ad6ae50e-742c-4037-86d7-7cf2f797cbb1",
+            "4609d756-8fc7-4ab7-8574-d907e98e3467",
+            "e590df1c-d1b5-4694-a1a7-7a2f807425b1",
+            "bf7cfd7a-886a-4396-879d-c6580184298e",
+            "c0430916-c1c4-4d96-acdf-f840a9e581df",
+            "ebd1e3f6-8a3e-4c7b-9c9e-1e0d1b4e3b2",
+            "c55de0e1-47f4-4526-8efe-082a78b93ca0",
+            "1a91e180-450e-400f-b5ca-7d1fc5c2094d",
+            "52d55b87-ec07-4b57-ae5b-8473a2aa8ee0",
+            "c95f68af-30b7-4745-8864-73c6c3fd3e26",
+            "f8a07e6a-d98a-4f33-9ce3-a56859e94a81",
+            "35c1d560-8bc4-4f98-a794-41dc9c2abdc9"
+        ],
+        "scenario": "年轻个性",
+        "description": "用于展示个性、社交、短途旅行等。"
+    },
+    {
+        "overall_score": 84.92857142857143,
+        "dimensions": [
+            {
+                "dimension": "身份展示",
+                "score": 90
+            },
+            {
+                "dimension": "高端社交活动",
+                "score": 85
+            },
+            {
+                "dimension": "社交活动",
+                "score": 85
+            },
+            {
+                "dimension": "社交活动适应性",
+                "score": 85
+            },
+            {
+                "dimension": "驾驶乐趣",
+                "score": 80
+            }
+        ],
+        "keywords": [
+            "奢华",
+            "驾驶",
+            "尊荣",
+            "身份",
+            "音响"
+        ],
+        "uuid": [
+            "170c877c-2a89-4756-be1e-694b21f659fb",
+            "dbb66cf4-3bd4-45ba-94f5-cf078bab76dc",
+            "a80756c2-4448-48d8-b2a4-9cf3d4f0f7cd",
+            "2ac3b3a0-b931-45c6-a244-36d612d8c1fb",
+            "21c11e2b-2c48-4a5f-9097-67eefb54337e",
+            "d1d8865c-4830-4209-b679-31709852f6d1",
+            "2fa525af-d2f6-4d83-a095-4b69d7635dc0",
+            "610d3cee-fc94-4998-ab7f-984566d22fd6",
+            "1c961db0-d0f3-4746-9dd7-e3047c40bc81",
+            "eaf6e151-81af-4ac4-bf8e-2fb5e240c771",
+            "0f97c829-62af-4e91-a9fd-541c55c28a2e",
+            "e8e93e9f-d5b7-41e6-adc0-6c59049aa55e",
+            "9338fb4a-4572-4700-b0a1-91b21df6bfd7",
+            "6cf8e362-ff5d-489e-9759-50f371d8e36e",
+            "a7537eb0-701d-43dd-aa8e-1c5c032ab6f1",
+            "a1f46363-8d25-4c5a-91e8-f738622fd618",
+            "7d845291-c683-4a5b-a3bf-1163665de753",
+            "108e1986-bc18-404a-8b9d-54fa12280ac1",
+            "52fa7f73-ed7f-4e0e-a1e7-5587e0bf7800",
+            "c623c9c6-223a-4dd8-adc1-0ac174498f0f",
+            "5c657692-39c7-4733-8777-f735e9f6a157",
+            "d39c8769-053c-4fe6-97ad-25b9ba0c1ef5",
+            "55f2001b-a07d-46aa-9a5f-0e3e88a9046e",
+            "3c987953-4123-4311-ac7e-1d65b7e4cf5b",
+            "1e00e73e-8c15-4086-8d77-d5bd03d531c3",
+            "631b2518-c62b-40b1-b7bc-fe9b807ec6e1",
+            "9c7bec38-244e-4132-85fd-89b302abe143",
+            "373ca42a-c01b-40d4-a656-af583f817d99",
+            "4e4cfcbc-1313-4cce-93df-cfd540fd1946",
+            "3a34571e-b9e3-4b24-b26b-c0df1a05b393",
+            "bcca0af8-84fe-477b-9634-530dbb615a67",
+            "10a0a0c4-a739-4387-9b46-ca236441fe47",
+            "17fa45be-f20c-4cd5-9bec-4add2cbfd3b5",
+            "ce5592b0-67ad-421a-80b1-b26c21eb5d9b",
+            "4f32d10d-18b6-49b2-9740-691da40966b7"
+        ],
+        "scenario": "高端奢华",
+        "description": "用于展示身份、享受驾驶乐趣、参加高端社交活动。"
+    },
+    {
+        "overall_score": 80.55555555555556,
+        "dimensions": [
+            {
+                "dimension": "空间",
+                "score": 90
+            },
+            {
+                "dimension": "空间舒适性",
+                "score": 90
+            },
+            {
+                "dimension": "经济性",
+                "score": 85
+            },
+            {
+                "dimension": "安全性",
+                "score": 85
+            },
+            {
+                "dimension": "动力",
+                "score": 80
+            }
+        ],
+        "keywords": [
+            "售后服务",
+            "智能配置",
+            "家庭出行",
+            "经济性",
+            "续航"
+        ],
+        "uuid": [
+            "8374ac93-d37e-4425-87d7-aa44caead921",
+            "b386818b-2418-46c8-9d70-7a41456a92a3",
+            "b10d64c6-d795-4db1-b186-caa3dde2c0eb",
+            "95278d47-7696-4c7c-b3f2-ab08a08b55d4",
+            "310f91ff-c78a-4e9e-9d57-9a264ea6f56b",
+            "e23955c2-96b5-4f66-91c2-b3dde95bc105",
+            "722a55fd-2db3-4e9a-91d0-d164631f9f26",
+            "c2b3fa46-d79b-4b31-8bba-779a7ab66899",
+            "bdbb309b-66cf-4717-bcb3-d78a814d69ee",
+            "ee32b7bb-7caf-43da-a242-fb1262486852",
+            "66a56c5a-2d12-445a-88be-b1743eff412a",
+            "ec0f6542-4107-4754-bc01-50f1692eb679",
+            "d1a40c5f-9bc6-4cec-8b52-e61e8a4f36f7",
+            "771ee6ad-633b-4178-a309-16001428fd65",
+            "1f7b33b4-44e0-4659-84b4-93b6c4a76c57",
+            "6433a250-a104-42a7-9b67-1f133da27b22",
+            "632ab3da-53db-4e7f-9cf2-b42fbcb7cccf",
+            "c42ca283-b29f-43d3-8c03-f4080e8572b5",
+            "bc9c0c12-2d4b-42fb-8f14-20d9fb7410fb",
+            "1391358f-4992-4adc-81de-bb5c522cea5e",
+            "c3b544a4-fe9d-4a5c-b74a-f20efffaa0e4",
+            "b3f8eadb-17e7-42f2-be30-4bccebd032c5",
+            "8fd61632-3e0e-4d60-a47c-282b05c886e7",
+            "1bc923d5-48a0-4ab2-a4e1-a9a3e712e12f",
+            "1ffaec36-4543-443b-8b09-4d846593ea53",
+            "818addf1-7d64-45b3-9ed6-6be46e526a93",
+            "e4d71151-7391-490e-91c5-dac0ab0a7b49",
+            "6f9a7a38-5119-47bc-9f9f-57023a9f6b19",
+            "e12c83f4-8498-42c3-a336-fe95819285c9",
+            "5e07c3a2-69bc-46f3-8461-8d97a0c5ca05",
+            "9ade395d-602c-4d31-987b-7ccd6ef3e5d5",
+            "3b431469-1c25-42bf-90a4-568a8e961c22",
+            "43f47a5d-0a27-40d1-af26-847dc77ba656",
+            "7e89085d-032e-4256-8a4c-303435f7da94",
+            "d046e0ca-3e49-48bb-93db-eca41c77bbee",
+            "6cc01e90-4065-4d9b-acee-b1347bf129c0",
+            "22191eac-a891-4a37-ae35-6ae2a5f6a889",
+            "537a838f-fd92-4090-b998-d35ed91c5640",
+            "eb072ce4-48fe-45b4-8a4a-7a400e6c8e94",
+            "ebd3cb27-f74c-4658-b8d0-acb15a98f5e7",
+            "49db4182-bea0-4233-a1b0-51b0fc61d352",
+            "2fc67a02-4832-497c-98b6-1c10c21e7acf",
+            "81eaf6db-2ae1-4535-aecf-64ff5b91ef96",
+            "9c10dffa-ac50-443e-ba07-17e5c5712a76",
+            "52e6d37f-0d26-42ee-b8ba-aa9b7412e398"
+        ],
+        "scenario": "家庭出行",
+        "description": "用于日常通勤、周末郊游、长途旅行等家庭活动。"
+    },
+    {
+        "overall_score": 75.35483870967742,
+        "dimensions": [
+            {
+                "dimension": "空间舒适性",
+                "score": 90
+            },
+            {
+                "dimension": "舒适性",
+                "score": 90
+            },
+            {
+                "dimension": "经济性",
+                "score": 90
+            },
+            {
+                "dimension": "驾驶舒适性",
+                "score": 90
+            },
+            {
+                "dimension": "能耗表现",
+                "score": 90
+            }
+        ],
+        "keywords": [
+            "舒适",
+            "续航",
+            "车身重量",
+            "驾驶舒适度",
+            "售后服务"
+        ],
+        "uuid": [
+            "b04cd6fe-75a5-4f55-aff6-9f8fa23eeb4c",
+            "6d327f2c-eab6-4099-b858-f132b2d946a7",
+            "cbb27ba8-5cc9-418a-ac4f-e06b0a7119dd",
+            "549675e0-6a70-4f3b-b277-d12fc564aa3f",
+            "c538aa47-2466-4a40-aaba-021048fe142e",
+            "51aeb38d-9094-43e8-b0d6-03aa4617c029",
+            "def7d383-ac07-4380-bd1b-68f92098988c",
+            "d165ef02-b0df-41f7-98e9-8875fe1b1657",
+            "416549c1-104e-4e46-a323-905fd407d74d",
+            "4260c986-2705-486a-ae96-71871249975b",
+            "c1e1d4d3-80bc-4ad8-a94b-8e653e899b07",
+            "a5abb64d-0583-4da3-bccb-af355ba86b80",
+            "d1ba1a4d-ffb4-475e-b92c-759f94175819",
+            "1e408209-89ee-44b5-978f-ac0d1fe79445",
+            "a370e7cb-8c29-4759-b8aa-268de2af28d3",
+            "a8b786b6-e54d-45fc-b561-7e696c4cff1d",
+            "6f2328eb-7c74-4b14-b7b9-90c8a9c73b9b",
+            "c7041c19-8e40-4a7e-9c40-9d39f8be5afe",
+            "94c2d86b-7402-4da8-ac5d-96df4c0b0786",
+            "db23b6ac-39db-4742-8151-a3ee8a51d617",
+            "fc6effe8-d708-4fc2-836f-6ebfc9f06019",
+            "ec18a1df-f971-42b3-a3b0-3fb85c742acf",
+            "a2d9daf4-e278-4b46-a68a-62969c64dc46",
+            "e4246d37-0239-4f24-b572-8fc4badc3e30",
+            "cd721a29-ed86-4c8e-b2b0-0c502bf6a94",
+            "9c5f649b-c9de-4a5d-8e84-8e964490d7da",
+            "d3d8cd37-7e9d-451b-87e5-9f9953d9891a",
+            "d1c6fdff-bdcf-473d-a155-a2d99dbca187",
+            "9cef9b88-6d6f-467c-a177-1de5c0f00b01",
+            "875a8140-e595-4c7c-90f6-e3a16090fb23",
+            "d2c4a2e9-6b6f-4dfd-a191-655257e45cfb",
+            "f61b0943-feb0-418a-be8d-9c092c4d6600",
+            "1a71aa4c-5570-4352-850d-32a2024d16b9",
+            "b675919f-90cc-4e7c-8539-9528d7281625",
+            "ba2900b4-3f8f-4f17-9fdb-e278707df166",
+            "fa47a925-78f7-429d-bc3d-410a7b5f7267",
+            "62e70b03-6ec8-4c28-842b-1f808faf295c",
+            "6529f75a-5a65-47f8-a166-53264c5f659a",
+            "b321562c-a34c-4a1b-8473-86d7666c3b38",
+            "ab33072f-6fc8-4a73-9142-26d08d221ae5",
+            "d125c2b3-9fee-4c4c-8ecc-9e76dee799c4",
+            "2229de28-4eb4-4dec-8f71-0cef9f6d4bd0",
+            "304c6cab-ba0d-4b73-885b-447763a7af45",
+            "d8f379e3-03b8-4519-aafd-430dc4866e78",
+            "27dada81-eeaa-4bac-a10f-8a9a91da0449",
+            "57948cc9-fa24-4011-9f1f-6a6e0b59cf75",
+            "5bf4a3b8-44d9-4fba-a59f-c107e00dcd02",
+            "2bd7f986-1a7b-4217-b265-3a7d5b002a87",
+            "f9c9bda5-d08e-4843-8263-69fcb0e8be90",
+            "3c67a82c-8f62-4107-9d82-fd47cfcc8b04",
+            "c4fa479a-e2ad-41fe-b4db-87b8e53e4d14",
+            "f5ab170c-00e3-4137-80cd-e3170ec00fe9",
+            "fee7805c-529e-4a43-910c-9766ba5956b4",
+            "8f0f5e98-36f9-459d-b939-a7ff102a3a48",
+            "8b09482c-4b39-424e-8587-78b1bf00a931",
+            "2f8dd7bc-3476-49a5-887e-579f17263ff2",
+            "e5bb3179-f464-4ed9-8af4-1235e6f33222",
+            "d54e687d-f848-4c55-8e36-520120e6f889",
+            "1bd9993c-2ae6-4037-8f57-637ab04a1ab7",
+            "d6aa8545-6306-4619-b122-d336016c6934",
+            "d4933499-6f1f-453b-92f5-7c5807d4d0c8",
+            "bd677c4b-5d2d-48a5-b481-0fff7e210a2d",
+            "1bcb29fd-5557-4cc0-8a27-d8f63dde92f7",
+            "40113408-c44a-4b45-bc57-de9d4273f262",
+            "c45562fd-f91e-4cfa-a9fd-6d7e51f9f0d5",
+            "e1bc5092-1c13-406b-b6d2-dfb666570d7c",
+            "d6e45eb7-0528-4dd8-bab9-f5fe1f2650a9",
+            "eb1a30c6-26e0-4f05-8f7d-9b5701254643",
+            "c8b21df9-9589-4eca-9a82-61b830a43e6b",
+            "2bc33804-c659-4883-8da8-1f97ae2a62fc",
+            "d40c420e-a0ad-41f1-88ba-4d4c6eff8800",
+            "008e1d8b-7e20-4d7c-837d-ddba173a5f08",
+            "7508f807-a9ca-4983-b6a7-74f063da8c32",
+            "c1081118-e46e-4208-bac9-4cdd8336e889",
+            "e5c606d5-0ee3-45cd-b4d2-1e5a30ec0472",
+            "c216e5b3-1c70-4c47-abbf-c2c666566c94",
+            "26b0ddcd-77c5-4d6e-a678-bcaafc0725d0",
+            "e8ecc9e5-93ab-4e5a-84bc-07442db8fb31",
+            "b18346a7-726d-478e-9498-07e11ad3d9d4",
+            "40ff266d-5e15-4268-bb97-039915189690",
+            "07441040-e688-4183-851b-af441663bbd7",
+            "9b91e746-cf06-4a7d-a6af-53cc87ff2677",
+            "b7b76f7b-46f7-46ef-8618-2db26e99dc67",
+            "cab26458-7e90-4e56-a97c-19f64ed89a6b",
+            "c8b874c2-92e9-4343-85c1-2f81c02e6463",
+            "5ae146d0-fcff-4a13-82d2-47e1014c7f1f",
+            "41061118-e6f0-4693-be67-9117dd1e381c",
+            "79f4e8e7-0c71-4df2-bf72-804cb6e79454",
+            "2203036b-54e8-4530-a7a5-be729356ace0",
+            "8e2a7295-fb21-4be7-99f0-d74fcef29788",
+            "c591d363-580e-41c0-ac99-e745bf949a4c",
+            "d62d4228-5993-4ecd-9803-7ed244790a51",
+            "1bb5a40c-b7ea-4d21-b29a-63938358f985",
+            "5b3feced-6da4-41f7-a00e-2a4bb5b90f5d",
+            "c87f0a72-3067-4515-813c-7af7632f1733",
+            "6c03247f-0c75-41d7-b89e-b4c8e53962b0",
+            "c9a85bd6-8509-4943-a223-c69bef1fb853",
+            "0c5baaa2-df47-4c90-9466-e5d6fd54c794",
+            "b0440719-2200-4ce4-afb5-ac455fd26634",
+            "c305ceb8-62c1-4203-b1c3-2a2f56884be3",
+            "c99b468a-2407-4205-bfad-7346270c9736",
+            "3706349e-eb56-4d33-9a26-7b3618db8c78",
+            "e9e01721-2092-4bb1-8319-d7f69ba608a0",
+            "e2b39699-999b-486d-8abc-62b81e3d2168",
+            "950698f6-679a-4470-97b0-21589d567e18",
+            "f5e5d216-eda1-4980-9fb9-7799dbb90727",
+            "9d824099-5ad6-49bf-93e6-3727298285cf",
+            "d46be2f5-217b-4fff-8886-1d9aadf320f0",
+            "b41f6475-8b41-4777-9123-c40694f68c61",
+            "c924c075-43f1-418c-82e2-1578ebaa8a88",
+            "304a71ee-25a5-4c9f-bbf1-8d40969253b4",
+            "bb5ed66f-e424-498d-b68e-8446da57e040",
+            "62cbdbf8-4fe5-48e5-b2c9-0895dc716af6",
+            "f21cddf3-e854-42f3-aec7-402c8ff6cefe",
+            "56bf2373-fea2-4171-b9df-d7ff44dababb",
+            "e6a8b071-7de6-4e8d-87e9-506f910dc850",
+            "14574eae-aec0-4b06-9b5d-2134dbb6b2b5",
+            "f7e6cac8-0630-4580-9783-254e5ee098db",
+            "21f82320-3fb1-4a16-b83c-e9917ae40a2d",
+            "f1aa993a-ea97-44e3-9b82-471e193b95e2",
+            "d9ba2291-a95f-4dfd-a08e-3f2ed6cf741",
+            "c5b3a584-34df-46c8-872f-e0a0e499e20f",
+            "2c0e702a-1708-477e-828e-9015f415f8f9",
+            "e12cf95d-fbf0-4e16-9b04-0269fe615390",
+            "d1e97edc-2856-41a7-a627-3667a57b95ec",
+            "ff6f5b16-ccc6-447a-a007-ccbb44da1abe",
+            "68d0249c-b8dc-4166-aa79-f2a5db3015cb",
+            "fe3dce13-8ddf-422f-be72-f066b16909ce",
+            "2c2d5850-4617-4a17-b99b-ca05a405156a",
+            "2c9cfb8b-c163-445d-96cc-78aff0dffa02",
+            "8fb6f8d1-c989-42cb-b99f-10b17725a329",
+            "8f41acb2-96b1-4e7f-ba11-0f03df7f74f2",
+            "76e3d0cd-9346-4154-8857-bbd35b89e9d4",
+            "9b835643-6a3a-4ff4-a377-d18652b7c8e1",
+            "cd55621d-4abf-48b4-86e8-2a76f1d29e33",
+            "5f82506a-2bdd-439c-bc2c-171bd6f3448f",
+            "6b5ea059-5810-4190-838f-6e158314ea94",
+            "f3d7acbe-779d-469f-bee6-17ce776692d6",
+            "5fb636a2-a7bb-43ae-a939-ba6022dd3cf7",
+            "a7b494ba-2d32-447e-af8f-d69faef6e61f",
+            "7a1a0250-c82b-4278-a0b1-35256f992fd3",
+            "d9460a5f-5de2-46c4-9ba9-c026ddc7f6d3",
+            "06ac830e-e849-4bbc-b219-2de6d3b92b6d",
+            "d20300af-86cb-405b-8a24-88e15b4544d0",
+            "fbab1b42-c9d2-48c4-a855-aca89a144de3",
+            "69f4c4db-e9a2-4ac1-9c2a-958b5736e88b",
+            "c2c05c2a-a296-43e6-88c7-2ea3acc91ea4",
+            "9c117f86-0857-45a3-a30b-dde2de3796d6",
+            "d359e826-abcc-4489-b033-b9d75a8c3100",
+            "84d63491-3354-4b69-bda3-84b5ebc5fc90",
+            "5bf54f09-121b-40c2-873d-f485e474d63f",
+            "e9d0e195-cc1f-4baa-a815-6193d2055d57",
+            "e3bdb8f8-7bf4-435d-bf51-dfd1b58c898f",
+            "a1f224d8-0806-4bf3-a97e-5baaae1f745a",
+            "f3ddfc65-47f0-4a36-bfb0-cb46acde738d",
+            "7f1ca740-fcd8-4cf3-8ee5-5b8c3111213b",
+            "34f44de1-5164-4c3b-ae3d-c2e3b6917e1b",
+            "cf277a22-abc6-43e0-a38a-1d1b70e4a543",
+            "7e69163f-8765-4fb2-a8f8-e79c88854010",
+            "e54b79a4-9dc4-44ce-8a11-2b20b460a067",
+            "c412edee-d622-4f9c-99b1-c58ba18a1ae7",
+            "5774dfb2-18ba-4bbf-971a-9ed36bda0d9e",
+            "8b4e4e45-8e0c-4f2d-a3cf-1bff81813c2d",
+            "da8d2ee0-1fdf-4ea1-85f4-99396cbf994c",
+            "3dc329eb-0d9a-42ff-b243-725d16cd3c3a",
+            "d3aa94c2-4e64-4564-a2ff-2427a4bfc558",
+            "f10ae255-05c1-4530-b6fb-e923dee90c4e",
+            "13d12067-2e59-4b50-9002-f2a752e91bd7",
+            "c6ee0e8-4e3d-4c6b-8e1e-0a4c5d1e7b24",
+            "d140b953-30e2-4040-956e-d4693a75e2d6"
+        ],
+        "scenario": "城市通勤",
+        "description": "用于日常上下班、短途出行等城市内活动。"
+    }
+]

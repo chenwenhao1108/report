@@ -1,58 +1,101 @@
 'use client'
 
-import { ChartFiled, ThemeAnalysisData } from '@/types'
-import { Line } from '@ant-design/charts'
-import { Bar } from '@ant-design/plots'
-import ThemeAttitudeTrendingChart from './ThemeAttitudeTrendingChart'
+import {
+  DimensionRatingChartFiled,
+  PostInfo,
+  RawThemeAnalysis,
+  ThemeAnalysisData,
+} from '@/types'
+import {
+  getChartData,
+  getPostsWithUuid,
+  getThemeAnalysisData,
+  getThemeCount,
+} from '@/utils.client'
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Legend,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts'
 import ThemeDiscussionTrendingChart from './ThemeDiscussionTrendingChart'
 
 export default function MultiDimensionAnalysis({
-  chartData,
-  themeAnalysisData,
-  themeTrendingChart,
+  resModule,
+  resModuleRaw,
+  themeAnalysisRaw,
+  granularity,
 }: {
-  chartData: Record<string, ChartFiled[]>
-  themeAnalysisData: ThemeAnalysisData[]
-  themeTrendingChart: Record<string, number | string>[][]
+  resModule: PostInfo[]
+  resModuleRaw: PostInfo[]
+  themeAnalysisRaw: RawThemeAnalysis[]
+  granularity: 'month' | 'day'
 }) {
-  const discussionHeatConfig = {
-    data: chartData.discussionHeatChart,
-    xField: 'x',
-    yField: 'y',
-    barSize: 70,
-    maxBarWidth: 70,
-  }
+  const { themeCountArray, themeCountObj } = getThemeCount(resModule)
 
-  const dimensionRatingConfig = {
-    data: chartData.dimensionRatingChart,
-    xField: 'x',
-    yField: 'y',
-    barSize: 100,
-    maxBarWidth: 100,
-  }
+  const {
+    dimensionRatingChart,
+    discussionHeatChart,
+    trendingChart,
+    themeAttitudeTrendingChart,
+    themeDiscussionTrendingChart,
+  } = getChartData(resModule, themeCountArray, themeCountObj, granularity)
 
-  const trendingConfig = {
-    data: chartData.trendingChart,
-    xField: 'x',
-    yField: 'y',
-  }
+  const posts = getPostsWithUuid(resModuleRaw)
+
+  const themeAnalysisData: ThemeAnalysisData[] = getThemeAnalysisData(
+    posts,
+    themeAnalysisRaw,
+  )
 
   const themeRating: Record<string, number> = {}
-  chartData.dimensionRatingChart.forEach((item: ChartFiled) => {
-    themeRating[item.x] = item.y
+  dimensionRatingChart.forEach((item: DimensionRatingChartFiled) => {
+    themeRating[item.theme] = item.score
   })
 
   return (
     <div className="flex flex-col items-center justify-center gap-4">
-      <h1 className="my-4 self-start text-2xl font-bold">银河E8多维度分析</h1>
+      <h1 className="my-4 self-start text-2xl font-bold">多维度分析</h1>
       <div className="grid grid-cols-2 gap-4">
         <div className="min-w-[400px] overflow-hidden rounded-lg p-4 ring-2 ring-gray-200">
-          <h2 className="text-xl font-bold">维度评分</h2>
-          <Bar {...dimensionRatingConfig} colorField="#111827" />
+          <h2 className="mb-4 text-xl font-bold">维度评分</h2>
+
+          <ResponsiveContainer width="100%" height={400}>
+            <BarChart layout="vertical" data={dimensionRatingChart}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis
+                type="number"
+                dataKey="score"
+                domain={[0, 100]}
+                tickFormatter={(value) => `${value}分`}
+              />
+              <YAxis type="category" dataKey="theme" width={100} />
+              <Tooltip />
+              <Bar dataKey="score" fill="#8884d8" barSize={40} />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
         <div className="min-w-[400px] overflow-hidden rounded-lg p-4 ring-2 ring-gray-200">
-          <h2 className="text-xl font-bold">讨论热度</h2>
-          <Bar {...discussionHeatConfig} colorField="#2563eb" />
+          <h2 className="mb-4 text-xl font-bold">讨论热度</h2>
+          <ResponsiveContainer width="100%" height={400}>
+            <BarChart layout="vertical" data={discussionHeatChart}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis
+                type="number"
+                dataKey="percentage"
+                tickFormatter={(value) => `${value}%`}
+              />
+              <YAxis type="category" dataKey="theme" width={100} />
+              <Tooltip />
+              <Bar dataKey="percentage" fill="#2563eb" barSize={40} />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
         {themeAnalysisData.map((data, index) => {
           let discussionCount = 0
@@ -104,8 +147,8 @@ export default function MultiDimensionAnalysis({
                       ))}
                     </div>
                     <div className="flex flex-col gap-2 italic text-gray-600">
-                      {advantage.content.slice(0, 3).map((content) => (
-                        <p key={content} className="line-clamp-2">
+                      {advantage.content.slice(0, 2).map((content) => (
+                        <p key={content} className="line-clamp-3">
                           {content}
                         </p>
                       ))}
@@ -143,8 +186,8 @@ export default function MultiDimensionAnalysis({
                       ))}
                     </div>
                     <div className="flex flex-col gap-2 italic text-gray-600">
-                      {disadvantage.content.slice(0, 3).map((content) => (
-                        <p key={content} className="line-clamp-2">
+                      {disadvantage.content.slice(0, 2).map((content) => (
+                        <p key={content} className="line-clamp-3">
                           {content}
                         </p>
                       ))}
@@ -157,16 +200,75 @@ export default function MultiDimensionAnalysis({
         })}
       </div>
       <div className="flex w-full flex-col gap-4 rounded-lg p-4 ring-2 ring-gray-200">
-        <h2 className="text-xl font-bold">银河E8讨论度趋势</h2>
-        <Line {...trendingConfig} />
+        <h2 className="text-xl font-bold">讨论度趋势</h2>
+        <ResponsiveContainer width="100%" height={400}>
+          <LineChart
+            data={trendingChart}
+            margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
+          >
+            <Line type="monotone" dataKey="number" stroke="#8884d8" />
+            <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+            <XAxis dataKey="date" />
+            <YAxis />
+            <Tooltip />
+          </LineChart>
+        </ResponsiveContainer>
       </div>
       <div className="flex w-full flex-col gap-4 rounded-lg p-4 ring-2 ring-gray-200">
         <h2 className="text-xl font-bold">主题讨论度趋势</h2>
-        <ThemeDiscussionTrendingChart data={themeTrendingChart[0]} />
+        {granularity === 'month' ? (
+          <ThemeDiscussionTrendingChart data={themeDiscussionTrendingChart} />
+        ) : (
+          <ResponsiveContainer width="100%" height={400}>
+            <BarChart
+              data={themeDiscussionTrendingChart}
+              margin={{
+                top: 20,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="date" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="外观内饰" stackId="a" fill="#1890FF" />
+              <Bar dataKey="智能系统" stackId="a" fill="#2FC25B" />
+              <Bar dataKey="驾驶性能" stackId="a" fill="#FACC14" />
+              <Bar dataKey="空间舒适" stackId="a" fill="#223273" />
+              <Bar dataKey="价格成本" stackId="a" fill="#FF6D00" />
+              <Bar dataKey="品牌口碑" stackId="a" fill="#CF1322" />
+              <Bar dataKey="购买体验" stackId="a" fill="#13C2C2" />
+              <Bar dataKey="售后服务" stackId="a" fill="#722ED1" />
+            </BarChart>
+          </ResponsiveContainer>
+        )}
       </div>
       <div className="flex w-full flex-col gap-4 rounded-lg p-4 ring-2 ring-gray-200">
         <h2 className="text-xl font-bold">讨论态度趋势</h2>
-        <ThemeAttitudeTrendingChart data={themeTrendingChart[1]} />
+
+        <ResponsiveContainer width="100%" height={400}>
+          <BarChart
+            data={themeAttitudeTrendingChart}
+            margin={{
+              top: 20,
+              right: 30,
+              left: 20,
+              bottom: 5,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="date" />
+            <YAxis />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="negative" stackId="a" fill="#dc2626" />
+            <Bar dataKey="neutral" stackId="a" fill="#D3D3D3" />
+            <Bar dataKey="positive" stackId="a" fill="#86efac" />
+          </BarChart>
+        </ResponsiveContainer>
       </div>
     </div>
   )

@@ -1,13 +1,19 @@
 'use client'
-import { ReviewProp } from '@/types'
+import { PostInfo, ReviewProp } from '@/types'
+import { getReviewsTableData } from '@/utils.client'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const UserReviewsTable = ({ reviews }: { reviews: ReviewProp[] }) => {
+const UserReviewsTable = ({ resModule }: { resModule: PostInfo[] }) => {
+  const reviews = getReviewsTableData(resModule)
+
   const [filteredReviews, setFilteredReviews] = useState<ReviewProp[]>(reviews)
   const [currentPage, setCurrentPage] = useState(2)
   const [reviewsPerPage] = useState(8)
 
+  useEffect(() => {
+    setFilteredReviews(reviews)
+  }, [resModule])
   const selectOwner = () => {
     setFilteredReviews(reviews.filter((review) => review.user_type === '车主'))
   }
@@ -62,7 +68,7 @@ const UserReviewsTable = ({ reviews }: { reviews: ReviewProp[] }) => {
 
   return (
     <div className="w-full font-normal">
-      <h1 className="text-2xl font-bold">银河E8用户评论数据展示</h1>
+      <h1 className="text-2xl font-bold">用户评论数据展示</h1>
       <div className="my-2 flex w-full justify-end gap-2">
         <button
           className="rounded-lg px-4 py-2 text-sm font-medium shadow-md hover:bg-gray-100"
@@ -86,7 +92,7 @@ const UserReviewsTable = ({ reviews }: { reviews: ReviewProp[] }) => {
           className="rounded-lg px-4 py-2 text-sm font-medium shadow-md hover:bg-gray-100"
           onClick={selectIntention}
         >
-          意向
+          普通网友
         </button>
       </div>
       <table className="w-full border-collapse">
@@ -138,7 +144,9 @@ const UserReviewsTable = ({ reviews }: { reviews: ReviewProp[] }) => {
                 </td>
                 <td className="px-4 py-5">
                   <span className="text-nowrap px-2 py-0.5 text-sm font-normal text-gray-400">
-                    {review.user_type}
+                    {review.user_type === '意向买家'
+                      ? '普通网友'
+                      : review.user_type}
                   </span>
                 </td>
                 <td className="line-clamp-3 max-w-xl px-4 py-5">

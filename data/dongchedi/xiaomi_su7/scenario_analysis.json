@@ -1,0 +1,434 @@
+[
+    {
+        "overall_score": 84.0,
+        "dimensions": [
+            {
+                "dimension": "舒适性",
+                "score": 90
+            },
+            {
+                "dimension": "适合商务场合",
+                "score": 90
+            },
+            {
+                "dimension": "服务体验",
+                "score": 85
+            },
+            {
+                "dimension": "外观设计",
+                "score": 80
+            },
+            {
+                "dimension": "能耗效率",
+                "score": 75
+            }
+        ],
+        "keywords": [
+            "出差",
+            "客户接送",
+            "商务接待",
+            "舒适性",
+            "会议"
+        ],
+        "uuid": [
+            "f62089fb-eed8-4044-af69-25f565f2ca68",
+            "9f79f97d-60ad-47ff-845a-92807b6f2429",
+            "ef835744-580c-4003-a896-afc3988bec05",
+            "2942bc88-94dc-4b2b-bd04-7f484d257054",
+            "9675aaa6-493b-42b3-8fb0-99ee9761d61e"
+        ],
+        "scenario": "商务接待",
+        "description": "用于接送客户、商务会议、出差等正式场合。"
+    },
+    {
+        "overall_score": 82.0,
+        "dimensions": [
+            {
+                "dimension": "适用性",
+                "score": 90
+            },
+            {
+                "dimension": "性价比",
+                "score": 85
+            },
+            {
+                "dimension": "安全性",
+                "score": 80
+            },
+            {
+                "dimension": "易用性",
+                "score": 80
+            },
+            {
+                "dimension": "舒适性",
+                "score": 75
+            }
+        ],
+        "keywords": [
+            "日常出行",
+            "代步",
+            "就医",
+            "老年人",
+            "购物"
+        ],
+        "uuid": [
+            "7c7ee69c-c949-4e04-b2ef-59382bb2730d",
+            "5a987562-64cd-4b9a-a1d1-34bb40c8e0b8",
+            "3d152598-a69b-477c-8bca-65a432a669f7",
+            "2d191f02-32ac-40a2-a153-0cac17f91147",
+            "2bc0bc3e-faf4-464d-9299-12e23764449b"
+        ],
+        "scenario": "老年人代步",
+        "description": "用于老年人日常出行、购物、就医等。"
+    },
+    {
+        "overall_score": 81.0,
+        "dimensions": [
+            {
+                "dimension": "续航能力",
+                "score": 90
+            },
+            {
+                "dimension": "智能驾驶",
+                "score": 85
+            },
+            {
+                "dimension": "越野性能",
+                "score": 80
+            },
+            {
+                "dimension": "充电便利性",
+                "score": 80
+            },
+            {
+                "dimension": "舒适性",
+                "score": 70
+            }
+        ],
+        "keywords": [
+            "续航",
+            "充电",
+            "智能驾驶",
+            "舒适性",
+            "越野"
+        ],
+        "uuid": [
+            "d187872b-3992-474a-9e35-283d1673d7a9",
+            "9ecd91f1-90af-4237-a0b6-a25c0d71cd37",
+            "cfb930d6-fe8b-4e0c-b463-664749fcbd1b",
+            "5c750ece-d313-467a-ba81-596a93fddd21",
+            "c5b91b7b-0556-4a0e-8b60-d48d6c59c1e5"
+        ],
+        "scenario": "户外探险",
+        "description": "用于越野、露营、长途自驾等户外活动。"
+    },
+    {
+        "overall_score": 74.5,
+        "dimensions": [
+            {
+                "dimension": "外观设计",
+                "score": 95
+            },
+            {
+                "dimension": "驾驶体验",
+                "score": 90
+            },
+            {
+                "dimension": "续航能力",
+                "score": 80
+            },
+            {
+                "dimension": "智能化配置",
+                "score": 80
+            },
+            {
+                "dimension": "智能驾驶",
+                "score": 75
+            }
+        ],
+        "keywords": [
+            "续航",
+            "性价比",
+            "智能化",
+            "外观",
+            "智能驾驶"
+        ],
+        "uuid": [
+            "8be0fcb2-2062-4eda-80b5-cbaf8a6463ef",
+            "6fb07883-2bb2-4881-a65e-95a239ec9ed9",
+            "375daecc-347b-4ca9-9e6f-e63ea90fd052",
+            "6e558ce6-db4f-4880-8d39-259839c3d986",
+            "65a5042f-74ce-4005-89f4-0f836d00dcbe",
+            "3395c8bd-1cd1-4653-a2d3-64474af80fa9",
+            "d9fbd449-7e09-4e8c-9f15-0dd279bef78a",
+            "b872eea8-f9cc-49ed-90a1-d5f70630e35f",
+            "f06b36c6-5c5e-46ec-8c26-fece36282109",
+            "f59fbc50-6fd6-4ab6-bc5b-042e1cb286c6"
+        ],
+        "scenario": "家庭出行",
+        "description": "用于日常通勤、周末郊游、长途旅行等家庭活动。"
+    },
+    {
+        "overall_score": 82.05882352941177,
+        "dimensions": [
+            {
+                "dimension": "身份展示",
+                "score": 90
+            },
+            {
+                "dimension": "性能与科技",
+                "score": 90
+            },
+            {
+                "dimension": "高端社交活动",
+                "score": 85
+            },
+            {
+                "dimension": "驾驶乐趣",
+                "score": 80
+            },
+            {
+                "dimension": "品牌形象",
+                "score": 80
+            }
+        ],
+        "keywords": [
+            "驾驶乐趣",
+            "奢华",
+            "社交活动",
+            "社交",
+            "性能"
+        ],
+        "uuid": [
+            "58763dca-d08a-438e-a93a-6fd7ec74dd84",
+            "dbb7138f-e0cc-4454-ae4a-50ca2e5c38c0",
+            "bf1f97c2-4991-492f-8f30-73ad644b448d",
+            "afa5a821-df91-4675-a2d9-a30992bf9080",
+            "7370e0e9-0c9b-41c4-9f07-ed16dd3bed1a",
+            "1a4d4efe-14a6-4b1c-aaaa-7481980fc094",
+            "9b05b0b2-e4b4-4e17-a408-b30146a99004",
+            "d88e6a40-68bb-4a41-b75d-86f1793132fd",
+            "b96c8db2-a158-44ca-9309-c375c3b569db",
+            "f42531c9-fa31-4d32-8751-ce37373116ff",
+            "5f4c9137-c1fe-412e-a692-ec4f15dd1ad3",
+            "c13f2e7d-ba3c-43cd-bfbb-f6f0dcc73308",
+            "e8a6eaff-b497-4c6a-8f34-c56982e52062",
+            "e2e98d6c-21d3-4f1c-91ff-bcc9c3775651",
+            "0f71f0c1-f226-43e0-8bf3-f97b7afa11ad",
+            "6480d5a5-77dd-4764-8215-5b0439412716",
+            "74a0482a-a259-43e4-bc23-ba103d003f65",
+            "c51809f6-a483-4616-99ac-36eb8080cde3",
+            "89b1cb3e-b4e1-4608-a881-a9febd06fd32",
+            "9de2eed7-1496-4152-92fe-c45cd72ddeeb"
+        ],
+        "scenario": "高端奢华",
+        "description": "用于展示身份、享受驾驶乐趣、参加高端社交活动。"
+    },
+    {
+        "overall_score": 75.50847457627118,
+        "dimensions": [
+            {
+                "dimension": "续航能力",
+                "score": 90
+            },
+            {
+                "dimension": "续航",
+                "score": 90
+            },
+            {
+                "dimension": "性价比",
+                "score": 85
+            },
+            {
+                "dimension": "智能化配置",
+                "score": 85
+            },
+            {
+                "dimension": "智能化功能",
+                "score": 85
+            }
+        ],
+        "keywords": [
+            "续航",
+            "充电",
+            "性价比",
+            "安全性",
+            "城市通勤"
+        ],
+        "uuid": [
+            "b127285f-f1d4-44e5-90dc-8f68bd4e1563",
+            "d6870ecd-2f53-4e6f-a910-70e0fc537c85",
+            "fca3eaac-1f10-4246-9238-6e3b6c49c60c",
+            "96125cd1-f3e6-4ab1-b4c8-7c959a24034f",
+            "d8b02802-26d4-4b53-948b-a9755dd98c39",
+            "69c6a62c-17e6-423e-94b9-c1a45b9e823a",
+            "4fd58791-15a1-4052-b7aa-f5ff5ccbedd4",
+            "99ca2344-4196-452c-96bd-9921219de183",
+            "c7c5af4c-483e-4b70-95f9-ac9a5be55370",
+            "e2937660-b301-49dc-8c28-4d540afbd13d",
+            "27acbfbe-bd94-415a-9a43-3ed92f69f7b3",
+            "940fc9e7-523b-480c-b2aa-43ebc2398a28",
+            "1f23d91c-7861-4814-a324-f9d57cd42feb",
+            "5ab3167b-305f-41f7-937b-75eeb2b265c8",
+            "cdf3ffe6-9d54-49cd-a891-1555415afc01",
+            "ad875fb0-1fa7-4fd8-ac25-96abf69e2f82",
+            "1acab2c9-78ca-45f3-8cc6-e8b9ec14360a",
+            "2b1ce010-e141-41fa-a0bd-9772b34cc71b",
+            "17ee71ff-4a39-461e-b2ce-6fe6d9722e2c",
+            "6d29ff9f-9d44-4b63-95f0-d9ff44327833",
+            "943a54b0-c728-47c3-806f-af7416a798a5",
+            "dd6790f1-7b92-4ac9-aa7e-91d566e44cfe",
+            "e30b01e7-4867-406d-827a-52bf02a332e0",
+            "37fe1141-2e06-4b58-8c6e-a4e10c946f6",
+            "d8a18e8f-8848-4ca5-840b-c088604b4570",
+            "bae1e115-bc7d-447d-85aa-de83679c6702",
+            "00128931-2ad2-4f17-8d15-99a62b22f7c5",
+            "1cd2d3c1-6651-407d-ab68-8b6b2af870c5",
+            "47c32950-d505-4d7e-ad77-f78f0b59a67a",
+            "f6595df3-0459-4258-8b7f-752bf72f734b",
+            "fec5cef0-0ffd-4f30-afc3-24226311e0e0",
+            "1c7ba5b0-58c7-4d82-b6ef-72695c2f7095",
+            "5ddeb6cb-d7db-4343-8a46-d2d83c3a914a",
+            "1d4ba354-61fb-4665-b378-f4bdaaf5125c",
+            "7c4cf4a7-9d73-4557-a5fa-8b678186abb1",
+            "6a5e8430-495e-4e46-9f1b-027b59d8e18d",
+            "36abc2f2-36c1-41d9-a125-2e2f526df6fe",
+            "6e5e3bcf-cb9a-4568-8bcf-e3cf6b6446d3",
+            "d4965e3b-f168-465f-b739-99e160f07e35",
+            "85402235-8bfb-47e2-a4d3-6dcaa230c711",
+            "dff6e22c-3b27-4707-9167-55673c7188b1",
+            "d9cd1d7e-f0f8-40df-8b82-41521ab45077",
+            "daa60c9c-7a70-4b26-bd8e-d05fd779ae4b",
+            "1db0ad46-7cc2-4af7-b24e-a3eb070b7be8",
+            "d07c81fd-f4b4-4091-a92f-0479ef7d7816",
+            "af1e22c4-04f2-4877-8067-9bd4487ac289",
+            "d1cc43a2-02bb-4a22-aa8e-3f403c3a122b",
+            "3a5f6f8e-7925-4501-8120-90c4d17b1327",
+            "05426935-d2db-4f76-874f-e34b673440e7",
+            "6d062580-35fa-4158-bdfa-a503d87cb2be",
+            "5c2de764-140c-41ab-9af5-c324d40fbbf5",
+            "bf37ea63-4f4f-4dde-ae52-a05c942bfcea",
+            "c913f7fe-8b67-43a4-baed-a230815002d2",
+            "f1808e97-9d99-47be-b470-cddcb49d8ff6",
+            "09f5315b-e60d-4733-aa11-77d289d802ef",
+            "c3691a18-c7fe-4607-87f6-579672bda9a7",
+            "3b3126d7-5a3a-401b-ac4c-80b06a14d2cd",
+            "fb09b453-20c1-4852-823f-3cc5aee0e65d",
+            "e7f9df8f-af6e-4938-9c00-bc6b87a82ef8",
+            "fe93de73-b43b-48d6-a65c-544ff668bb33"
+        ],
+        "scenario": "城市通勤",
+        "description": "用于日常上下班、短途出行等城市内活动。"
+    },
+    {
+        "overall_score": 81.07692307692308,
+        "dimensions": [
+            {
+                "dimension": "外观设计",
+                "score": 95
+            },
+            {
+                "dimension": "外观吸引力",
+                "score": 95
+            },
+            {
+                "dimension": "个性化设计",
+                "score": 90
+            },
+            {
+                "dimension": "个性化",
+                "score": 90
+            },
+            {
+                "dimension": "品牌影响力",
+                "score": 90
+            }
+        ],
+        "keywords": [
+            "性价比",
+            "旅行",
+            "社交",
+            "个性",
+            "短途旅行"
+        ],
+        "uuid": [
+            "c8124cc7-8570-4195-bc43-359252369dc6",
+            "babc8a41-9a54-412d-8ab2-ac375403fa7f",
+            "ff806c8d-33b5-4a77-89d2-addfe7927267",
+            "1feb513d-795b-4760-9dcf-f2b05cbac656",
+            "72847b8e-ff13-4b44-94bd-d8cac873fc94",
+            "d23a15b3-463a-4ea9-9947-26ad9dd1e8db",
+            "30b917dc-2f35-4bd2-bc79-018669ba2264",
+            "bbbc015f-bddd-4ab6-8637-8e06fdd19b3f",
+            "54022176-2fd0-469d-a3a4-24af132a934b",
+            "30a9f3f2-66b2-449e-814b-6a5db0873336",
+            "28fcb3cf-358d-4a76-bcde-ab632758a91f",
+            "2a69d829-f8ac-4a79-81a2-9f6ae00ce014",
+            "d5ed3fde-3db8-4ba2-8c79-5867b122aa5c",
+            "6f5f9ac3-f26d-46b2-96ff-0a908dad4e4c",
+            "c79a12ac-c7f4-4df0-9fbe-83aa279962b8",
+            "fcde149b-f076-4437-82f5-c3495d6279e2",
+            "18725c52-bd9a-4670-89b5-000d4a2810ed",
+            "1d4f0f34-bef7-4832-908b-d3d854fe4f82",
+            "d9ea5e01-f037-4f62-b859-420d0c69f130",
+            "7cb129f6-d575-452d-b20a-17e69b12938d",
+            "4e2e7f0f-cf01-4b1b-b7a5-92150b0e4601",
+            "46540f07-7348-4a88-b811-0928c3e6a117",
+            "7bb5e494-e5a3-4d5e-86c9-8166e0a64ef9",
+            "60f1f641-8158-4f5c-89b9-749bdedc8a99",
+            "e29b8790-ee20-4838-a08b-18d2ba8584b0",
+            "cafe0ba0-caca-454d-aad7-21f663534827",
+            "14f10f34-b303-4fda-962a-99cc6f134ddd",
+            "acdc0795-17d9-447e-b294-b4de85ba7ab0",
+            "d61e8d6d-641f-439b-9982-ecd21b019c7f",
+            "b5066487-f494-4ca2-9806-09565615c913",
+            "91b57a43-1710-44c1-8c7e-96a2cf4c703a",
+            "f132878d-b29c-4d59-8ff5-c5ff8e201336",
+            "64e78c92-2f8f-437c-aecc-50c0d818704c",
+            "647dc17f-846d-473d-b99f-f6fcab64a7a6",
+            "30616ccc-7202-4bbc-8c59-46982128cc2a",
+            "1e48345d-97ff-4f85-80c1-2b44fbaab8d6",
+            "c30b8041-db21-4cdc-9bec-5219da733398",
+            "c01d018b-34b8-4913-9a0f-0b8f5432278d",
+            "95ac2f5a-a685-4e42-984f-0141a2838419",
+            "b1bb7cf9-7952-474a-82d6-88ec8ee2b5db",
+            "1e44a773-a7ac-478d-be23-e5ec05423dc7",
+            "e1de4c23-6daf-4add-85e3-1fca8ff13742",
+            "d08b6a6c-a78b-467d-9ddd-8ebb5f587695",
+            "fcfc998f-33c2-4c26-a40d-66713b64f761",
+            "7dccbc08-66b2-4acf-896b-7de313b98532",
+            "f068a05a-9ee9-4442-a9a8-e420f1752133",
+            "8d6c612b-f0e4-4f21-a28e-a7ebb9677b72",
+            "37914a29-1ad7-4816-a7d7-3e637501f1cb",
+            "9f1a267c-6733-4367-86e7-7d1748ea747d",
+            "82c3946f-e4d2-428f-818c-15716caec87e",
+            "6fb43a1b-586b-4d3e-a584-54700ffad3c4",
+            "2a190fd9-90eb-4028-872d-4b28d74e1f6c",
+            "1ce92eee-bfc7-4ff3-b457-76de427dc64d",
+            "50eee031-7c0f-4986-b862-b63c92b7a4df",
+            "4b89e0da-dcdf-40b1-9c1c-accd311e09ee",
+            "94177e18-e1e2-49f3-989f-b3c37f9d3b1a",
+            "ec8e885c-69ec-43d9-a8e5-01aa4527fcef",
+            "60557d32-38df-4bf7-a934-055dcdea7ff3",
+            "bbc8d0c7-0966-4a0b-a8ba-41b006a2a070",
+            "dbcd601f-191e-43f5-85c2-d5c662ede4ec",
+            "9e17a091-ccaf-4f5a-8f2f-30a41c06c765",
+            "0c0be4fd-4b26-4e7c-8e5c-f682817113b9",
+            "2f519842-04ba-40e2-8b18-3407cb99459a",
+            "eb0d29f7-40be-4e47-9abc-2183dc73b9fe",
+            "e665a2d2-0866-40b1-9541-2988f41eef2f",
+            "671f87de-f76a-4020-bab5-f25b8b91b6b1",
+            "36a2bb16-1ff8-4c40-8d7c-aa136ca512db",
+            "d12be16c-0c5b-4e4f-bc27-ac43d305edfb",
+            "e937f9dc-2dfd-4985-ae6f-30abd3ef3d26",
+            "64012971-5ca8-4652-84fa-1b070a1403f2",
+            "9a5ecd0f-9f44-469b-893b-8305244c99c2",
+            "d4eb1606-3b90-4d7b-8d52-4616de87c349",
+            "56ab0ba7-a17f-41ad-8164-6a0eda455afb",
+            "ebed2518-d391-4c08-8718-82424df2afa7",
+            "7be07ea7-3414-4ebb-b2f5-1e400cee3d09"
+        ],
+        "scenario": "年轻个性",
+        "description": "用于展示个性、社交、短途旅行等。"
+    }
+]

@@ -11,14 +11,14 @@ import {
 } from 'recharts'
 
 type Metric =
-  |  '外观内饰'
-  |  '智能系统'
-  |  '驾驶性能'
-  |  '空间舒适'
-  |  '价格成本'
-  |  '品牌口碑'
-  |  '购买体验'
-  |  '售后服务'
+  | '外观内饰'
+  | '智能系统'
+  | '驾驶性能'
+  | '空间舒适'
+  | '价格成本'
+  | '品牌口碑'
+  | '购买体验'
+  | '售后服务'
 
 type ColorMap = {
   [K in Metric]: string
@@ -42,9 +42,7 @@ const ThemeDiscussionTrendingChart = ({
 
   const metrics = useMemo(() => {
     if (data && data.length > 0) {
-      return Object.keys(data[0]).filter(
-        (key) => key !== 'yearMonth',
-      ) as Metric[]
+      return Object.keys(data[0]).filter((key) => key !== 'date') as Metric[]
     }
     return [] as Metric[]
   }, [data])
@@ -63,7 +61,7 @@ const ThemeDiscussionTrendingChart = ({
         >
           <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
           <XAxis
-            dataKey="yearMonth"
+            dataKey="date"
             stroke="#999"
             tick={{ fill: '#666' }}
             domain={['dataMin', 'dataMax']}

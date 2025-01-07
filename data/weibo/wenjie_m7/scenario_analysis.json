@@ -1,0 +1,188 @@
+[
+    {
+        "overall_score": 82.5,
+        "dimensions": [
+            {
+                "dimension": "越野性能",
+                "score": 90
+            },
+            {
+                "dimension": "科技实力",
+                "score": 85
+            },
+            {
+                "dimension": "舒适性",
+                "score": 80
+            },
+            {
+                "dimension": "适应性",
+                "score": 75
+            }
+        ],
+        "keywords": [
+            "长途自驾",
+            "露营",
+            "越野",
+            "科技",
+            "性能"
+        ],
+        "uuid": [
+            "3909e738-8db8-4600-9509-720eb1321815",
+            "f1f66fba-09fb-4e4a-99a9-cb6a6105c5b0"
+        ],
+        "scenario": "户外探险",
+        "description": "用于越野、露营、长途自驾等户外活动。"
+    },
+    {
+        "overall_score": 84.0,
+        "dimensions": [
+            {
+                "dimension": "家庭出行适用性",
+                "score": 90
+            },
+            {
+                "dimension": "智能驾驶体验",
+                "score": 85
+            },
+            {
+                "dimension": "安全性",
+                "score": 85
+            },
+            {
+                "dimension": "舒适性",
+                "score": 80
+            },
+            {
+                "dimension": "空间宽敞性",
+                "score": 80
+            }
+        ],
+        "keywords": [
+            "家庭出行",
+            "智能驾驶",
+            "舒适性",
+            "安全性",
+            "空间宽敞"
+        ],
+        "uuid": [
+            "b507b559-8737-409d-877a-f509d962a290",
+            "d28f6e57-8868-4619-8a76-710818daf3bb",
+            "36139928-0958-4f1b-a9f4-243227dc8d2a",
+            "7fe2b2bf-5d98-44f5-a664-72827c76ceae",
+            "632e483d-1da3-4105-9535-07b9d7d2a79d"
+        ],
+        "scenario": "家庭出行",
+        "description": "用于日常通勤、周末郊游、长途旅行等家庭活动。"
+    },
+    {
+        "overall_score": 90.0,
+        "dimensions": [
+            {
+                "dimension": "品牌影响力",
+                "score": 95
+            },
+            {
+                "dimension": "用户口碑",
+                "score": 90
+            },
+            {
+                "dimension": "市场表现",
+                "score": 90
+            },
+            {
+                "dimension": "豪华属性",
+                "score": 85
+            }
+        ],
+        "keywords": [
+            "高端",
+            "用户口碑",
+            "豪华",
+            "市场销量",
+            "品牌影响力"
+        ],
+        "uuid": [
+            "4fba12a2-344b-415f-a504-181daf96f593",
+            "6133b793-cdd7-49f7-bd3d-760ba0d18ebb",
+            "e844cd6e-ff5e-4bc7-8dbb-7853bb36af6d",
+            "67d0ed81-9760-435a-ad20-5dfd9a12a13a",
+            "88aa1f95-eb97-454c-bf25-60f73f357d98"
+        ],
+        "scenario": "高端奢华",
+        "description": "用于展示身份、享受驾驶乐趣、参加高端社交活动。"
+    },
+    {
+        "overall_score": 83.75,
+        "dimensions": [
+            {
+                "dimension": "个性化设计",
+                "score": 90
+            },
+            {
+                "dimension": "短途旅行适用性",
+                "score": 85
+            },
+            {
+                "dimension": "社交功能",
+                "score": 80
+            },
+            {
+                "dimension": "驾驶体验",
+                "score": 80
+            }
+        ],
+        "keywords": [
+            "个性",
+            "设计",
+            "驾驶",
+            "社交",
+            "旅行"
+        ],
+        "uuid": [
+            "a4c59f7f-7721-458a-8f32-e7cc3bbbf678",
+            "cf28f0c0-49e5-426e-b906-195554e19b34",
+            "e276db9d-0814-4176-9274-3f179318512b",
+            "5b725012-8f78-4804-8e57-010b6dac8fb5",
+            "00d4e69e-74ae-4a8a-827f-2b947e6e7c0f"
+        ],
+        "scenario": "年轻个性",
+        "description": "用于展示个性、社交、短途旅行等。"
+    },
+    {
+        "overall_score": 82.5,
+        "dimensions": [
+            {
+                "dimension": "智能驾驶",
+                "score": 90
+            },
+            {
+                "dimension": "续航能力",
+                "score": 85
+            },
+            {
+                "dimension": "性价比",
+                "score": 80
+            },
+            {
+                "dimension": "舒适性",
+                "score": 75
+            }
+        ],
+        "keywords": [
+            "续航能力",
+            "智能驾驶",
+            "舒适性",
+            "城市通勤",
+            "性价比"
+        ],
+        "uuid": [
+            "d1b954f1-e558-42f2-a0a2-4b835d0f8cdd",
+            "8c397e76-ba77-4ef5-8335-c0fc608fdd66",
+            "1996b7ab-082b-42ea-855f-a3fff0e627d6",
+            "d541eacf-2355-4c3e-828b-40076768ffd3",
+            "37840fa1-3ebb-4eea-8a3a-1cbb659ba42e"
+        ],
+        "scenario": "城市通勤",
+        "description": "用于日常上下班、短途出行等城市内活动。"
+    }
+]

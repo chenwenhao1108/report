@@ -1,0 +1,1221 @@
+[
+    {
+        "advantage": [
+            {
+                "summary": "售后服务可靠性高",
+                "summary_topic": "售后服务可靠",
+                "uuid": [
+                    "ad634ec8-e55f-4760-a34d-5a72982547dd",
+                    "f6f5be6c-88e6-403d-a21e-7ab7200ffaac"
+                ],
+                "keywords": [
+                    "售后",
+                    "维修",
+                    "可靠性",
+                    "销量"
+                ]
+            },
+            {
+                "summary": "保养和维修成本相对较低",
+                "summary_topic": "保养维修成本低",
+                "uuid": [
+                    "301fd95c-60e7-4234-8473-b09161b5ce52",
+                    "64126ae6-740b-4b66-890d-05b98fb9b000"
+                ],
+                "keywords": [
+                    "保养",
+                    "实惠",
+                    "维修",
+                    "成本"
+                ]
+            },
+            {
+                "summary": "终身质保政策吸引用户",
+                "summary_topic": "终身质保吸引",
+                "uuid": [
+                    "46b9ffe8-4d33-4201-988e-c045a70c9ebe",
+                    "87a8788b-562b-4450-8eb1-dcce3f04acb1"
+                ],
+                "keywords": [
+                    "终身质保",
+                    "电车",
+                    "免费",
+                    "车主"
+                ]
+            },
+            {
+                "summary": "售后服务网点覆盖广",
+                "summary_topic": "服务网点覆盖",
+                "uuid": [
+                    "ad634ec8-e55f-4760-a34d-5a72982547dd",
+                    "fbd1da64-8a72-43e3-9299-0a0ac6cc7ee0"
+                ],
+                "keywords": [
+                    "售后",
+                    "服务",
+                    "网点",
+                    "覆盖"
+                ]
+            },
+            {
+                "summary": "售后服务态度较好",
+                "summary_topic": "服务态度良好",
+                "uuid": [
+                    "3bbc7339-d64c-402d-8acd-4257b4f294ab",
+                    "25b17ee7-4a25-48ea-a296-89ccd54b9ce9"
+                ],
+                "keywords": [
+                    "售后",
+                    "服务",
+                    "态度"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "维修过程可能耗时",
+                "summary_topic": "维修耗时问题",
+                "uuid": [
+                    "43827fd2-4474-4a9a-83f3-42b338976fc3",
+                    "6ed4e608-fb56-4ba8-b8de-edf729537a15"
+                ],
+                "keywords": [
+                    "维修",
+                    "耗时",
+                    "问题"
+                ]
+            },
+            {
+                "summary": "售后服务保障不足",
+                "summary_topic": "保障不足问题",
+                "uuid": [
+                    "57cac049-ed7f-497b-9952-944790e9a9a4",
+                    "3a58953f-4165-463d-a329-bd0012027cfa"
+                ],
+                "keywords": [
+                    "售后",
+                    "保障",
+                    "问题"
+                ]
+            },
+            {
+                "summary": "维修费用可能较高",
+                "summary_topic": "维修费用高",
+                "uuid": [
+                    "5ba807cf-9128-4486-a75a-bf75b02097ca",
+                    "5a500a48-7872-41c2-a8df-da5fcf49a598"
+                ],
+                "keywords": [
+                    "维修",
+                    "费用",
+                    "高"
+                ]
+            },
+            {
+                "summary": "服务质量参差不齐",
+                "summary_topic": "服务质量不一",
+                "uuid": [
+                    "95ce2566-d8c8-4fa1-b3c3-83abccda3073",
+                    "c38dbac7-6c96-4a9f-a380-7b6a72a12a6a"
+                ],
+                "keywords": [
+                    "服务",
+                    "质量",
+                    "参差不齐"
+                ]
+            },
+            {
+                "summary": "售后服务响应慢",
+                "summary_topic": "响应速度慢",
+                "uuid": [
+                    "62d89bf3-09ca-4525-ace3-f909f4e0b6bb",
+                    "91c4372e-e136-404f-866a-670dcdc204de"
+                ],
+                "keywords": [
+                    "售后",
+                    "响应",
+                    "慢"
+                ]
+            }
+        ],
+        "theme": "售后服务"
+    },
+    {
+        "advantage": [
+            {
+                "summary": "智能系统提升驾驶体验",
+                "summary_topic": "智能系统的优势",
+                "uuid": [
+                    "ea679476-c026-4e78-b554-6a54d5c11fdc",
+                    "1146a05a-9bd0-4fa5-9228-77d61c80569c",
+                    "de076345-9c8a-44c3-b3e1-a2f37d71bf67"
+                ],
+                "keywords": [
+                    "智能化配置",
+                    "驾驶体验",
+                    "语音指令",
+                    "自动驾驶功能"
+                ]
+            },
+            {
+                "summary": "丰富的智能化配置",
+                "summary_topic": "智能配置的多样性",
+                "uuid": [
+                    "ea679476-c026-4e78-b554-6a54d5c11fdc",
+                    "1146a05a-9bd0-4fa5-9228-77d61c80569c",
+                    "1bc94904-7d62-4804-afbf-53e98ddbe9be"
+                ],
+                "keywords": [
+                    "摄像头",
+                    "毫米波雷达",
+                    "激光雷达",
+                    "感知能力"
+                ]
+            },
+            {
+                "summary": "提升安全性和便捷性",
+                "summary_topic": "安全与便捷",
+                "uuid": [
+                    "ea679476-c026-4e78-b554-6a54d5c11fdc",
+                    "11bf6da0-d7cf-476c-8f4f-f4a2703d83e0"
+                ],
+                "keywords": [
+                    "安全",
+                    "智能辅助",
+                    "自动泊车",
+                    "车道保持"
+                ]
+            },
+            {
+                "summary": "增强用户交互体验",
+                "summary_topic": "用户交互的提升",
+                "uuid": [
+                    "de076345-9c8a-44c3-b3e1-a2f37d71bf67",
+                    "c70c3843-bf24-4d98-8b70-93413e8c2fa7"
+                ],
+                "keywords": [
+                    "语音控制",
+                    "智能家居",
+                    "用户体验"
+                ]
+            },
+            {
+                "summary": "智能系统支持多种功能",
+                "summary_topic": "功能多样性",
+                "uuid": [
+                    "ea679476-c026-4e78-b554-6a54d5c11fdc",
+                    "de076345-9c8a-44c3-b3e1-a2f37d71bf67"
+                ],
+                "keywords": [
+                    "多功能",
+                    "导航",
+                    "智能保电"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "智能系统反应不够灵敏",
+                "summary_topic": "反应速度问题",
+                "uuid": [
+                    "11e48005-d9ca-413a-a368-69d948f2d977",
+                    "18a220bc-2bf4-407a-af41-e3bc3759fa2d"
+                ],
+                "keywords": [
+                    "反应慢",
+                    "决策不清晰",
+                    "提示不明显"
+                ]
+            },
+            {
+                "summary": "HUD功能有限",
+                "summary_topic": "HUD的不足",
+                "uuid": [
+                    "11246d0e-e5bd-4821-a59c-0391e36f0c5e",
+                    "feb55d58-6608-453f-a4c2-1e36de999ddc"
+                ],
+                "keywords": [
+                    "HUD",
+                    "导航功能",
+                    "质感差"
+                ]
+            },
+            {
+                "summary": "智能系统存在故障",
+                "summary_topic": "系统故障问题",
+                "uuid": [
+                    "affd64b4-510c-47ab-aecb-5d7539cf292a",
+                    "85584399-90d2-4cdd-bc13-d3dee56d9b02"
+                ],
+                "keywords": [
+                    "车机故障",
+                    "用户体验",
+                    "产品质量"
+                ]
+            },
+            {
+                "summary": "智能化设计影响操作便捷性",
+                "summary_topic": "操作不便",
+                "uuid": [
+                    "1720218d-4741-42d5-aeca-379f4bcd12db",
+                    "c70c3843-bf24-4d98-8b70-93413e8c2fa7"
+                ],
+                "keywords": [
+                    "实体按钮",
+                    "空调控制",
+                    "误触"
+                ]
+            },
+            {
+                "summary": "智能系统功能过于复杂",
+                "summary_topic": "功能复杂性",
+                "uuid": [
+                    "1e0566c2-0730-4433-b9bb-de7d7ae6f280",
+                    "f35fb888-dc57-41b6-9fd4-972d6dbdbf68"
+                ],
+                "keywords": [
+                    "复杂",
+                    "功能整合",
+                    "用户体验"
+                ]
+            }
+        ],
+        "theme": "智能系统"
+    },
+    {
+        "advantage": [
+            {
+                "summary": "购买体验良好，满意度高",
+                "summary_topic": "满意的购买体验",
+                "uuid": [
+                    "b7a11f6b-a49d-4183-ab50-586d723b9c52",
+                    "14180cb0-e7cb-4c78-9fb3-595fc1a52581",
+                    "4cd1ab4c-1469-4152-a213-78f472454d22",
+                    "e2b2546d-0a75-401f-b589-5b06e29ae8f1",
+                    "dabb4650-0e6d-440d-8d9b-e27eaf512c68"
+                ],
+                "keywords": [
+                    "满意",
+                    "购买",
+                    "体验",
+                    "提车",
+                    "正品"
+                ]
+            },
+            {
+                "summary": "购车方式灵活多样",
+                "summary_topic": "灵活的购车方式",
+                "uuid": [
+                    "7a267db6-5dbb-4e27-b569-e13845025937",
+                    "55a66870-2c23-4af6-9ec4-05c02f8e4fd3",
+                    "40f02e76-f7e3-4eb4-965c-6f9f2e526d29",
+                    "3693f0a5-73de-4b1e-8354-3404a1d0234d",
+                    "eb28b156-a427-41cd-a6b9-528e40ed8337"
+                ],
+                "keywords": [
+                    "全款",
+                    "首付",
+                    "贷款",
+                    "购车方式",
+                    "灵活"
+                ]
+            },
+            {
+                "summary": "购车优惠政策吸引",
+                "summary_topic": "吸引的购车优惠",
+                "uuid": [
+                    "d9a1f113-79fa-48d7-b874-3896f60e174e",
+                    "60521611-ba72-4562-a50a-f69839b4d4f2",
+                    "7b96344a-069d-4fb1-bf5b-ab24b4a95830",
+                    "eab12f79-e199-42dd-9752-ccae135028bd",
+                    "7b9b4269-135f-42e0-a021-9414253f98b9"
+                ],
+                "keywords": [
+                    "优惠",
+                    "补贴",
+                    "现金优惠",
+                    "购车优惠",
+                    "政策"
+                ]
+            },
+            {
+                "summary": "车辆配置与性价比高",
+                "summary_topic": "高性价比配置",
+                "uuid": [
+                    "3b08b4af-7523-4d1e-af3f-193dd861abaf",
+                    "9e9bbee4-ade8-4a62-8b18-74a312f9e7f5",
+                    "fcb820d3-eeaf-4e00-8d63-0733c08463da",
+                    "d260e8a7-86ea-41bd-9227-e02d9cee9ca9",
+                    "5b042483-b103-4618-8c6f-bf02182182c0"
+                ],
+                "keywords": [
+                    "配置",
+                    "性价比",
+                    "车型",
+                    "功能",
+                    "实用"
+                ]
+            },
+            {
+                "summary": "购车体验便捷，快速提车",
+                "summary_topic": "便捷的购车体验",
+                "uuid": [
+                    "6d2ad302-eab2-40cf-ac63-367aee197368",
+                    "14180cb0-e7cb-4c78-9fb3-595fc1a52581",
+                    "4b86967b-f9a8-4356-aeb6-edcb7e701d79",
+                    "eab12f79-e199-42dd-9752-ccae135028bd",
+                    "eb28b156-a427-41cd-a6b9-528e40ed8337"
+                ],
+                "keywords": [
+                    "提车",
+                    "快速",
+                    "便捷",
+                    "体验",
+                    "满意"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "车辆质量问题频发",
+                "summary_topic": "质量问题",
+                "uuid": [
+                    "f70773c0-1f63-41e3-9b4d-2f45f90af15b",
+                    "d4b336d3-a8ce-453b-ba45-20fd8df647ff",
+                    "51b5f5da-6b9a-46b9-a34e-f7791ec94c5b",
+                    "e8fea591-1efa-46ae-8394-10f5c1eb809f",
+                    "8a4d55db-31fa-4a3a-8771-a9996f0879a9"
+                ],
+                "keywords": [
+                    "质量",
+                    "问题",
+                    "使用体验",
+                    "故障",
+                    "投诉"
+                ]
+            },
+            {
+                "summary": "购车后悔，选择不当",
+                "summary_topic": "购车后悔",
+                "uuid": [
+                    "d9a1f113-79fa-48d7-b874-3896f60e174e",
+                    "f4b9c8f5-6c3f-4f9e-8f5a-9a1c2b6f1e0",
+                    "e2b2546d-0a75-401f-b589-5b06e29ae8f1",
+                    "51b5f5da-6b9a-46b9-a34e-f7791ec94c5b",
+                    "d4b336d3-a8ce-453b-ba45-20fd8df647ff"
+                ],
+                "keywords": [
+                    "后悔",
+                    "选择",
+                    "购车",
+                    "体验",
+                    "不当"
+                ]
+            },
+            {
+                "summary": "购车等待时间长",
+                "summary_topic": "长时间等待",
+                "uuid": [
+                    "cc4a65d8-12dd-4b13-bca6-03d9022e0db0",
+                    "af583901-8cd9-4647-a708-ffb2f9e48115",
+                    "7f9e66c4-a8e8-4205-9d8b-ff3cab8b2e1e",
+                    "1d4c813a-119a-4e5e-a06f-7a5f9a2b44e0",
+                    "1b9eabd7-cc68-4cc9-9561-0792d57fc95d"
+                ],
+                "keywords": [
+                    "等待",
+                    "时间",
+                    "提车",
+                    "交车",
+                    "订单"
+                ]
+            },
+            {
+                "summary": "销售服务态度差",
+                "summary_topic": "服务态度",
+                "uuid": [
+                    "3ee8ed36-f2dc-419d-8490-52e0ce5d1a7c",
+                    "de9b9b53-dfd7-4842-a716-0fd54689a070",
+                    "c2edd66c-860b-469c-a835-4a85c965c270",
+                    "d9f77ccc-45aa-4923-b892-5bed6e5b2f5b",
+                    "8ff81c6d-b67a-4a7d-8378-54122ae4b3fa"
+                ],
+                "keywords": [
+                    "销售",
+                    "服务",
+                    "态度",
+                    "体验",
+                    "不满"
+                ]
+            },
+            {
+                "summary": "购车成本高，费用多",
+                "summary_topic": "高额费用",
+                "uuid": [
+                    "f3ded002-bd01-4c74-980f-5ff76aa049b9",
+                    "52ab3273-514a-4908-98fc-a2088eae8393",
+                    "e344127e-adb1-4946-9d36-2c37b448186a",
+                    "4f8ea3fe-1f84-4495-a188-ed2677fb1e3c",
+                    "eb1b4ca6-7244-4758-b083-61ee5226a7b5"
+                ],
+                "keywords": [
+                    "费用",
+                    "购车",
+                    "保险",
+                    "贷款",
+                    "服务费"
+                ]
+            }
+        ],
+        "theme": "购买体验"
+    },
+    {
+        "advantage": [
+            {
+                "summary": "空间大，舒适性好",
+                "summary_topic": "空间舒适",
+                "uuid": [
+                    "984704a6-5d91-49d2-be82-fd209a00bd31",
+                    "b90d61bf-d00e-4f6f-a3e1-51576bd63638",
+                    "e1fd9940-b85d-4885-a0cf-87f54ff6651a",
+                    "e09fe232-e83e-4193-8ccd-ddb8bdddf565",
+                    "47403d2f-d65b-4e09-a0df-50ce84c70996"
+                ],
+                "keywords": [
+                    "空间",
+                    "舒适",
+                    "后排",
+                    "家用"
+                ]
+            },
+            {
+                "summary": "配置丰富，驾驶体验好",
+                "summary_topic": "配置与体验",
+                "uuid": [
+                    "7284d26c-dd0e-4606-a4f0-28293aa287bc",
+                    "9d4dad00-691f-4b95-b0b2-633b2cf5c986",
+                    "c22036c6-d3b7-4085-9e1c-9ad68f53aac2"
+                ],
+                "keywords": [
+                    "配置",
+                    "驾驶体验",
+                    "舒适性"
+                ]
+            },
+            {
+                "summary": "空间大，适合家用",
+                "summary_topic": "空间宽敞",
+                "uuid": [
+                    "8bbac988-724c-402b-b3ba-76007cc83cb4",
+                    "be223cca-a40a-4a7d-b65e-8042a2e17704",
+                    "7141379a-98bc-41d8-a4ac-3746dfdd7173"
+                ],
+                "keywords": [
+                    "空间大",
+                    "家用",
+                    "舒适"
+                ]
+            },
+            {
+                "summary": "驾驶体验舒适",
+                "summary_topic": "驾驶舒适性",
+                "uuid": [
+                    "9693f69b-6924-4d14-89d8-239c5d5a4266",
+                    "24bd0648-0335-42b1-a911-ee0d97123a7c",
+                    "790c403f-7aa2-4083-841f-e090101c95e3"
+                ],
+                "keywords": [
+                    "驾驶",
+                    "舒适",
+                    "体验"
+                ]
+            },
+            {
+                "summary": "静谧性和隔音效果好",
+                "summary_topic": "静谧性优越",
+                "uuid": [
+                    "d9aadf28-28cb-4248-a982-4df6b62d9cc1",
+                    "eb0d07b1-6266-49ea-b391-c34bf096971a"
+                ],
+                "keywords": [
+                    "隔音",
+                    "静谧性",
+                    "噪音"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "后排空间不足",
+                "summary_topic": "后排空间问题",
+                "uuid": [
+                    "c24b3bda-f9cd-4ce0-b904-bd22c17b892d",
+                    "e86c103f-2577-45f8-b0c7-7951448d9499",
+                    "6f6929a7-5c9d-417d-b0a4-7c9891796c9d"
+                ],
+                "keywords": [
+                    "后排",
+                    "空间",
+                    "舒适"
+                ]
+            },
+            {
+                "summary": "底盘和悬挂表现差",
+                "summary_topic": "底盘悬挂问题",
+                "uuid": [
+                    "4690c583-f6ad-41c0-a6c4-1a0d2e12cf9c",
+                    "8bc60c95-7327-42b8-b59c-953c5431ab2e"
+                ],
+                "keywords": [
+                    "底盘",
+                    "悬挂",
+                    "驾驶体验"
+                ]
+            },
+            {
+                "summary": "噪音控制不佳",
+                "summary_topic": "噪音问题",
+                "uuid": [
+                    "4788971d-8dcd-40a9-add0-48a16e63a9be",
+                    "eb0d07b1-6266-49ea-b391-c34bf096971a"
+                ],
+                "keywords": [
+                    "噪音",
+                    "隔音",
+                    "舒适性"
+                ]
+            },
+            {
+                "summary": "座椅舒适性不足",
+                "summary_topic": "座椅舒适性",
+                "uuid": [
+                    "4ac78ad3-e8bc-4d1f-a773-8f0c4b1d2d35",
+                    "67e839ca-189f-4ad7-91ee-557ee4520787"
+                ],
+                "keywords": [
+                    "座椅",
+                    "舒适性",
+                    "按摩"
+                ]
+            },
+            {
+                "summary": "智能驾驶系统表现不佳",
+                "summary_topic": "智能系统问题",
+                "uuid": [
+                    "11e48005-d9ca-413a-a368-69d948f2d977",
+                    "c70c3843-bf24-4d98-8b70-93413e8c2fa7"
+                ],
+                "keywords": [
+                    "智能驾驶",
+                    "安全",
+                    "乘坐体验"
+                ]
+            }
+        ],
+        "theme": "空间舒适"
+    },
+    {
+        "advantage": [
+            {
+                "summary": "动力表现优秀，油耗低",
+                "summary_topic": "动力与油耗",
+                "uuid": [
+                    "ffdaed44-9b7f-40b6-96b8-1d1d6163ad15",
+                    "639e4fde-3dfe-42eb-a0b9-1b5fc225a785",
+                    "d74c5422-0b37-4bcb-90a2-0dc7d3f28e74",
+                    "e113ffd8-6b49-4ede-9a92-f2ec60619b60",
+                    "c2dfe2dd-3228-4fa5-a220-69a0439de6a2"
+                ],
+                "keywords": [
+                    "动力",
+                    "油耗",
+                    "高速",
+                    "省油",
+                    "巡航"
+                ]
+            },
+            {
+                "summary": "动力性能强劲",
+                "summary_topic": "动力强劲",
+                "uuid": [
+                    "f484ab4e-f884-4f9d-ae3d-88a5601a834f",
+                    "ea679476-c026-4e78-b554-6a54d5c11fdc",
+                    "1146a05a-9bd0-4fa5-9228-77d61c80569c"
+                ],
+                "keywords": [
+                    "动力性能",
+                    "加速",
+                    "电机"
+                ]
+            },
+            {
+                "summary": "驾驶性能出色，操控灵活",
+                "summary_topic": "操控灵活",
+                "uuid": [
+                    "0018e699-40e7-40b9-8891-75992d28e392",
+                    "4039e6c7-3e1c-4cb2-b8c6-3544d406712a",
+                    "a7a2ba8a-f250-481b-b63e-041a08c033bb"
+                ],
+                "keywords": [
+                    "驾驶乐趣",
+                    "操控",
+                    "四驱",
+                    "转向"
+                ]
+            },
+            {
+                "summary": "空间宽敞",
+                "summary_topic": "空间大",
+                "uuid": [
+                    "ea679476-c026-4e78-b554-6a54d5c11fdc",
+                    "1146a05a-9bd0-4fa5-9228-77d61c80569c"
+                ],
+                "keywords": [
+                    "空间",
+                    "车身尺寸"
+                ]
+            },
+            {
+                "summary": "设计风格独特",
+                "summary_topic": "设计独特",
+                "uuid": [
+                    "ea679476-c026-4e78-b554-6a54d5c11fdc",
+                    "1146a05a-9bd0-4fa5-9228-77d61c80569c"
+                ],
+                "keywords": [
+                    "设计风格",
+                    "外观"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "转弯半径大",
+                "summary_topic": "转弯半径",
+                "uuid": [
+                    "f1201439-e9bb-4be4-84b7-85e37599808b",
+                    "7bba13d3-63c7-40c5-a7e1-dcf9127df263",
+                    "c0378664-4183-4838-9585-797db15dad6f"
+                ],
+                "keywords": [
+                    "转弯半径",
+                    "操控性"
+                ]
+            },
+            {
+                "summary": "底盘操控差",
+                "summary_topic": "底盘操控",
+                "uuid": [
+                    "f21f6a9b-a86e-44a6-8427-3f85b0c6caeb",
+                    "846cea64-3ae5-4170-b68c-1f78d346f0f3"
+                ],
+                "keywords": [
+                    "底盘",
+                    "操控"
+                ]
+            },
+            {
+                "summary": "油耗表现不佳",
+                "summary_topic": "油耗问题",
+                "uuid": [
+                    "f70773c0-1f63-41e3-9b4d-2f45f90af15b",
+                    "69a75fde-a7da-4548-98f0-32bd9668ad8a"
+                ],
+                "keywords": [
+                    "油耗",
+                    "续航"
+                ]
+            },
+            {
+                "summary": "悬挂系统不理想",
+                "summary_topic": "悬挂问题",
+                "uuid": [
+                    "f21f6a9b-a86e-44a6-8427-3f85b0c6caeb",
+                    "c1e4d77a-d33a-49d3-be3b-e00f343307b3"
+                ],
+                "keywords": [
+                    "悬挂",
+                    "性能"
+                ]
+            },
+            {
+                "summary": "安全性存疑",
+                "summary_topic": "安全性",
+                "uuid": [
+                    "28943123-c397-4734-91d5-c14f7ed19cab",
+                    "f91716c1-7640-4485-a781-9579b5cf1577"
+                ],
+                "keywords": [
+                    "安全",
+                    "驾驶性能"
+                ]
+            }
+        ],
+        "theme": "驾驶性能"
+    },
+    {
+        "advantage": [
+            {
+                "summary": "汉的外观设计受到认可",
+                "summary_topic": "外观设计优越",
+                "uuid": [
+                    "ab05056a-d890-4163-bf72-11e64cb0c6a5",
+                    "095bbf7e-5339-4628-a204-fea0e58eb121",
+                    "8e41a238-7782-40c5-a83e-9cf282b64d9f"
+                ],
+                "keywords": [
+                    "汉",
+                    "外观",
+                    "设计",
+                    "颜值",
+                    "经典"
+                ]
+            },
+            {
+                "summary": "性价比高，适合家庭",
+                "summary_topic": "性价比与家庭适用",
+                "uuid": [
+                    "0c690df4-9c0a-44a1-80ae-7330569527ae",
+                    "27bc0318-13d4-4657-91f5-a3f6d326a34e"
+                ],
+                "keywords": [
+                    "性价比",
+                    "实用",
+                    "家庭",
+                    "舒适度",
+                    "智能化"
+                ]
+            },
+            {
+                "summary": "市场认可度高",
+                "summary_topic": "品牌与市场认可",
+                "uuid": [
+                    "169c0dd0-ae16-4781-88de-8ce58e15b598",
+                    "a6bdaca3-3667-4b83-b671-4729d6dfdfa2"
+                ],
+                "keywords": [
+                    "市场认可度",
+                    "品牌",
+                    "销量",
+                    "消费者"
+                ]
+            },
+            {
+                "summary": "外观设计经典",
+                "summary_topic": "外观与设计",
+                "uuid": [
+                    "686bdba8-d335-424e-af20-5ba825a4c214",
+                    "fd88beda-ecaf-42ff-a4c7-f342e8fb108d"
+                ],
+                "keywords": [
+                    "外观",
+                    "设计",
+                    "经典",
+                    "豪华"
+                ]
+            },
+            {
+                "summary": "多样化的车型选择",
+                "summary_topic": "车型选择多样",
+                "uuid": [
+                    "2c85ab66-2933-4d1d-a58b-4da3cdb367ec",
+                    "de6799d9-2905-433f-be86-15e0988bb66d"
+                ],
+                "keywords": [
+                    "车型",
+                    "选择",
+                    "插混",
+                    "电动"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "操控性不足",
+                "summary_topic": "操控性问题",
+                "uuid": [
+                    "fd2ca7a8-ffef-4e40-92b3-3342d318de8f",
+                    "c7bcc9ae-340f-4aa9-af64-3c8c6e6ca98f"
+                ],
+                "keywords": [
+                    "操控",
+                    "不足",
+                    "驾驶体验"
+                ]
+            },
+            {
+                "summary": "品牌形象偏低",
+                "summary_topic": "品牌形象与认知",
+                "uuid": [
+                    "c7bcc9ae-340f-4aa9-af64-3c8c6e6ca98f",
+                    "d70d208c-3a72-48fc-8563-f74c7728c5ca"
+                ],
+                "keywords": [
+                    "品牌形象",
+                    "认知",
+                    "消费者看法"
+                ]
+            },
+            {
+                "summary": "技术更新缓慢",
+                "summary_topic": "技术与更新",
+                "uuid": [
+                    "c74c796a-f8a7-4c0a-ab94-e3f125f9ee84",
+                    "1f2ee60d-ddc0-44bf-9805-c35285ffb3ec"
+                ],
+                "keywords": [
+                    "技术",
+                    "更新",
+                    "市场竞争"
+                ]
+            },
+            {
+                "summary": "质量问题频发",
+                "summary_topic": "质量与可靠性",
+                "uuid": [
+                    "5dc31552-efcc-4c07-bbb1-259c9fc6c478",
+                    "7de4bc93-95a1-46e0-a182-ddd39f738298"
+                ],
+                "keywords": [
+                    "质量",
+                    "问题",
+                    "可靠性"
+                ]
+            },
+            {
+                "summary": "缺乏豪华感",
+                "summary_topic": "豪华感不足",
+                "uuid": [
+                    "d3ffb0d4-7035-4066-a60c-4083749454dd",
+                    "c3a99398-a458-4d1a-a60e-19c13d95819f"
+                ],
+                "keywords": [
+                    "豪华感",
+                    "内饰",
+                    "品牌"
+                ]
+            }
+        ],
+        "theme": "品牌口碑"
+    },
+    {
+        "advantage": [
+            {
+                "summary": "价格亲民，性价比高",
+                "summary_topic": "性价比优越",
+                "uuid": [
+                    "0c690df4-9c0a-44a1-80ae-7330569527ae",
+                    "f80981c3-1429-49a4-afb1-a4c04ac04204",
+                    "fa2dd876-d0dc-49d7-a911-a1b663ffd9d0"
+                ],
+                "keywords": [
+                    "价格",
+                    "性价比",
+                    "亲民",
+                    "实用"
+                ]
+            },
+            {
+                "summary": "价格相对便宜，性价比高",
+                "summary_topic": "价格优势",
+                "uuid": [
+                    "f74af694-c92a-4cd5-99b9-44f7aad3a5d1",
+                    "bac18a09-66c7-4b3e-8977-9714599afdc0",
+                    "ab05056a-d890-4163-bf72-11e64cb0c6a5"
+                ],
+                "keywords": [
+                    "便宜",
+                    "性价比",
+                    "价格合适"
+                ]
+            },
+            {
+                "summary": "购车补贴降低成本",
+                "summary_topic": "购车补贴",
+                "uuid": [
+                    "d5dd0c41-ce74-4c14-a845-663952072c6f",
+                    "caf045da-7c36-4f70-9526-39f03d1a34dd",
+                    "b5c92170-0cc9-455d-9f90-1e014df64388"
+                ],
+                "keywords": [
+                    "购置补贴",
+                    "国补",
+                    "价格",
+                    "全款落地"
+                ]
+            },
+            {
+                "summary": "油耗低，经济实惠",
+                "summary_topic": "低油耗",
+                "uuid": [
+                    "6779691a-78bf-4a53-9739-b38b7c1bca83",
+                    "6fab44f2-7012-4426-8a02-c870c21d7933",
+                    "cdf6e2ee-0168-4f90-8001-cba905dadcfb"
+                ],
+                "keywords": [
+                    "油耗",
+                    "经济",
+                    "性能"
+                ]
+            },
+            {
+                "summary": "性价比高，适合家用",
+                "summary_topic": "性价比",
+                "uuid": [
+                    "86d98366-d1eb-4f31-a291-c5ea3a334f49",
+                    "be223cca-a40a-4a7d-b65e-8042a2e17704",
+                    "e8bc89d1-dd43-41f5-a909-7e908647ce5b"
+                ],
+                "keywords": [
+                    "性价比",
+                    "家用",
+                    "舒适"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "保值率低",
+                "summary_topic": "保值问题",
+                "uuid": [
+                    "4237c92a-1ffb-4aa3-87be-f9cb8438c794",
+                    "6dce96c8-e0fd-4685-883e-a08ac1d76d99"
+                ],
+                "keywords": [
+                    "保值率",
+                    "二手车",
+                    "贬值"
+                ]
+            },
+            {
+                "summary": "配置缺失",
+                "summary_topic": "配置不足",
+                "uuid": [
+                    "18637523-24db-4fbb-a2e0-f184c8a244b6",
+                    "c74c796a-f8a7-4c0a-ab94-e3f125f9ee84"
+                ],
+                "keywords": [
+                    "配置",
+                    "缺失",
+                    "功能"
+                ]
+            },
+            {
+                "summary": "价格波动大",
+                "summary_topic": "价格不稳定",
+                "uuid": [
+                    "738c81ce-d4da-4586-b7e5-b7f7372ea442",
+                    "f0ee474a-0733-4b7a-8f4a-8156e33fbe06"
+                ],
+                "keywords": [
+                    "价格",
+                    "波动",
+                    "市场"
+                ]
+            },
+            {
+                "summary": "竞争激烈",
+                "summary_topic": "市场竞争",
+                "uuid": [
+                    "60a35081-8520-4675-8350-08ab9b93dc1d",
+                    "c7bcc9ae-340f-4aa9-af64-3c8c6e6ca98f"
+                ],
+                "keywords": [
+                    "竞争",
+                    "市场",
+                    "品牌"
+                ]
+            },
+            {
+                "summary": "续航能力不足",
+                "summary_topic": "续航问题",
+                "uuid": [
+                    "cb9b8680-d70d-4f5a-939f-64b2fdee3351",
+                    "d3e359d8-7f71-446a-ac44-ecd085a0525c"
+                ],
+                "keywords": [
+                    "续航",
+                    "电池",
+                    "使用场景"
+                ]
+            }
+        ],
+        "theme": "价格成本"
+    },
+    {
+        "advantage": [
+            {
+                "summary": "外观设计经典且吸引人",
+                "summary_topic": "外观吸引力",
+                "uuid": [
+                    "8d00d1e0-9583-4ea9-aa81-c7fa4e51983b",
+                    "b8e819ac-fb96-4d93-94ea-7dfa9f7bf5f2",
+                    "5a24a4cb-81af-42df-945a-a16096946df8",
+                    "149fb0f7-3126-4362-9b0f-baf5806c02b6",
+                    "d59bdad6-31e1-4475-b41d-5621b0dc2d6f"
+                ],
+                "keywords": [
+                    "外观",
+                    "设计",
+                    "经典",
+                    "吸引人"
+                ]
+            },
+            {
+                "summary": "内饰设计豪华感强",
+                "summary_topic": "内饰豪华感",
+                "uuid": [
+                    "d907e003-873d-40dc-96ff-c45c54c45fb1",
+                    "aad653df-5259-4532-b87e-3a09761db490",
+                    "fd88beda-ecaf-42ff-a4c7-f342e8fb108d",
+                    "1d4e5da3-8ba9-4b73-b7d4-7cfeb20db0ed",
+                    "9b29f0e2-9419-4123-abb4-f79181fa52de"
+                ],
+                "keywords": [
+                    "内饰",
+                    "豪华",
+                    "设计",
+                    "感"
+                ]
+            },
+            {
+                "summary": "外观设计优雅，吸引眼球",
+                "summary_topic": "外观吸引力",
+                "uuid": [
+                    "095bbf7e-5339-4628-a204-fea0e58eb121",
+                    "6d6019ce-a9c9-483a-8cee-b03a9e3c10d9",
+                    "25fb6ad6-42a8-4f21-a02d-9ba83ec7a251",
+                    "74aada8f-d82d-4142-a43d-b1c687c692d0",
+                    "55553b0d-4beb-443f-b3ff-1138a23fe350"
+                ],
+                "keywords": [
+                    "外观",
+                    "设计",
+                    "优雅",
+                    "吸引",
+                    "汉"
+                ]
+            },
+            {
+                "summary": "内饰空间大，舒适性好",
+                "summary_topic": "内饰空间",
+                "uuid": [
+                    "be223cca-a40a-4a7d-b65e-8042a2e17704",
+                    "6e70160c-55f2-4da5-b1ec-a3da9a090f78",
+                    "d7385818-f824-439b-b32d-0ee93814fbf0",
+                    "d5d7dc93-b491-456a-b919-fca2e56d2c20",
+                    "c310753d-2da2-4905-908f-74157eba7c32"
+                ],
+                "keywords": [
+                    "内饰",
+                    "空间",
+                    "舒适",
+                    "大"
+                ]
+            },
+            {
+                "summary": "配置丰富，满足日常需求",
+                "summary_topic": "配置实用性",
+                "uuid": [
+                    "2d6d39d1-978b-4a0e-a453-37f4b72d186e",
+                    "5ef9446c-a286-4492-8b16-9678b19f21ef",
+                    "d9ceb15a-2aad-4f94-9c3d-5fc2f3ac2e85",
+                    "1cb2f68a-ded5-4add-bb4c-d206a3a39c98",
+                    "1f6def6d-444a-41ec-a7ee-09c7a78cbd3a"
+                ],
+                "keywords": [
+                    "配置",
+                    "实用",
+                    "丰富"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "内饰塑料感强，质感不足",
+                "summary_topic": "内饰质感",
+                "uuid": [
+                    "5c23a42f-ada3-47b9-9fc4-b349994a170a",
+                    "6cd65ae2-9467-4c2d-8a83-1ac65376f3e3",
+                    "2238bd62-fd0a-4df9-93c1-40ad95e6ef46",
+                    "8f9681fc-c300-45a8-97bb-cac5a4cda892",
+                    "05c3dbf1-e2fc-448f-8a93-f95df7644277"
+                ],
+                "keywords": [
+                    "内饰",
+                    "塑料感",
+                    "质感",
+                    "不足"
+                ]
+            },
+            {
+                "summary": "档把设计不合理，使用体验差",
+                "summary_topic": "档把设计",
+                "uuid": [
+                    "37088544-cc89-43ae-a05b-cd1147019676",
+                    "32bffacd-62f2-41e9-93ec-a5d077040056",
+                    "188ec212-9189-4910-9559-1a0e2cd6f07a",
+                    "d3d7ff42-9136-4653-9428-b054045d27a6",
+                    "6cd65ae2-9467-4c2d-8a83-1ac65376f3e3"
+                ],
+                "keywords": [
+                    "档把",
+                    "设计",
+                    "使用体验",
+                    "不合理"
+                ]
+            },
+            {
+                "summary": "转弯半径大，操控性差",
+                "summary_topic": "操控性问题",
+                "uuid": [
+                    "be223cca-a40a-4a7d-b65e-8042a2e17704",
+                    "d9b44818-76fb-4f69-9435-4fb8b61329da",
+                    "d5d7dc93-b491-456a-b919-fca2e56d2c20",
+                    "1cb2f68a-ded5-4add-bb4c-d206a3a39c98",
+                    "d3d7ff42-9136-4653-9428-b054045d27a6"
+                ],
+                "keywords": [
+                    "转弯半径",
+                    "操控性",
+                    "问题"
+                ]
+            },
+            {
+                "summary": "外观设计缺乏创新，容易审美疲劳",
+                "summary_topic": "外观设计",
+                "uuid": [
+                    "c4aae46f-ee0e-4572-9452-358c0e5d74c8",
+                    "d9b44818-76fb-4f69-9435-4fb8b61329da",
+                    "8f9681fc-c300-45a8-97bb-cac5a4cda892",
+                    "f0045aa5-328a-4132-af87-5ddae721414f",
+                    "8dba4f1d-8c3d-4b8e-9f4e-5a8b4e1d5d7c"
+                ],
+                "keywords": [
+                    "外观",
+                    "设计",
+                    "创新",
+                    "审美疲劳"
+                ]
+            },
+            {
+                "summary": "后排空间不足，舒适性差",
+                "summary_topic": "后排空间",
+                "uuid": [
+                    "9b788ec1-a54d-49a7-8d6f-8141ef93063c",
+                    "d9b44818-76fb-4f69-9435-4fb8b61329da",
+                    "d5d7dc93-b491-456a-b919-fca2e56d2c20",
+                    "8f9681fc-c300-45a8-97bb-cac5a4cda892",
+                    "c310753d-2da2-4905-908f-74157eba7c32"
+                ],
+                "keywords": [
+                    "后排",
+                    "空间",
+                    "不足",
+                    "舒适性"
+                ]
+            }
+        ],
+        "theme": "外观内饰"
+    }
+]

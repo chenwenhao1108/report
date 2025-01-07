@@ -1,409 +1,269 @@
+'use client'
+
 import MultiDimensionAnalysis from '@/components/MultiDimensionAnalysis'
 import ScenarioAnalysis from '@/components/ScenarioAnalysis'
 import TopicAnalysis from '@/components/TopicAnalysis'
 import UserReviewsTable from '@/components/UserReviewsTable'
-import {
-  ChartFiled,
-  PostInfo,
-  RawAdvantage,
-  RawThemeAnalysis,
-  ReviewProp,
-  ScenarioData,
-  ScenarioRawData,
-  ThemeAnalysisData,
-  ThemeCount,
-  TopicCount,
-} from '@/types'
-import fs from 'fs'
-import path from 'path'
+import { PostInfo, RawThemeAnalysis } from '@/types'
+import { useEffect, useState } from 'react'
 
-async function getRawData() {
-  const res_module = JSON.parse(
-    fs.readFileSync(
-      path.join(process.cwd(), 'data', 'res_module.json'),
-      'utf8',
-    ),
-  )
+export default function Page() {
+  const [res_module, setRes_module] = useState<PostInfo[]>([])
+  const [filteredResModule, setFilteredResModule] = useState<PostInfo[]>([])
+  const [theme_analysis_raw, setTheme_analysis_raw] = useState<
+    RawThemeAnalysis[]
+  >([])
+  const [scenario_analysis_raw, setScenario_analysis_raw] = useState<any>([])
+  const [platforms, setPlatforms] = useState<string[]>(['dongchedi'])
+  const [productName, setProductName] = useState('yinhe_e8')
+  const [granularity, setGranularity] = useState<'month' | 'day'>('month')
 
-  const theme_analysis_raw = JSON.parse(
-    fs.readFileSync(
-      path.join(process.cwd(), 'data', 'theme_analysis.json'),
-      'utf8',
-    ),
-  )
+  const [startYear, setStartYear] = useState('')
+  const [StartMonth, setStartMonth] = useState('')
+  const [startDay, setStartDay] = useState('')
+  const [endYear, setEndYear] = useState('')
+  const [endMonth, setEndMonth] = useState('')
+  const [endDay, setEndDay] = useState('')
 
-  const scenario_analysis_raw = JSON.parse(
-    fs.readFileSync(
-      path.join(process.cwd(), 'data', 'scenario_analysis.json'),
-      'utf-8',
-    ),
-  )
+  const [loading, setLoading] = useState(false)
 
-  return {
-    res_module,
-    theme_analysis_raw,
-    scenario_analysis_raw,
-  }
-}
+  useEffect(() => {
+    const fetchData = async () => {
+      const searchParams = new URLSearchParams()
 
-function getThemeCount(res_module: PostInfo[]) {
-  const themeCountObj: Record<string, number> = {}
-  const themeCountArray: ThemeCount[] = []
-
-  res_module.forEach((item: PostInfo) => {
-    if (item.themes.length > 0) {
-      item.themes.forEach((theme: string) => {
-        if (themeCountObj[theme]) {
-          themeCountObj[theme] += 1
-        } else {
-          themeCountObj[theme] = 1
-        } 
+      platforms.forEach((platform) => {
+        searchParams.append('platform', platform)
       })
-    }
-  })
 
-  Object.entries(themeCountObj).forEach(([theme, count]) => {
-    themeCountArray.push({
-      theme: theme,
-      percentage: Math.round((count / res_module.length) * 100),
-    })
-  })
-  return {
-    themeCountArray: themeCountArray.sort(
-      (a, b) => b.percentage - a.percentage,
-    ),
-    themeCountObj: themeCountObj,
-  }
-}
+      searchParams.append('product_name', productName)
 
-function getTopicDiscussionArray(theme_analysis_raw: RawThemeAnalysis[]) {
-  let postsCount = 0
-  const topicDiscussionObj: Record<string, number> = {}
-
-  theme_analysis_raw.forEach((item: RawThemeAnalysis) => {
-    item.advantage.forEach((advantage: RawAdvantage) => {
-      const topic = advantage.summary_topic
-      const count = advantage.uuid.length
-
-      postsCount += count
-
-      if (topicDiscussionObj[topic]) {
-        topicDiscussionObj[topic] += count
-      } else {
-        topicDiscussionObj[topic] = count
+      try {
+        const response = await fetch(`/api/data?${searchParams.toString()}`)
+        if (!response.ok) {
+          throw new Error('Failed to fetch data')
+        }
+        const result = await response.json()
+        setRes_module(result['res_module'])
+        setFilteredResModule(result['res_module'])
+        setTheme_analysis_raw(result['theme_analysis_raw'])
+        setScenario_analysis_raw(result['scenario_analysis_raw'])
+      } catch (error) {
+        console.error('Error fetching data:', error)
       }
-    })
-
-    item.disadvantage.forEach((disadvantage: RawAdvantage) => {
-      const topic = disadvantage.summary_topic
-      const count = disadvantage.uuid.length
-
-      postsCount += count
-
-      if (topicDiscussionObj[topic]) {
-        topicDiscussionObj[topic] += count
-      } else {
-        topicDiscussionObj[topic] = count
-      }
-    })
-  })
-
-  const topicDiscussionArray: TopicCount[] = Object.entries(
-    topicDiscussionObj,
-  ).map(([topic, count]) => {
-    return {
-      topic: topic,
-      percentage: count/ postsCount * 100,
     }
-  }).sort((a, b) => b.percentage - a.percentage)
 
-  return topicDiscussionArray
-}
+    fetchData()
+  }, [platforms, productName])
 
-function getScenarioAnalysisData(
-  res_module: PostInfo[],
-  scenario_analysis_raw: ScenarioRawData[],
-  posts: Record<string, string>,
-) {
-  const postsCount = res_module.length
+  const options = [
+    { id: 'dongchedi', label: '懂车帝' },
+    { id: 'autohome', label: '汽车之家' },
+    { id: 'bili', label: 'Bilibili' },
+    { id: 'weibo', label: '微博' },
+  ]
 
-  const scenarioCount: Record<string, number> = {}
-
-  res_module.forEach((item: PostInfo) => {
-    if (scenarioCount[item.scenario]) {
-      scenarioCount[item.scenario] += 1
+  const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const optionId = event.target.id
+    if (event.target.checked) {
+      setPlatforms((prevSelected) => [...prevSelected, optionId])
     } else {
-      scenarioCount[item.scenario] = 1
-    }
-  })
-
-  const scenarioAnalysisArray: ScenarioData[] = scenario_analysis_raw.map(
-    (item: ScenarioRawData) => {
-      const scenarioPosts = item.uuid.map((uuid: string) => posts[uuid])
-
-      return {
-        scenario: item.scenario,
-        percentage: Math.ceil(
-          (scenarioCount[item.scenario] / postsCount) * 100,
-        ),
-        description: item.description,
-        overall_score: item.overall_score,
-        keywords: item.keywords,
-        dimensions: item.dimensions,
-        posts: scenarioPosts,
-      }
-    },
-  )
-
-  return scenarioAnalysisArray
-}
-
-function getChartData(
-  res_module: PostInfo[],
-  themeCountArray: ThemeCount[],
-  themeCountObj: Record<string, number>,
-) {
-  const discussionHeatChart: ChartFiled[] = themeCountArray.map((item) => {
-    return {
-      x: item.theme,
-      y: item.percentage,
-    }
-  })
-
-  const dimensionRating: Record<string, number> = {}
-
-
-  const trendingCount: Record<string, number> = {}
-  const trendingChart: ChartFiled[] = []
-
-  const themeDiscussionTrendingChart: Record<
-    string,
-    Record<string, number>
-  > = {}
-  const themeAttitudeTrendingChart: Record<string, Record<string, number>> = {}
-
-  const initialThemeDiscussionCount: Record<string, number> = {}
-  themeCountArray.forEach((item) => {
-    initialThemeDiscussionCount[item.theme] = 0
-  })
-
-  res_module.forEach((item: PostInfo) => {
-    // get dimension rating
-    if (item.themes.length > 0) {
-      for (const theme of item.themes) {
-        if (!dimensionRating[theme]) {
-          dimensionRating[theme] = 0
-        }
-        if (item.sentiment === 'positive') {
-          dimensionRating[theme] += 100
-        } else if (item.sentiment === 'neutral') {
-          dimensionRating[theme] += 50
-        }
-      }
-    }
-
-    const yearMonth: string = item.timestamp.substring(0, 7)
-
-    if (!trendingCount[yearMonth]) {
-      trendingCount[yearMonth] = 1
-    } else {
-      trendingCount[yearMonth] += 1
-    }
-
-    if (!themeDiscussionTrendingChart[yearMonth]) {
-      themeDiscussionTrendingChart[yearMonth] = { ...initialThemeDiscussionCount }
-    }
-    item.themes.forEach((theme: string) => {
-      themeDiscussionTrendingChart[yearMonth][theme] += 1
-    })
-
-    if (!themeAttitudeTrendingChart[yearMonth]) {
-      themeAttitudeTrendingChart[yearMonth] = {
-        positive: 0,
-        negative: 0,
-        neutral: 0,
-      }
-    }
-    switch (item.sentiment) {
-      case 'positive':
-        themeAttitudeTrendingChart[yearMonth]['positive'] += 1
-        break
-      case 'negative':
-        themeAttitudeTrendingChart[yearMonth]['negative'] += 1
-        break
-      case 'neutral':
-        themeAttitudeTrendingChart[yearMonth]['neutral'] += 1
-        break
-    }
-  })
-
-  const dimensionRatingChart: ChartFiled[] = Object.entries(dimensionRating).map(([theme, score]) => {
-return {
-      x: theme,
-      y: Math.ceil(score / themeCountObj[theme]),
-    }
-  }).sort((a, b) => b.y - a.y)
-
-  Object.entries(trendingCount).forEach(([yearMonth, count]) => {
-    trendingChart.push({
-      x: yearMonth,
-      y: count,
-    })
-  })
-
-  const sortedThemeDiscussionTrendingChart: Record<string, string | number>[] =
-    Object.entries(themeDiscussionTrendingChart)
-      .map(([yearMonth, themes]) => {
-        return {
-          yearMonth: yearMonth,
-          ...themes,
-        }
-      })
-      .sort(
-        (a, b) =>
-          new Date(a.yearMonth).getTime() - new Date(b.yearMonth).getTime(),
+      setPlatforms((prevSelected) =>
+        prevSelected.filter((id) => id !== optionId),
       )
-      
-  const sortedThemeAttitudeTrendingChart: Record<string, string | number>[] =
-    Object.entries(themeAttitudeTrendingChart)
-      .map(([yearMonth, sentiments]) => {
-        return {
-          yearMonth: yearMonth,
-          ...sentiments,
-        }
-      })
-      .sort(
-        (a, b) =>
-          new Date(a.yearMonth).getTime() - new Date(b.yearMonth).getTime(),
-      )
-
-  return {
-    chartData: {
-      discussionHeatChart,
-      dimensionRatingChart,
-      'trendingChart': trendingChart.sort(
-        (a, b) =>
-          new Date(a.x).getTime() - new Date(b.x).getTime(),
-      ),
-    },
-    themeDiscussionTrendingChart: sortedThemeDiscussionTrendingChart,
-    themeAttitudeTrendingChart: sortedThemeAttitudeTrendingChart,
+    }
   }
-}
 
-function getReviewsTableData(res_module: PostInfo[]) {
-  const reviews: ReviewProp[] = []
+  const years = Array.from(
+    { length: 10 },
+    (_, i) => new Date().getFullYear() - i,
+  )
+  const months = Array.from({ length: 12 }, (_, i) => i + 1)
+  const days = Array.from({ length: 31 }, (_, i) => i + 1)
 
-  res_module.forEach((item: PostInfo) => {
-    // Get reviews with no empty field
-    let skip = false
-    Object.entries(item).forEach(([, value]) => {
-      if (value.length === 0) skip = true
+  const handleDateChange = () => {
+    const startDate = `${startYear}-${StartMonth}-${startDay}`
+    const endDate = `${endYear}-${endMonth}-${endDay}`
+    const filteredResModule = res_module.filter((post: PostInfo) => {
+      const postDate = new Date(post.timestamp)
+      return postDate >= new Date(startDate) && postDate <= new Date(endDate)
     })
-
-    if (!skip) {
-      let sentiment: '中立' | '正面' | '负面' = '中立'
-      if (item.sentiment === 'negative') {
-        sentiment = '负面'
-      } else if (item.sentiment === 'positive') {
-        sentiment = '正面'
-      }
-
-      const review: ReviewProp = {
-        username: item.username,
-        user_type: item.user_type,
-        content: item.post,
-        keywords: item.keywords,
-        themes: item.themes,
-        sentiment,
-        language: item.language,
-        hasNoMeaningComment: item.is_valuable ? '否' : '是',
-        url: item.url,
-      }
-      reviews.push(review)
-    }
-  })
-
-  return reviews
-}
-
-function getPostsWithUuid(res_module: PostInfo[]) {
-  const posts: Record<string, string> = {}
-
-  res_module.forEach((item: PostInfo) => {
-    posts[item.uuid] = item.post
-  })
-
-  return posts
-}
-function getThemeAnalysisData(
-  posts: Record<string, string>,
-  theme_analysis_raw: RawThemeAnalysis[],
-) {
-  const themeAnalysisData: ThemeAnalysisData[] = theme_analysis_raw.map(
-    (item: RawThemeAnalysis) => {
-      return {
-        theme: item.theme,
-        advantages: item.advantage.map((advantage: RawAdvantage) => {
-          return {
-            summary: advantage.summary,
-            content: advantage.uuid.map((uuid: string) => posts[uuid]),
-            keywords: advantage.keywords,
-          }
-        }),
-        disadvantages: item.disadvantage.map((disadvantage: RawAdvantage) => {
-          return {
-            summary: disadvantage.summary,
-            content: disadvantage.uuid.map((uuid: string) => posts[uuid]),
-            keywords: disadvantage.keywords,
-          }
-        }),
-      }
-    },
-  )
-  return themeAnalysisData
-}
-
-export default async function Home() {
-  const { res_module, theme_analysis_raw, scenario_analysis_raw } =
-    await getRawData()
-
-  const reviews = getReviewsTableData(res_module)
-
-  const { themeCountArray, themeCountObj } = getThemeCount(res_module)
-
-  const {
-    chartData,
-    themeAttitudeTrendingChart,
-    themeDiscussionTrendingChart,
-  } = getChartData(res_module, themeCountArray, themeCountObj)
-
-  const themeAnalysisData = getThemeAnalysisData(
-    getPostsWithUuid(res_module),
-    theme_analysis_raw,
-  )
-  const posts = getPostsWithUuid(res_module)
-  const scenarioDataArray = getScenarioAnalysisData(
-    res_module,
-    scenario_analysis_raw,
-    posts,
-  )
-
-  const topicDiscussionArray = getTopicDiscussionArray(theme_analysis_raw)
+    setFilteredResModule(filteredResModule)
+  }
 
   return (
     <div className="flex flex-col gap-8 px-16 py-8">
-      <UserReviewsTable reviews={reviews} />
-      <TopicAnalysis topicDiscussionArray={topicDiscussionArray} />
-      <MultiDimensionAnalysis
-        chartData={chartData}
-        themeAnalysisData={themeAnalysisData}
-        themeTrendingChart={[
-          themeDiscussionTrendingChart,
-          themeAttitudeTrendingChart,
-        ]}
+      <div className='flex flex-col gap-4'>
+        <div className='flex items-center gap-4'>
+          <h2 className="text-lg font-medium">选择平台：</h2>
+          <div className="flex items-center gap-4 space-y-1">
+            {options.map((option) => (
+              <label key={option.id} className="flex items-center space-x-2">
+                <input
+                  type="checkbox"
+                  id={option.id}
+                  checked={platforms.includes(option.id)}
+                  onChange={handleOptionChange}
+                  className="rounded border-gray-300 text-blue-600 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                />
+                <span>{option.label}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+
+        <div className='flex items-center gap-4'>
+          <h2 className="text-lg font-medium">选择车型：</h2>
+          <div className="flex items-center gap-4 space-y-1">
+            <button
+              className={`rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 ${productName === 'yinhe_e8' ? 'shadow-inner' : 'shadow-md'}`}
+              onClick={() => setProductName('yinhe_e8')}
+            >
+              银河E8
+            </button>
+            <button
+              className={`rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 ${productName === 'byd_han' ? 'shadow-inner' : 'shadow-md'}`}
+              onClick={() => setProductName('byd_han')}
+            >
+              比亚迪汉
+            </button>
+            <button
+              className={`rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 ${productName === 'wenjie_m7' ? 'shadow-inner' : 'shadow-md'}`}
+              onClick={() => setProductName('wenjie_m7')}
+            >
+              问界M7
+            </button>
+            <button
+              className={`rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 ${productName === 'lixiang_l6' ? 'shadow-inner' : 'shadow-md'}`}
+              onClick={() => setProductName('lixiang_l6')}
+            >
+              理想L6
+            </button>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <h2 className="text-lg font-medium">选择日期粒度：</h2>
+          <button
+            className={`rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 ${granularity === 'month' ? 'shadow-inner' : 'shadow-md'}`}
+            onClick={() => setGranularity('month')}
+          >
+            月度
+          </button>
+          <button
+            className={`rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 ${granularity === 'day' ? 'shadow-inner' : 'shadow-md'}`}
+            onClick={() => setGranularity('day')}
+          >
+            日度
+          </button>
+        </div>
+        <div className="flex items-center gap-4">
+          <h2 className="text-lg font-medium">选择日期范围：</h2>
+          <span>From：</span>
+          <div className="flex space-x-2">
+            <select
+              value={startYear}
+              onChange={(e) => setStartYear(e.target.value)}
+              className="rounded border border-gray-300 p-2"
+            >
+              <option value="">Year</option>
+              {years.map((year) => (
+                <option key={year} value={year}>
+                  {year}
+                </option>
+              ))}
+            </select>
+
+            <select
+              value={StartMonth}
+              onChange={(e) => setStartMonth(e.target.value)}
+              className="rounded border border-gray-300 p-2"
+            >
+              <option value="">Month</option>
+              {months.map((month) => (
+                <option key={month} value={month}>
+                  {month}
+                </option>
+              ))}
+            </select>
+
+            <select
+              value={startDay}
+              onChange={(e) => setStartDay(e.target.value)}
+              className="rounded border border-gray-300 p-2"
+            >
+              <option value="">Day</option>
+              {days.map((day) => (
+                <option key={day} value={day}>
+                  {day}
+                </option>
+              ))}
+            </select>
+          </div>
+          <span>To：</span>
+          <div className="flex space-x-2">
+            <select
+              value={endYear}
+              onChange={(e) => setEndYear(e.target.value)}
+              className="rounded border border-gray-300 p-2"
+            >
+              <option value="">Year</option>
+              {years.map((year) => (
+                <option key={year} value={year}>
+                  {year}
+                </option>
+              ))}
+            </select>
+
+            <select
+              value={endMonth}
+              onChange={(e) => setEndMonth(e.target.value)}
+              className="rounded border border-gray-300 p-2"
+            >
+              <option value="">Month</option>
+              {months.map((month) => (
+                <option key={month} value={month}>
+                  {month}
+                </option>
+              ))}
+            </select>
+
+            <select
+              value={endDay}
+              onChange={(e) => setEndDay(e.target.value)}
+              className="rounded border border-gray-300 p-2"
+            >
+              <option value="">Day</option>
+              {days.map((day) => (
+                <option key={day} value={day}>
+                  {day}
+                </option>
+              ))}
+            </select>
+          </div>
+          <button
+            onClick={handleDateChange}
+            className="rounded bg-blue-500 px-6 py-2 text-white hover:bg-blue-600"
+          >
+            Confirm
+          </button>
+        </div>
+      </div>
+      <UserReviewsTable resModule={filteredResModule} />
+      <TopicAnalysis
+        themeAnalysisRaw={theme_analysis_raw}
+        platform={platforms[0]}
+        product_name={productName}
       />
-      <ScenarioAnalysis scenarioDataArray={scenarioDataArray} />
+      <MultiDimensionAnalysis
+        resModule={filteredResModule}
+        resModuleRaw={res_module}
+        themeAnalysisRaw={theme_analysis_raw}
+        granularity={granularity}
+      />
+      <ScenarioAnalysis
+        resModule={res_module}
+        scenarioAnalysisRaw={scenario_analysis_raw}
+      />
     </div>
   )
 }

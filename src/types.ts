@@ -13,7 +13,7 @@ export interface ReviewProp {
 export interface PostInfo {
   scenario: '独行侠' | '家庭出行' | '周末休闲'
   user_type: '车主' | '试驾' | '意向买家'
-  is_valuable: boolean
+  is_valuable: string
   reason: string
   keywords: string[]
   themes: string[]
@@ -33,12 +33,23 @@ export interface ThemeCount {
 
 export interface TopicCount {
   topic: string
+  isAdvantage: boolean
   percentage: number
 }
 
 export interface ChartFiled {
   x: string
   y: number
+}
+
+export interface DimensionRatingChartFiled {
+  theme: string
+  score: number
+}
+
+export interface DiscussionHeatChartFiled {
+  theme: string
+  percentage: number
 }
 
 export interface RawPost {
@@ -77,12 +88,7 @@ export interface ScenarioData {
   description: string
   overall_score: number
   keywords: string[]
-  dimensions: [
-    {
-      dimension: string
-      score: number
-    },
-  ]
+  dimensions: { dimension: string; score: number }[] // 修改这里
   posts: string[]
 }
 
@@ -91,11 +97,14 @@ export interface ScenarioRawData {
   description: string
   overall_score: number
   keywords: string[]
-  dimensions: [
-    {
-      dimension: string
-      score: number
-    },
-  ]
+  dimensions: Array<{
+    dimension: string
+    score: number
+  }>
   uuid: string[]
+}
+
+export interface TrendingChartField {
+  date: string
+  number: number
 }
