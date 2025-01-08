@@ -27,8 +27,11 @@ export default function Page() {
   const [endMonth, setEndMonth] = useState('')
   const [endDay, setEndDay] = useState('')
 
+  const [loading, setLoading] = useState(false)
+
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true)
       const searchParams = new URLSearchParams()
 
       platforms.forEach((platform) => {
@@ -49,6 +52,8 @@ export default function Page() {
         setScenario_analysis_raw(result['scenario_analysis_raw'])
       } catch (error) {
         console.error('Error fetching data:', error)
+      } finally {
+        setLoading(false)
       }
     }
 
@@ -62,6 +67,13 @@ export default function Page() {
     { id: 'weibo', label: '微博' },
   ]
 
+  if (loading) {
+    return (
+      <div className="flex h-screen w-screen items-center justify-center text-4xl font-bold">
+        Loading...
+      </div>
+    )
+  }
   const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const optionId = event.target.id
     if (event.target.checked) {
@@ -88,7 +100,6 @@ export default function Page() {
       return postDate >= new Date(startDate) && postDate <= new Date(endDate)
     })
     setFilteredResModule(filteredResModule)
-    console.log(filteredResModule.length)
   }
 
   return (
