@@ -1,3 +1,4 @@
+import { PostInfo, RawThemeAnalysis, ScenarioRawData } from '@/types'
 import {
   getRawData,
   mergeScenarioAnalysisData,
@@ -93,9 +94,9 @@ async function getDataBasedOnQuery(productName: string, platforms: string[]) {
     const rawData = await getRawData(platform, productName)
     return rawData
   } else {
-    const all_res_module: any[] = []
-    const all_theme_analysis_raw: any[] = []
-    const all_scenario_analysis_raw: any[] = []
+    const all_res_module: PostInfo[] = []
+    const all_theme_analysis_raw: RawThemeAnalysis[][] = []
+    const all_scenario_analysis_raw: ScenarioRawData[][] = []
 
     const rawDataPromises = platforms.map(async (platform) => {
       return await getRawData(platform, productName)

@@ -32,28 +32,6 @@ const UserReviewsTable = ({ resModule }: { resModule: PostInfo[] }) => {
 
   const totalPages = Math.ceil(filteredReviews.length / reviewsPerPage)
 
-  const handlePageChange = (pageNumber: number) => {
-    setCurrentPage(pageNumber)
-  }
-
-  const renderPageNumbers = () => {
-    const pageNumbers = []
-    for (let i = 1; i <= totalPages; i++) {
-      pageNumbers.push(
-        <button
-          key={i}
-          onClick={() => handlePageChange(i)}
-          className={`rounded-lg px-4 py-2 text-sm font-medium shadow-md hover:bg-gray-100 ${
-            currentPage === i ? 'bg-gray-100' : ''
-          }`}
-        >
-          {i}
-        </button>,
-      )
-    }
-    return pageNumbers
-  }
-
   const handlePrevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1)

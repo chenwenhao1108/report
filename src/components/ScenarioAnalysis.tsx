@@ -30,8 +30,6 @@ export default function ScenarioAnalysis({
     value: scenario.percentage,
   }))
 
-  console.log(scenarioDataArray)
-
   const COLORS = [
     '#1E90FF',
     '#40E0D0',

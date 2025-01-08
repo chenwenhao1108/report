@@ -4,7 +4,7 @@ import MultiDimensionAnalysis from '@/components/MultiDimensionAnalysis'
 import ScenarioAnalysis from '@/components/ScenarioAnalysis'
 import TopicAnalysis from '@/components/TopicAnalysis'
 import UserReviewsTable from '@/components/UserReviewsTable'
-import { PostInfo, RawThemeAnalysis } from '@/types'
+import { PostInfo, RawThemeAnalysis, ScenarioRawData } from '@/types'
 import { useEffect, useState } from 'react'
 
 export default function Page() {
@@ -13,7 +13,9 @@ export default function Page() {
   const [theme_analysis_raw, setTheme_analysis_raw] = useState<
     RawThemeAnalysis[]
   >([])
-  const [scenario_analysis_raw, setScenario_analysis_raw] = useState<any>([])
+  const [scenario_analysis_raw, setScenario_analysis_raw] = useState<
+    ScenarioRawData[]
+  >([])
   const [platforms, setPlatforms] = useState<string[]>(['dongchedi'])
   const [productName, setProductName] = useState('yinhe_e8')
   const [granularity, setGranularity] = useState<'month' | 'day'>('month')
@@ -24,8 +26,6 @@ export default function Page() {
   const [endYear, setEndYear] = useState('')
   const [endMonth, setEndMonth] = useState('')
   const [endDay, setEndDay] = useState('')
-
-  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -88,6 +88,7 @@ export default function Page() {
       return postDate >= new Date(startDate) && postDate <= new Date(endDate)
     })
     setFilteredResModule(filteredResModule)
+    console.log(filteredResModule.length)
   }
 
   return (
