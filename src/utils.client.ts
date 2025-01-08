@@ -169,6 +169,7 @@ export function getChartData(
   })
 
   res_module.forEach((item: PostInfo) => {
+    console.log(item)
     // get dimension rating
     if (item.themes.length > 0) {
       for (const theme of item.themes) {
@@ -320,14 +321,18 @@ export function getThemeAnalysisData(
         advantages: item.advantage.map((advantage: RawAdvantage) => {
           return {
             summary: advantage.summary,
-            content: advantage.uuid.map((uuid: string) => posts[uuid]),
+            content: advantage.uuid
+              .map((uuid: string) => posts[uuid])
+              .filter((content) => !!content),
             keywords: advantage.keywords,
           }
         }),
         disadvantages: item.disadvantage.map((disadvantage: RawAdvantage) => {
           return {
             summary: disadvantage.summary,
-            content: disadvantage.uuid.map((uuid: string) => posts[uuid]),
+            content: disadvantage.uuid
+              .map((uuid: string) => posts[uuid])
+              .filter((content) => !!content),
             keywords: disadvantage.keywords,
           }
         }),

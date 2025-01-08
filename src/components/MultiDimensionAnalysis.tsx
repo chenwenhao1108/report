@@ -70,6 +70,19 @@ export default function MultiDimensionAnalysis({
     themeRating[item.theme] = item.score
   })
 
+  themeAnalysisData.forEach((item) => {
+    let discussionCount = 0
+    item.advantages.forEach((advantage) => {
+      discussionCount += advantage.content.length
+    })
+    item.disadvantages.forEach((disadvantage) => {
+      discussionCount += disadvantage.content.length
+    })
+    if (discussionCount === 0) {
+      themeRating[item.theme] = 0
+    }
+  })
+
   return (
     <div className="flex flex-col items-center justify-center gap-4">
       <h1 className="my-4 self-start text-2xl font-bold">多维度分析</h1>
@@ -117,6 +130,7 @@ export default function MultiDimensionAnalysis({
           data.disadvantages.forEach((disadvantage) => {
             discussionCount += disadvantage.content.length
           })
+
           return (
             <div
               key={index}
@@ -143,9 +157,12 @@ export default function MultiDimensionAnalysis({
                         </h3>
                         <span className="ml-2 h-fit text-nowrap rounded-xl px-2 font-semibold ring-1 ring-gray-300">
                           讨论度
-                          {Math.ceil(
-                            (advantage.content.length / discussionCount) * 100,
-                          )}
+                          {discussionCount
+                            ? Math.ceil(
+                                (advantage.content.length / discussionCount) *
+                                  100,
+                              )
+                            : 0}
                           %
                         </span>
                       </div>
@@ -160,7 +177,7 @@ export default function MultiDimensionAnalysis({
                         ))}
                       </div>
                       <div className="flex flex-col gap-2 italic text-gray-600">
-                        {advantage.content.filter((a) => !!a).length > 0 ? (
+                        {advantage.content.length > 0 ? (
                           advantage.content.slice(0, 2).map((content) => {
                             return (
                               <p key={content} className="line-clamp-3">
@@ -192,10 +209,13 @@ export default function MultiDimensionAnalysis({
                         </h3>
                         <span className="ml-2 h-fit text-nowrap rounded-xl px-2 font-semibold ring-1 ring-gray-300">
                           讨论度
-                          {Math.ceil(
-                            (disadvantage.content.length / discussionCount) *
-                              100,
-                          )}
+                          {discussionCount
+                            ? Math.ceil(
+                                (disadvantage.content.length /
+                                  discussionCount) *
+                                  100,
+                              )
+                            : 0}
                           %
                         </span>
                       </div>
@@ -210,7 +230,7 @@ export default function MultiDimensionAnalysis({
                         ))}
                       </div>
                       <div className="flex flex-col gap-2 italic text-gray-600">
-                        {disadvantage.content.filter((a) => !!a).length > 0 ? (
+                        {disadvantage.content.length > 0 ? (
                           disadvantage.content.slice(0, 2).map((content) => (
                             <p key={content} className="line-clamp-3">
                               {content}

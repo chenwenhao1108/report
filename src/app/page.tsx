@@ -63,12 +63,22 @@ export default function Page() {
   }, [platforms, productName])
 
   useEffect(() => {
+    const startDate = `${startYear || '2016'}-${StartMonth || '01'}-${startDay || '01'}`
+    const endDate = `${endYear || '2025'}-${endMonth || '12'}-${endDay || '31'}`
+
+    const resModuleFilteredByDate = res_module.filter((post: PostInfo) => {
+      const postDate = new Date(post.timestamp)
+      return postDate >= new Date(startDate) && postDate <= new Date(endDate)
+    })
+
     if (userType) {
       setFilteredResModule(
-        res_module.filter((post: PostInfo) => post.user_type === userType),
+        resModuleFilteredByDate.filter(
+          (post: PostInfo) => post.user_type === userType,
+        ),
       )
     } else {
-      setFilteredResModule(res_module)
+      setFilteredResModule(resModuleFilteredByDate)
     }
   }, [userType, res_module])
 
@@ -97,6 +107,25 @@ export default function Page() {
     }
   }
 
+  const handleDateReset = () => {
+    setStartYear('')
+    setStartMonth('')
+    setStartDay('')
+    setEndYear('')
+    setEndMonth('')
+    setEndDay('')
+
+    if (userType) {
+      if (userType) {
+        setFilteredResModule(
+          res_module.filter((post: PostInfo) => post.user_type === userType),
+        )
+      } else {
+        setFilteredResModule(res_module)
+      }
+    }
+  }
+
   const years = Array.from(
     { length: 10 },
     (_, i) => new Date().getFullYear() - i,
@@ -105,14 +134,23 @@ export default function Page() {
   const days = Array.from({ length: 31 }, (_, i) => i + 1)
 
   const handleDateChange = () => {
+    let resModuleFilteredByUserType = res_module
+    if (userType) {
+      resModuleFilteredByUserType = res_module.filter(
+        (post: PostInfo) => post.user_type === userType,
+      )
+    }
+
     const startDate = `${startYear || '2016'}-${StartMonth || '01'}-${startDay || '01'}`
     const endDate = `${endYear || '2025'}-${endMonth || '12'}-${endDay || '31'}`
 
-    const filteredResModule = res_module.filter((post: PostInfo) => {
-      const postDate = new Date(post.timestamp)
-      return postDate >= new Date(startDate) && postDate <= new Date(endDate)
-    })
-    setFilteredResModule(filteredResModule)
+    const resModuleFilteredByDate = resModuleFilteredByUserType.filter(
+      (post: PostInfo) => {
+        const postDate = new Date(post.timestamp)
+        return postDate >= new Date(startDate) && postDate <= new Date(endDate)
+      },
+    )
+    setFilteredResModule(resModuleFilteredByDate)
   }
 
   return (
@@ -270,6 +308,12 @@ export default function Page() {
             className="rounded bg-blue-500 px-6 py-2 text-white hover:bg-blue-600"
           >
             Confirm
+          </button>
+          <button
+            onClick={handleDateReset}
+            className="rounded bg-blue-500 px-6 py-2 text-white hover:bg-blue-600"
+          >
+            Reset
           </button>
         </div>
         <div className="flex items-center gap-4">
