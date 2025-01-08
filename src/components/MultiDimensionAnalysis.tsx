@@ -28,12 +28,10 @@ import ThemeDiscussionTrendingChart from './ThemeDiscussionTrendingChart'
 
 export default function MultiDimensionAnalysis({
   resModule,
-  resModuleRaw,
   themeAnalysisRaw,
   granularity,
 }: {
   resModule: PostInfo[]
-  resModuleRaw: PostInfo[]
   themeAnalysisRaw: RawThemeAnalysis[]
   granularity: 'month' | 'day'
 }) {
@@ -47,12 +45,25 @@ export default function MultiDimensionAnalysis({
     themeDiscussionTrendingChart,
   } = getChartData(resModule, themeCountArray, themeCountObj, granularity)
 
-  const posts = getPostsWithUuid(resModuleRaw)
+  const themes = [
+    '外观内饰',
+    '智能系统',
+    '驾驶性能',
+    '空间舒适',
+    '价格成本',
+    '品牌口碑',
+    '购买体验',
+    '售后服务',
+  ]
+
+  const indexMap = new Map(themes.map((theme, index) => [theme, index]))
+
+  const posts = getPostsWithUuid(resModule)
 
   const themeAnalysisData: ThemeAnalysisData[] = getThemeAnalysisData(
     posts,
     themeAnalysisRaw,
-  )
+  ).sort((a, b) => indexMap.get(a.theme)! - indexMap.get(b.theme)!)
 
   const themeRating: Record<string, number> = {}
   dimensionRatingChart.forEach((item: DimensionRatingChartFiled) => {
@@ -114,86 +125,105 @@ export default function MultiDimensionAnalysis({
               <div className="flex justify-between">
                 <span className="my-2 text-lg font-bold">{data.theme}</span>
                 <span className="text-lg font-bold text-gray-400">
-                  {themeRating[data.theme]}分
+                  {themeRating[data.theme] ?? 0}分
                 </span>
               </div>
               <div className="flex flex-col gap-4">
                 <h2 className="text-lg font-bold text-green-500">优点</h2>
-                {data.advantages.map((advantage, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col gap-4 border-l-4 border-green-300 px-4"
-                  >
-                    <div className="flex justify-between">
-                      <h3 className="text-base font-bold">
-                        {advantage.summary}
-                      </h3>
-                      <span className="ml-2 h-fit text-nowrap rounded-xl px-2 font-semibold ring-1 ring-gray-300">
-                        讨论度
-                        {Math.ceil(
-                          (advantage.content.length / discussionCount) * 100,
-                        )}
-                        %
-                      </span>
-                    </div>
-                    <div className="flex gap-2 overflow-auto py-1 pl-2">
-                      {advantage.keywords.slice(0, 5).map((keyword) => (
-                        <span
-                          key={keyword}
-                          className="flex items-center justify-center text-nowrap rounded-xl px-2 text-sm font-semibold ring-1 ring-gray-300"
-                        >
-                          {keyword}
+                {data.advantages
+                  .sort((a, b) => b.content.length - a.content.length)
+                  .map((advantage, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col gap-4 border-l-4 border-green-300 px-4"
+                    >
+                      <div className="flex justify-between">
+                        <h3 className="text-base font-bold">
+                          {advantage.summary}
+                        </h3>
+                        <span className="ml-2 h-fit text-nowrap rounded-xl px-2 font-semibold ring-1 ring-gray-300">
+                          讨论度
+                          {Math.ceil(
+                            (advantage.content.length / discussionCount) * 100,
+                          )}
+                          %
                         </span>
-                      ))}
+                      </div>
+                      <div className="flex gap-2 overflow-auto py-1 pl-2">
+                        {advantage.keywords.slice(0, 5).map((keyword) => (
+                          <span
+                            key={keyword}
+                            className="flex items-center justify-center text-nowrap rounded-xl px-2 text-sm font-semibold ring-1 ring-gray-300"
+                          >
+                            {keyword}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex flex-col gap-2 italic text-gray-600">
+                        {advantage.content.filter((a) => !!a).length > 0 ? (
+                          advantage.content.slice(0, 2).map((content) => {
+                            return (
+                              <p key={content} className="line-clamp-3">
+                                {content}
+                              </p>
+                            )
+                          })
+                        ) : (
+                          <p className="text-gray-400">
+                            当前日期范围及用户类型下无评论
+                          </p>
+                        )}
+                      </div>
                     </div>
-                    <div className="flex flex-col gap-2 italic text-gray-600">
-                      {advantage.content.slice(0, 2).map((content) => (
-                        <p key={content} className="line-clamp-3">
-                          {content}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+                  ))}
               </div>
               <div className="flex flex-col gap-4">
                 <h2 className="text-lg font-bold text-red-600">有待改进</h2>
-                {data.disadvantages.map((disadvantage, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col gap-4 border-l-4 border-red-600 px-4"
-                  >
-                    <div className="flex justify-between">
-                      <h3 className="text-base font-bold">
-                        {disadvantage.summary}
-                      </h3>
-                      <span className="ml-2 h-fit text-nowrap rounded-xl px-2 font-semibold ring-1 ring-gray-300">
-                        讨论度
-                        {Math.ceil(
-                          (disadvantage.content.length / discussionCount) * 100,
-                        )}
-                        %
-                      </span>
-                    </div>
-                    <div className="flex gap-2 overflow-auto py-1 pl-2">
-                      {disadvantage.keywords.slice(0, 5).map((keyword) => (
-                        <span
-                          key={keyword}
-                          className="flex items-center justify-center text-nowrap rounded-xl px-2 text-sm font-semibold ring-1 ring-gray-300"
-                        >
-                          {keyword}
+                {data.disadvantages
+                  .sort((a, b) => b.content.length - a.content.length)
+                  .map((disadvantage, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col gap-4 border-l-4 border-red-600 px-4"
+                    >
+                      <div className="flex justify-between">
+                        <h3 className="text-base font-bold">
+                          {disadvantage.summary}
+                        </h3>
+                        <span className="ml-2 h-fit text-nowrap rounded-xl px-2 font-semibold ring-1 ring-gray-300">
+                          讨论度
+                          {Math.ceil(
+                            (disadvantage.content.length / discussionCount) *
+                              100,
+                          )}
+                          %
                         </span>
-                      ))}
+                      </div>
+                      <div className="flex gap-2 overflow-auto py-1 pl-2">
+                        {disadvantage.keywords.slice(0, 5).map((keyword) => (
+                          <span
+                            key={keyword}
+                            className="flex items-center justify-center text-nowrap rounded-xl px-2 text-sm font-semibold ring-1 ring-gray-300"
+                          >
+                            {keyword}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex flex-col gap-2 italic text-gray-600">
+                        {disadvantage.content.filter((a) => !!a).length > 0 ? (
+                          disadvantage.content.slice(0, 2).map((content) => (
+                            <p key={content} className="line-clamp-3">
+                              {content}
+                            </p>
+                          ))
+                        ) : (
+                          <p className="text-gray-400">
+                            当前日期范围及用户类型下暂无评论
+                          </p>
+                        )}
+                      </div>
                     </div>
-                    <div className="flex flex-col gap-2 italic text-gray-600">
-                      {disadvantage.content.slice(0, 2).map((content) => (
-                        <p key={content} className="line-clamp-3">
-                          {content}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           )

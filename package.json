@@ -10,19 +10,19 @@
     "fix-formatting": "prettier 'src/**/*.{js,jsx,ts,tsx}' --write"
   },
   "dependencies": {
-    "@ant-design/charts": "^2.2.6",
-    "@ant-design/plots": "^2.3.2",
     "next": "15.1.2",
     "prettier": "^3.4.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "recharts": "^2.15.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.15.0",
+    "wordcloud": "^1.2.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/wordcloud": "^1.2.2",
     "eslint": "^9",
     "eslint-config-next": "15.1.2",
     "postcss": "^8",

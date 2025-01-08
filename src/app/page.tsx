@@ -27,6 +27,8 @@ export default function Page() {
   const [endMonth, setEndMonth] = useState('')
   const [endDay, setEndDay] = useState('')
 
+  const [userType, setUserType] = useState('')
+
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
@@ -59,6 +61,16 @@ export default function Page() {
 
     fetchData()
   }, [platforms, productName])
+
+  useEffect(() => {
+    if (userType) {
+      setFilteredResModule(
+        res_module.filter((post: PostInfo) => post.user_type === userType),
+      )
+    } else {
+      setFilteredResModule(res_module)
+    }
+  }, [userType, res_module])
 
   const options = [
     { id: 'dongchedi', label: '懂车帝' },
@@ -93,8 +105,9 @@ export default function Page() {
   const days = Array.from({ length: 31 }, (_, i) => i + 1)
 
   const handleDateChange = () => {
-    const startDate = `${startYear}-${StartMonth}-${startDay}`
-    const endDate = `${endYear}-${endMonth}-${endDay}`
+    const startDate = `${startYear || '2016'}-${StartMonth || '01'}-${startDay || '01'}`
+    const endDate = `${endYear || '2025'}-${endMonth || '12'}-${endDay || '31'}`
+
     const filteredResModule = res_module.filter((post: PostInfo) => {
       const postDate = new Date(post.timestamp)
       return postDate >= new Date(startDate) && postDate <= new Date(endDate)
@@ -259,16 +272,38 @@ export default function Page() {
             Confirm
           </button>
         </div>
+        <div className="flex items-center gap-4">
+          <h2 className="text-lg font-medium">选择用户类型：</h2>
+          <button
+            className={`rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 ${userType ? 'shadow-md' : 'shadow-inner'}`}
+            onClick={() => setUserType('')}
+          >
+            全部
+          </button>
+          <button
+            className={`rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 ${userType === '车主' ? 'shadow-inner' : 'shadow-md'}`}
+            onClick={() => setUserType('车主')}
+          >
+            车主
+          </button>
+          <button
+            className={`rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 ${userType === '试驾' ? 'shadow-inner' : 'shadow-md'}`}
+            onClick={() => setUserType('试驾')}
+          >
+            试驾
+          </button>
+          <button
+            className={`rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-100 ${userType === '意向买家' ? 'shadow-inner' : 'shadow-md'}`}
+            onClick={() => setUserType('意向买家')}
+          >
+            普通网友
+          </button>
+        </div>
       </div>
       <UserReviewsTable resModule={filteredResModule} />
-      <TopicAnalysis
-        themeAnalysisRaw={theme_analysis_raw}
-        platform={platforms[0]}
-        product_name={productName}
-      />
+      <TopicAnalysis themeAnalysisRaw={theme_analysis_raw} />
       <MultiDimensionAnalysis
         resModule={filteredResModule}
-        resModuleRaw={res_module}
         themeAnalysisRaw={theme_analysis_raw}
         granularity={granularity}
       />

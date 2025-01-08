@@ -82,7 +82,7 @@ export default function ScenarioAnalysis({
                   </h2>
 
                   <span className="h-fit rounded-3xl px-2 text-sm font-medium ring-1 ring-gray-300">
-                    讨论度 {scenarioData.percentage}%
+                    讨论度 {Math.ceil(scenarioData.percentage)}%
                   </span>
                 </div>
                 <p className="mt-2 text-gray-700">{scenarioData.description}</p>
@@ -106,17 +106,22 @@ export default function ScenarioAnalysis({
               </div>
               <div className="flex flex-col gap-4">
                 <h3 className="font-semibold">维度匹配</h3>
-                {scenarioData.dimensions.slice(0, 5).map((dimension) => (
-                  <div
-                    key={dimension.dimension}
-                    className="flex justify-between"
-                  >
-                    <span className="text-gray-700">{dimension.dimension}</span>
-                    <span className="text-sm text-gray-700">
-                      {dimension.score} 分
-                    </span>
-                  </div>
-                ))}
+                {scenarioData.dimensions
+                  .sort((a, b) => b.score - a.score)
+                  .slice(0, 5)
+                  .map((dimension) => (
+                    <div
+                      key={dimension.dimension}
+                      className="flex justify-between"
+                    >
+                      <span className="text-gray-700">
+                        {dimension.dimension}
+                      </span>
+                      <span className="text-sm text-gray-700">
+                        {Math.ceil(dimension.score)} 分
+                      </span>
+                    </div>
+                  ))}
               </div>
               <div>
                 <h3 className="font-semibold">用户反馈</h3>

@@ -12,26 +12,11 @@ const UserReviewsTable = ({ resModule }: { resModule: PostInfo[] }) => {
   const [reviewsPerPage] = useState(8)
 
   useEffect(() => {
+    const reviews = getReviewsTableData(resModule)
     setFilteredReviews(reviews)
   }, [resModule])
-  const selectOwner = () => {
-    setFilteredReviews(reviews.filter((review) => review.user_type === '车主'))
-  }
-  const selectTestDriver = () => {
-    setFilteredReviews(reviews.filter((review) => review.user_type === '试驾'))
-  }
-  const selectIntention = () => {
-    setFilteredReviews(
-      reviews.filter((review) => review.user_type === '意向买家'),
-    )
-  }
-
-  const selectAll = () => {
-    setFilteredReviews(reviews)
-  }
 
   const totalPages = Math.ceil(filteredReviews.length / reviewsPerPage)
-
   const handlePrevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1)
@@ -47,32 +32,6 @@ const UserReviewsTable = ({ resModule }: { resModule: PostInfo[] }) => {
   return (
     <div className="w-full font-normal">
       <h1 className="text-2xl font-bold">用户评论数据展示</h1>
-      <div className="my-2 flex w-full justify-end gap-2">
-        <button
-          className="rounded-lg px-4 py-2 text-sm font-medium shadow-md hover:bg-gray-100"
-          onClick={selectAll}
-        >
-          全部
-        </button>
-        <button
-          className="rounded-lg px-4 py-2 text-sm font-medium shadow-md hover:bg-gray-100"
-          onClick={selectOwner}
-        >
-          车主
-        </button>
-        <button
-          className="rounded-lg px-4 py-2 text-sm font-medium shadow-md hover:bg-gray-100"
-          onClick={selectTestDriver}
-        >
-          试驾
-        </button>
-        <button
-          className="rounded-lg px-4 py-2 text-sm font-medium shadow-md hover:bg-gray-100"
-          onClick={selectIntention}
-        >
-          普通网友
-        </button>
-      </div>
       <table className="w-full border-collapse">
         <thead>
           <tr className="border-b border-gray-300">
