@@ -1,3 +1,5 @@
+'use client'
+
 import { RawThemeAnalysis } from '@/types'
 import { getTopicDiscussionArray } from '@/utils.client'
 import WordCloudComponent from './WordCloud'

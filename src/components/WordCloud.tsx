@@ -1,11 +1,14 @@
-import React, { useEffect, useRef } from 'react'
-import WordCloud from 'wordcloud'
+'use client'
+
+import React, { useEffect, useRef, useState } from 'react'
 
 interface WordCloudComponentProps {
   words: [string, number][]
   width?: number
   height?: number
 }
+
+type WordCloudType = (canvas: HTMLCanvasElement, options: object) => void
 
 const WordCloudComponent: React.FC<WordCloudComponentProps> = ({
   words,
@@ -14,8 +17,18 @@ const WordCloudComponent: React.FC<WordCloudComponentProps> = ({
 }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
 
+  const [WordCloud, setWordCloud] = useState<WordCloudType | null>(null)
+
   useEffect(() => {
-    if (canvasRef.current && words && words.length > 0) {
+    if (typeof window !== 'undefined') {
+      import('wordcloud').then((module) => {
+        setWordCloud(() => module.default)
+      })
+    }
+  }, [])
+
+  useEffect(() => {
+    if (WordCloud && canvasRef.current && words && words.length > 0) {
       WordCloud(canvasRef.current, {
         list: words,
         gridSize: 20,
@@ -30,7 +43,7 @@ const WordCloudComponent: React.FC<WordCloudComponentProps> = ({
         shape: 'circle',
       })
     }
-  }, [words])
+  }, [words, WordCloud])
 
   return <canvas ref={canvasRef} width={width} height={height} />
 }
