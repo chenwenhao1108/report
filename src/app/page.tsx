@@ -63,7 +63,12 @@ export default function Page() {
           throw new Error('Failed to fetch data')
         }
         const result = await response.json()
-        setAllData(result)
+        setAllData((prevData) => {
+          return {
+            ...prevData,
+            ['dongchedi']: result['dongchedi'],
+          }
+        })
         setRes_module(result['dongchedi']['yinhe_e8']['res_module'])
         setFilteredResModule(result['dongchedi']['yinhe_e8']['res_module'])
         setTheme_analysis_raw(
