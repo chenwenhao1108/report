@@ -116,13 +116,11 @@ export default function Page() {
     setEndDay('')
 
     if (userType) {
-      if (userType) {
-        setFilteredResModule(
-          res_module.filter((post: PostInfo) => post.user_type === userType),
-        )
-      } else {
-        setFilteredResModule(res_module)
-      }
+      setFilteredResModule(
+        res_module.filter((post: PostInfo) => post.user_type === userType),
+      )
+    } else {
+      setFilteredResModule(res_module)
     }
   }
 
