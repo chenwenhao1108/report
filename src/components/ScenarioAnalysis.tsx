@@ -42,33 +42,33 @@ export default function ScenarioAnalysis({
   return (
     <div>
       <h1 className="my-4 text-2xl font-bold">购车场景分析</h1>
+      <div className="mb-4 flex h-[500px] flex-col rounded-lg p-4 ring-2 ring-gray-200">
+        <h2 className="text-xl font-bold">场景分布</h2>
+        <ResponsiveContainer width="100%" height="100%">
+          <PieChart>
+            <Pie
+              data={data}
+              cx="50%"
+              cy="50%"
+              innerRadius="50%"
+              outerRadius="80%"
+              dataKey="value"
+              nameKey="scenario"
+              labelLine={false}
+            >
+              {data.map((entry, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill={COLORS[index % COLORS.length]}
+                />
+              ))}
+            </Pie>
+            <Tooltip />
+            <Legend layout="vertical" align="right" verticalAlign="top" />
+          </PieChart>
+        </ResponsiveContainer>
+      </div>
       <div className="grid grid-cols-2 gap-4">
-        <div className="flex flex-col rounded-lg p-4 ring-2 ring-gray-200">
-          <h2 className="text-xl font-bold">场景分布</h2>
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={data}
-                cx="50%"
-                cy="50%"
-                innerRadius="50%"
-                outerRadius="80%"
-                dataKey="value"
-                nameKey="scenario"
-                labelLine={false}
-              >
-                {data.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={COLORS[index % COLORS.length]}
-                  />
-                ))}
-              </Pie>
-              <Tooltip />
-              <Legend layout="vertical" align="right" verticalAlign="top" />
-            </PieChart>
-          </ResponsiveContainer>
-        </div>
         {scenarioDataArray.map((scenarioData: ScenarioData) => {
           return (
             <div
