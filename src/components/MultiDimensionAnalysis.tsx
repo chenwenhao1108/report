@@ -19,6 +19,7 @@ import {
   Legend,
   Line,
   LineChart,
+  ReferenceLine,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -30,10 +31,14 @@ export default function MultiDimensionAnalysis({
   resModule,
   themeAnalysisRaw,
   granularity,
+  releaseDate,
+  productName,
 }: {
   resModule: PostInfo[]
   themeAnalysisRaw: RawThemeAnalysis[]
   granularity: 'month' | 'day'
+  releaseDate: string
+  productName: string
 }) {
   const { themeCountArray, themeCountObj } = getThemeCount(resModule)
 
@@ -82,6 +87,8 @@ export default function MultiDimensionAnalysis({
       themeRating[item.theme] = 0
     }
   })
+
+  console.log(releaseDate)
 
   return (
     <div className="flex flex-col items-center justify-center gap-4">
@@ -261,13 +268,43 @@ export default function MultiDimensionAnalysis({
             <XAxis dataKey="date" />
             <YAxis />
             <Tooltip />
+            {productName === 'byd_han' && (
+              <ReferenceLine
+                x={granularity === 'month' ? '2022-04' : '2022-04-15'}
+                stroke="red"
+                strokeDasharray="3 3"
+                label={{
+                  value: '改款日',
+                  position: 'top',
+                  fill: 'black',
+                  offset: -15,
+                  className: 'font-bold',
+                }}
+              />
+            )}
+            <ReferenceLine
+              x={releaseDate}
+              stroke="red"
+              strokeDasharray="3 3"
+              label={{
+                value: '发布日',
+                position: 'top',
+                fill: 'black',
+                offset: -15,
+                className: 'font-bold',
+              }}
+            />
           </LineChart>
         </ResponsiveContainer>
       </div>
       <div className="flex w-full flex-col gap-4 rounded-lg p-4 ring-2 ring-gray-200">
         <h2 className="text-xl font-bold">主题讨论度趋势</h2>
         {granularity === 'month' ? (
-          <ThemeDiscussionTrendingChart data={themeDiscussionTrendingChart} />
+          <ThemeDiscussionTrendingChart
+            data={themeDiscussionTrendingChart}
+            releaseDate={releaseDate}
+            productName={productName}
+          />
         ) : (
           <ResponsiveContainer width="100%" height={400}>
             <BarChart
@@ -292,6 +329,32 @@ export default function MultiDimensionAnalysis({
               <Bar dataKey="品牌口碑" stackId="a" fill="#CF1322" />
               <Bar dataKey="购买体验" stackId="a" fill="#13C2C2" />
               <Bar dataKey="售后服务" stackId="a" fill="#722ED1" />
+              {productName === 'byd_han' && (
+                <ReferenceLine
+                  x={granularity === 'day' ? '2022-04-15' : '2022-04'}
+                  stroke="red"
+                  strokeDasharray="3 3"
+                  label={{
+                    value: '改款日',
+                    position: 'top',
+                    fill: 'black',
+                    offset: -15,
+                    className: 'font-bold',
+                  }}
+                />
+              )}
+              <ReferenceLine
+                x={releaseDate}
+                stroke="red"
+                strokeDasharray="3 3"
+                label={{
+                  value: '发布日',
+                  position: 'top',
+                  fill: 'black',
+                  offset: -15,
+                  className: 'font-bold',
+                }}
+              />
             </BarChart>
           </ResponsiveContainer>
         )}
@@ -317,6 +380,32 @@ export default function MultiDimensionAnalysis({
             <Bar dataKey="negative" stackId="a" fill="#dc2626" />
             <Bar dataKey="neutral" stackId="a" fill="#D3D3D3" />
             <Bar dataKey="positive" stackId="a" fill="#86efac" />
+            {productName === 'byd_han' && (
+              <ReferenceLine
+                x={granularity === 'day' ? '2022-03-15' : '2022-03'}
+                stroke="red"
+                strokeDasharray="3 3"
+                label={{
+                  value: '改款日',
+                  position: 'top',
+                  fill: 'black',
+                  offset: -15,
+                  className: 'font-bold',
+                }}
+              />
+            )}
+            <ReferenceLine
+              x={releaseDate}
+              stroke="red"
+              strokeDasharray="3 3"
+              label={{
+                value: '发布日',
+                position: 'top',
+                fill: 'black',
+                offset: -15,
+                className: 'font-bold',
+              }}
+            />
           </BarChart>
         </ResponsiveContainer>
       </div>

@@ -4,6 +4,7 @@ import {
   Legend,
   Line,
   LineChart,
+  ReferenceLine,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -26,8 +27,12 @@ type ColorMap = {
 
 const ThemeDiscussionTrendingChart = ({
   data,
+  releaseDate,
+  productName,
 }: {
   data: Record<string, number | string>[]
+  releaseDate: string
+  productName: string
 }) => {
   const colors: ColorMap = {
     外观内饰: '#1890FF',
@@ -94,6 +99,32 @@ const ThemeDiscussionTrendingChart = ({
               name={metric}
             />
           ))}
+          {productName === 'byd_han' && (
+            <ReferenceLine
+              x="2022-03"
+              stroke="red"
+              strokeDasharray="3 3"
+              label={{
+                value: '改款日',
+                position: 'top',
+                fill: 'black',
+                offset: -15,
+                className: 'font-bold',
+              }}
+            />
+          )}
+          <ReferenceLine
+            x={releaseDate}
+            stroke="red"
+            strokeDasharray="3 3"
+            label={{
+              value: '发布日',
+              position: 'top',
+              fill: 'black',
+              offset: -15,
+              className: 'font-bold',
+            }}
+          />
         </LineChart>
       </ResponsiveContainer>
     </div>

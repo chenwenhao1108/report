@@ -118,3 +118,8 @@ export interface AllData {
     }
   }
 }
+
+export interface ReleaseData {
+  productName: string
+  date: string
+}

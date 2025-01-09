@@ -36,6 +36,23 @@ export default function Page() {
 
   const [loading, setLoading] = useState(true)
 
+  const [releaseDate, setReleaseDate] = useState('')
+
+  const releaseDates: Record<string, string> = {
+    yinhe_e8: '2024-01-05',
+    wenjie_m7: '2023-09-12',
+    byd_han: '2020-07-12',
+    lixiang_l6: '2024-4-18',
+  }
+
+  useEffect(() => {
+    if (granularity === 'day') {
+      setReleaseDate(releaseDates[productName])
+    } else {
+      setReleaseDate(releaseDates[productName].slice(0, 7))
+    }
+  }, [productName, granularity])
+
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true)
@@ -376,9 +393,11 @@ export default function Page() {
       <UserReviewsTable resModule={filteredResModule} />
       <TopicAnalysis themeAnalysisRaw={theme_analysis_raw} />
       <MultiDimensionAnalysis
+        releaseDate={releaseDate}
         resModule={filteredResModule}
         themeAnalysisRaw={theme_analysis_raw}
         granularity={granularity}
+        productName={productName}
       />
       <ScenarioAnalysis
         resModule={res_module}
