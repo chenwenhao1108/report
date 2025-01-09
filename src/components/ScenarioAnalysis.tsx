@@ -88,41 +88,6 @@ export default function ScenarioAnalysis({
                 <p className="mt-2 text-gray-700">{scenarioData.description}</p>
               </div>
 
-              <div className="flex justify-between">
-                <h3 className="font-semibold">整体匹配度</h3>
-                <span className="text-gray-700">
-                  {Math.ceil(scenarioData.overall_score)} 分
-                </span>
-              </div>
-              <div className="flex gap-2">
-                {scenarioData.keywords.slice(0, 7).map((keyword) => (
-                  <span
-                    key={keyword}
-                    className="flex items-center justify-center rounded-xl px-2 text-sm font-medium ring-2 ring-gray-200"
-                  >
-                    {keyword}
-                  </span>
-                ))}
-              </div>
-              <div className="flex flex-col gap-4">
-                <h3 className="font-semibold">维度匹配</h3>
-                {scenarioData.dimensions
-                  .sort((a, b) => b.score - a.score)
-                  .slice(0, 5)
-                  .map((dimension) => (
-                    <div
-                      key={dimension.dimension}
-                      className="flex justify-between"
-                    >
-                      <span className="text-gray-700">
-                        {dimension.dimension}
-                      </span>
-                      <span className="text-sm text-gray-700">
-                        {Math.ceil(dimension.score)} 分
-                      </span>
-                    </div>
-                  ))}
-              </div>
               <div>
                 <h3 className="font-semibold">用户反馈</h3>
                 <div className="mt-2 line-clamp-3 border-l-2 border-gray-400 pl-2 italic text-gray-700">
