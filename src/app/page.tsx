@@ -96,11 +96,6 @@ export default function Page() {
       for (const platform of platforms) {
         const data = await fetchData(platform)
         setAllData((prevData) => {
-          if (!prevData) {
-            return {
-              [platform]: data,
-            }
-          }
           return {
             ...prevData,
             [platform]: data,
