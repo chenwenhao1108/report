@@ -106,12 +106,17 @@ export default function Page() {
             [platform]: data,
           }
         })
+        console.log(`${platform} done`)
       }
     }
 
     fetchFirstData()
     fetchOtherData()
   }, [])
+
+  useEffect(() => {
+    console.log(Object.keys(allData || {}))
+  }, [allData])
 
   useEffect(() => {
     const resModules: PostInfo[] = []
