@@ -4,10 +4,15 @@ import MultiDimensionAnalysis from '@/components/MultiDimensionAnalysis'
 import ScenarioAnalysis from '@/components/ScenarioAnalysis'
 import TopicAnalysis from '@/components/TopicAnalysis'
 import UserReviewsTable from '@/components/UserReviewsTable'
-import { PostInfo, RawThemeAnalysis, ScenarioRawData } from '@/types'
+import { AllData, PostInfo, RawThemeAnalysis, ScenarioRawData } from '@/types'
+import {
+  mergeScenarioAnalysisData,
+  mergeThemeAnalysisData,
+} from '@/utils.client'
 import { useEffect, useState } from 'react'
 
 export default function Page() {
+  const [allData, setAllData] = useState<AllData>()
   const [res_module, setRes_module] = useState<PostInfo[]>([])
   const [filteredResModule, setFilteredResModule] = useState<PostInfo[]>([])
   const [theme_analysis_raw, setTheme_analysis_raw] = useState<
@@ -29,29 +34,27 @@ export default function Page() {
 
   const [userType, setUserType] = useState('')
 
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true)
-      const searchParams = new URLSearchParams()
-
-      platforms.forEach((platform) => {
-        searchParams.append('platform', platform)
-      })
-
-      searchParams.append('product_name', productName)
 
       try {
-        const response = await fetch(`/api/data?${searchParams.toString()}`)
+        const response = await fetch('/api/data')
         if (!response.ok) {
           throw new Error('Failed to fetch data')
         }
         const result = await response.json()
-        setRes_module(result['res_module'])
-        setFilteredResModule(result['res_module'])
-        setTheme_analysis_raw(result['theme_analysis_raw'])
-        setScenario_analysis_raw(result['scenario_analysis_raw'])
+        setAllData(result)
+        setRes_module(result['dongchedi']['yinhe_e8']['res_module'])
+        setFilteredResModule(result['dongchedi']['yinhe_e8']['res_module'])
+        setTheme_analysis_raw(
+          result['dongchedi']['yinhe_e8']['theme_analysis_raw'],
+        )
+        setScenario_analysis_raw(
+          result['dongchedi']['yinhe_e8']['scenario_analysis_raw'],
+        )
       } catch (error) {
         console.error('Error fetching data:', error)
       } finally {
@@ -60,7 +63,35 @@ export default function Page() {
     }
 
     fetchData()
-  }, [platforms, productName])
+  }, [])
+
+  useEffect(() => {
+    const resModules: PostInfo[] = []
+    const themeAnalysisRaws: RawThemeAnalysis[][] = []
+    const scenarioAnalysisRaws: ScenarioRawData[][] = []
+
+    platforms.forEach((platform) => {
+      if (
+        allData &&
+        platform &&
+        allData[platform] &&
+        allData[platform][productName]
+      ) {
+        resModules.push(...allData[platform][productName]['res_module'])
+        themeAnalysisRaws.push(
+          allData[platform][productName]['theme_analysis_raw'],
+        )
+        scenarioAnalysisRaws.push(
+          allData[platform][productName]['scenario_analysis_raw'],
+        )
+      }
+    })
+    setRes_module(resModules)
+    setFilteredResModule(resModules)
+
+    setTheme_analysis_raw(mergeThemeAnalysisData(themeAnalysisRaws))
+    setScenario_analysis_raw(mergeScenarioAnalysisData(scenarioAnalysisRaws))
+  }, [platforms, productName, allData])
 
   useEffect(() => {
     const startDate = `${startYear || '2016'}-${StartMonth || '01'}-${startDay || '01'}`

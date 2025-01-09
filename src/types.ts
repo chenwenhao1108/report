@@ -108,3 +108,13 @@ export interface TrendingChartField {
   date: string
   number: number
 }
+
+export interface AllData {
+  [platform: string]: {
+    [productName: string]: {
+      res_module: PostInfo[]
+      theme_analysis_raw: RawThemeAnalysis[]
+      scenario_analysis_raw: ScenarioRawData[]
+    }
+  }
+}
