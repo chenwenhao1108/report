@@ -19,7 +19,7 @@ export async function GET() {
 
 async function getAllRawData() {
   const allData: AllData = {}
-  const platforms: string[] = ['dongchedi', 'autohome', 'bili', 'weibo']
+  const platforms: string[] = ['bili']
   const productNames: string[] = [
     'yinhe_e8',
     'wenjie_m7',

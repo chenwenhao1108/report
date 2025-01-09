@@ -88,8 +88,6 @@ export default function MultiDimensionAnalysis({
     }
   })
 
-  console.log(releaseDate)
-
   return (
     <div className="flex flex-col items-center justify-center gap-4">
       <h1 className="my-4 self-start text-2xl font-bold">多维度分析</h1>

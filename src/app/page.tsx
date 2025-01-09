@@ -54,11 +54,11 @@ export default function Page() {
   }, [productName, granularity])
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchFirstData = async () => {
       setLoading(true)
 
       try {
-        const response = await fetch('/api/data')
+        const response = await fetch('/api/dongchedi')
         if (!response.ok) {
           throw new Error('Failed to fetch data')
         }
@@ -79,7 +79,38 @@ export default function Page() {
       }
     }
 
-    fetchData()
+    const fetchData = async (platform: string) => {
+      try {
+        const response = await fetch(`/api/${platform}`)
+        if (!response.ok) {
+          throw new Error('Failed to fetch data')
+        }
+        const result = await response.json()
+        return result[platform]
+      } catch (error) {
+        console.error('Error fetching data:', error)
+      }
+    }
+    const fetchOtherData = async () => {
+      const platforms = ['autohome', 'bili', 'weibo']
+      for (const platform of platforms) {
+        const data = await fetchData(platform)
+        setAllData((prevData) => {
+          if (!prevData) {
+            return {
+              [platform]: data,
+            }
+          }
+          return {
+            ...prevData,
+            [platform]: data,
+          }
+        })
+      }
+    }
+
+    fetchFirstData()
+    fetchOtherData()
   }, [])
 
   useEffect(() => {
