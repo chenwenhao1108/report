@@ -34,7 +34,7 @@ export interface ThemeCount {
 export interface TopicCount {
   topic: string
   isAdvantage: boolean
-  percentage: number
+  postsCount: number
 }
 
 export interface ChartFiled {

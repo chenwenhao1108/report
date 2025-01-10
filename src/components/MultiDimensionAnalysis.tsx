@@ -109,6 +109,12 @@ export default function MultiDimensionAnalysis({
               <Bar dataKey="score" fill="#8884d8" barSize={40} />
             </BarChart>
           </ResponsiveContainer>
+          <div className="flex flex-col gap-2">
+            <span className="text-lg">数据说明：</span>
+            <span>
+              根据每个维度下每条评论的情感态度进行统计，情感态度为positive则为100分，neutral则为50分，negative则为0分，取平均值得到。
+            </span>
+          </div>
         </div>
         <div className="min-w-[400px] overflow-hidden rounded-lg p-4 ring-2 ring-gray-200">
           <h2 className="mb-4 text-xl font-bold">讨论热度</h2>
@@ -125,7 +131,21 @@ export default function MultiDimensionAnalysis({
               <Bar dataKey="percentage" fill="#2563eb" barSize={40} />
             </BarChart>
           </ResponsiveContainer>
+          <div className="flex flex-col gap-2">
+            <span className="text-lg">数据说明：</span>
+            <span>
+              根据每个维度下的评论数量所占总评论数的比例进行统计，得出用户对产品维度的关注度排序。由于同一个评论所讨论的维度可能不止一个，所以加和大于100%。
+            </span>
+          </div>
         </div>
+      </div>
+      <div className="mt-4 flex w-full flex-col gap-2">
+        <span className="text-lg">维度优缺点数据说明：</span>
+        <span className="pl-8">
+          右上角评分与上表维度评分一致，每个优缺点的讨论度则为对应优缺点下评论数量所占讨论该维度的评论数量的比例。
+        </span>
+      </div>
+      <div className="grid grid-cols-2 gap-4">
         {themeAnalysisData.map((data, index) => {
           let discussionCount = 0
 
@@ -163,11 +183,11 @@ export default function MultiDimensionAnalysis({
                         <span className="ml-2 h-fit text-nowrap rounded-xl px-2 font-semibold ring-1 ring-gray-300">
                           讨论度
                           {discussionCount
-                            ? Math.ceil(
+                            ? (
                                 (advantage.content.length / discussionCount) *
-                                  100,
-                              )
-                            : 0}
+                                100
+                              ).toFixed(2)
+                            : '0.00'}
                           %
                         </span>
                       </div>
@@ -215,11 +235,11 @@ export default function MultiDimensionAnalysis({
                         <span className="ml-2 h-fit text-nowrap rounded-xl px-2 font-semibold ring-1 ring-gray-300">
                           讨论度
                           {discussionCount
-                            ? Math.ceil(
+                            ? (
                                 (disadvantage.content.length /
                                   discussionCount) *
-                                  100,
-                              )
+                                100
+                              ).toFixed(2)
                             : 0}
                           %
                         </span>
@@ -256,6 +276,10 @@ export default function MultiDimensionAnalysis({
       </div>
       <div className="flex w-full flex-col gap-4 rounded-lg p-4 ring-2 ring-gray-200">
         <h2 className="text-xl font-bold">讨论度趋势</h2>
+        <div className="flex flex-col gap-2">
+          <span className="text-lg">数据说明：</span>
+          <span className="pl-8">在当月或当日发布的评论数量。</span>
+        </div>
         <ResponsiveContainer width="100%" height={400}>
           <LineChart
             data={trendingChart}
@@ -297,6 +321,12 @@ export default function MultiDimensionAnalysis({
       </div>
       <div className="flex w-full flex-col gap-4 rounded-lg p-4 ring-2 ring-gray-200">
         <h2 className="text-xl font-bold">主题讨论度趋势</h2>
+        <div className="flex flex-col gap-2">
+          <span className="text-lg">数据说明：</span>
+          <span className="pl-8">
+            在当月或当日发布的对应评价维度的评论数量。
+          </span>
+        </div>
         {granularity === 'month' ? (
           <ThemeDiscussionTrendingChart
             data={themeDiscussionTrendingChart}
@@ -359,7 +389,10 @@ export default function MultiDimensionAnalysis({
       </div>
       <div className="flex w-full flex-col gap-4 rounded-lg p-4 ring-2 ring-gray-200">
         <h2 className="text-xl font-bold">讨论态度趋势</h2>
-
+        <div className="flex flex-col gap-2">
+          <span className="text-lg">数据说明：</span>
+          <span className="pl-8">在当月或当日所发布评论的态度分布。</span>
+        </div>
         <ResponsiveContainer width="100%" height={400}>
           <BarChart
             data={themeAttitudeTrendingChart}

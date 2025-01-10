@@ -42,8 +42,15 @@ export default function ScenarioAnalysis({
   return (
     <div>
       <h1 className="my-4 text-2xl font-bold">购车场景分析</h1>
+      <div className="my-4 flex flex-col gap-2">
+        <span className="text-lg">数据说明：</span>
+        <span className="pl-8">
+          根据每条评论内容判断评论人的购车场景，得出场景分布。
+        </span>
+      </div>
       <div className="mb-4 flex h-[500px] flex-col rounded-lg p-4 ring-2 ring-gray-200">
         <h2 className="text-xl font-bold">场景分布</h2>
+
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
@@ -82,7 +89,7 @@ export default function ScenarioAnalysis({
                   </h2>
 
                   <span className="h-fit rounded-3xl px-2 text-sm font-medium ring-1 ring-gray-300">
-                    讨论度 {Math.ceil(scenarioData.percentage)}%
+                    场景比例 {Math.ceil(scenarioData.percentage)}%
                   </span>
                 </div>
                 <p className="mt-2 text-gray-700">{scenarioData.description}</p>

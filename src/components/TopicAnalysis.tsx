@@ -1,26 +1,40 @@
 'use client'
 
-import { RawThemeAnalysis } from '@/types'
-import { getTopicDiscussionArray } from '@/utils.client'
+import { PostInfo, RawThemeAnalysis } from '@/types'
+import { getPostsWithUuid, getTopicDiscussionArray } from '@/utils.client'
 import WordCloudComponent from './WordCloud'
 
 export default function TopicAnalysis({
   themeAnalysisRaw,
+  resModule,
 }: {
   themeAnalysisRaw: RawThemeAnalysis[]
+  resModule: PostInfo[]
 }) {
-  const topicDiscussionArray = getTopicDiscussionArray(themeAnalysisRaw)
+  const posts = getPostsWithUuid(resModule)
+
+  const topicDiscussionArray = getTopicDiscussionArray(themeAnalysisRaw, posts)
+
+  const wordsCount = topicDiscussionArray.reduce(
+    (acc, cur) => acc + cur.postsCount,
+    0,
+  )
 
   const words: [string, number][] = topicDiscussionArray.map((item) => [
     item.topic,
-    Math.ceil(item.percentage),
+    (Math.ceil(item.postsCount) / wordsCount) * 100,
   ])
+
   return (
     <div>
       <h1 className="my-4 text-2xl font-bold">话题分析</h1>
       <div className="flex w-full flex-grow justify-start gap-8">
         <div className="w-1/5 min-w-[400px] rounded-lg p-4 ring-2 ring-gray-200">
           <h2 className="text-xl font-bold">热点话题讨论度</h2>
+          <div className="flex w-full justify-between py-4">
+            <span className="text-lg font-semibold">维度分析优缺点</span>
+            <span className="text-lg font-semibold">评论数量</span>
+          </div>
           <ul>
             {topicDiscussionArray.slice(0, 10).map((item) => (
               <li key={item.topic} className="flex w-full justify-between py-4">
@@ -29,7 +43,7 @@ export default function TopicAnalysis({
                 >
                   {item.topic}
                 </span>
-                <span>{Math.ceil(item.percentage)}%</span>
+                <span>{Math.ceil(item.postsCount)}条</span>
               </li>
             ))}
           </ul>

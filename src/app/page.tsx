@@ -106,17 +106,12 @@ export default function Page() {
             [platform]: data,
           }
         })
-        console.log(`${platform} done`)
       }
     }
 
     fetchFirstData()
     fetchOtherData()
   }, [])
-
-  useEffect(() => {
-    console.log(Object.keys(allData || {}))
-  }, [allData])
 
   useEffect(() => {
     const resModules: PostInfo[] = []
@@ -427,7 +422,10 @@ export default function Page() {
         </div>
       </div>
       <UserReviewsTable resModule={filteredResModule} />
-      <TopicAnalysis themeAnalysisRaw={theme_analysis_raw} />
+      <TopicAnalysis
+        themeAnalysisRaw={theme_analysis_raw}
+        resModule={filteredResModule}
+      />
       <MultiDimensionAnalysis
         releaseDate={releaseDate}
         resModule={filteredResModule}

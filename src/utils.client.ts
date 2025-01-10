@@ -52,16 +52,20 @@ interface TopicCountObj {
 
 export function getTopicDiscussionArray(
   theme_analysis_raw: RawThemeAnalysis[],
+  posts: Record<string, string>,
 ) {
-  let postsCount = 0
   const topicDiscussionObj: TopicCountObj = {}
 
   theme_analysis_raw.forEach((item: RawThemeAnalysis) => {
     item.advantage.forEach((advantage: RawAdvantage) => {
       const topic = advantage.summary_topic
-      const count = advantage.uuid.length
-
-      postsCount += count
+      const count = advantage.uuid.reduce((acc, uuid) => {
+        const post = posts[uuid]
+        if (post) {
+          return acc + 1
+        }
+        return acc
+      }, 0)
 
       if (topicDiscussionObj[topic]) {
         topicDiscussionObj[topic]['count'] += count
@@ -72,9 +76,13 @@ export function getTopicDiscussionArray(
 
     item.disadvantage.forEach((disadvantage: RawAdvantage) => {
       const topic = disadvantage.summary_topic
-      const count = disadvantage.uuid.length
-
-      postsCount += count
+      const count = disadvantage.uuid.reduce((acc, uuid) => {
+        const post = posts[uuid]
+        if (post) {
+          return acc + 1
+        }
+        return acc
+      }, 0)
 
       if (topicDiscussionObj[topic]) {
         topicDiscussionObj[topic]['count'] += count
@@ -91,10 +99,10 @@ export function getTopicDiscussionArray(
       return {
         topic,
         isAdvantage,
-        percentage: (count / postsCount) * 100,
+        postsCount: count,
       }
     })
-    .sort((a, b) => b.percentage - a.percentage)
+    .sort((a, b) => b.postsCount - a.postsCount)
 
   return topicDiscussionArray
 }
