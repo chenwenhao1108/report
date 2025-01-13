@@ -11,8 +11,8 @@ export interface ReviewProp {
 }
 
 export interface PostInfo {
-  scenario: '独行侠' | '家庭出行' | '周末休闲'
-  user_type: '车主' | '试驾' | '意向买家'
+  scenario: string
+  user_type: string
   is_valuable: string
   reason: string
   keywords: string[]

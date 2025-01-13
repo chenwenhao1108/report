@@ -5,10 +5,7 @@ import ScenarioAnalysis from '@/components/ScenarioAnalysis'
 import TopicAnalysis from '@/components/TopicAnalysis'
 import UserReviewsTable from '@/components/UserReviewsTable'
 import { AllData, PostInfo, RawThemeAnalysis, ScenarioRawData } from '@/types'
-import {
-  mergeScenarioAnalysisData,
-  mergeThemeAnalysisData,
-} from '@/utils.client'
+import { mergeThemeAnalysisData } from '@/utils.client'
 import { useEffect, useState } from 'react'
 
 export default function Page() {
@@ -17,9 +14,6 @@ export default function Page() {
   const [filteredResModule, setFilteredResModule] = useState<PostInfo[]>([])
   const [theme_analysis_raw, setTheme_analysis_raw] = useState<
     RawThemeAnalysis[]
-  >([])
-  const [scenario_analysis_raw, setScenario_analysis_raw] = useState<
-    ScenarioRawData[]
   >([])
   const [platforms, setPlatforms] = useState<string[]>(['dongchedi'])
   const [productName, setProductName] = useState('yinhe_e8')
@@ -73,9 +67,6 @@ export default function Page() {
         setFilteredResModule(result['dongchedi']['yinhe_e8']['res_module'])
         setTheme_analysis_raw(
           result['dongchedi']['yinhe_e8']['theme_analysis_raw'],
-        )
-        setScenario_analysis_raw(
-          result['dongchedi']['yinhe_e8']['scenario_analysis_raw'],
         )
       } catch (error) {
         console.error('Error fetching data:', error)
@@ -138,7 +129,6 @@ export default function Page() {
     setFilteredResModule(resModules)
 
     setTheme_analysis_raw(mergeThemeAnalysisData(themeAnalysisRaws))
-    setScenario_analysis_raw(mergeScenarioAnalysisData(scenarioAnalysisRaws))
   }, [platforms, productName, allData])
 
   useEffect(() => {
@@ -433,10 +423,7 @@ export default function Page() {
         granularity={granularity}
         productName={productName}
       />
-      <ScenarioAnalysis
-        resModule={res_module}
-        scenarioAnalysisRaw={scenario_analysis_raw}
-      />
+      <ScenarioAnalysis resModule={filteredResModule} />
     </div>
   )
 }
