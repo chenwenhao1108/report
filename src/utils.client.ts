@@ -1,13 +1,14 @@
 import {
   DimensionRatingChartFiled,
   DiscussionHeatChartFiled,
+  MergedAdvantage,
+  MergedThemeAnalysis,
   PostInfo,
   RawAdvantage,
   RawThemeAnalysis,
   ReviewProp,
   ScenarioData,
   ScenarioRawData,
-  ThemeAnalysisData,
   ThemeCount,
   TopicCount,
   TrendingChartField,
@@ -51,21 +52,30 @@ interface TopicCountObj {
 }
 
 export function getTopicDiscussionArray(
-  theme_analysis_raw: RawThemeAnalysis[],
+  mergedThemeAnalysis: MergedThemeAnalysis[],
   posts: Record<string, string>,
+  platforms: string[],
 ) {
   const topicDiscussionObj: TopicCountObj = {}
 
-  theme_analysis_raw.forEach((item: RawThemeAnalysis) => {
-    item.advantage.forEach((advantage: RawAdvantage) => {
+  mergedThemeAnalysis.forEach((item: MergedThemeAnalysis) => {
+    item.advantage.forEach((advantage: MergedAdvantage) => {
       const topic = advantage.summary_topic
-      const count = advantage.uuid.reduce((acc, uuid) => {
-        const post = posts[uuid]
-        if (post) {
-          return acc + 1
+      let count = 0
+      platforms.forEach((platform) => {
+        if (Object.keys(advantage.platform_data).includes(platform)) {
+          count += advantage.platform_data[platform].uuid.reduce(
+            (acc, uuid) => {
+              const post = posts[uuid]
+              if (post) {
+                return acc + 1
+              }
+              return acc
+            },
+            0,
+          )
         }
-        return acc
-      }, 0)
+      })
 
       if (topicDiscussionObj[topic]) {
         topicDiscussionObj[topic]['count'] += count
@@ -74,16 +84,23 @@ export function getTopicDiscussionArray(
       }
     })
 
-    item.disadvantage.forEach((disadvantage: RawAdvantage) => {
+    item.disadvantage.forEach((disadvantage: MergedAdvantage) => {
       const topic = disadvantage.summary_topic
-      const count = disadvantage.uuid.reduce((acc, uuid) => {
-        const post = posts[uuid]
-        if (post) {
-          return acc + 1
+      let count = 0
+      platforms.forEach((platform) => {
+        if (Object.keys(disadvantage.platform_data).includes(platform)) {
+          count += disadvantage.platform_data[platform].uuid.reduce(
+            (acc, uuid) => {
+              const post = posts[uuid]
+              if (post) {
+                return acc + 1
+              }
+              return acc
+            },
+            0,
+          )
         }
-        return acc
-      }, 0)
-
+      })
       if (topicDiscussionObj[topic]) {
         topicDiscussionObj[topic]['count'] += count
       } else {
@@ -106,6 +123,63 @@ export function getTopicDiscussionArray(
 
   return topicDiscussionArray
 }
+
+// export function getTopicDiscussionArray(
+//   theme_analysis_raw: RawThemeAnalysis[],
+//   posts: Record<string, string>,
+// ) {
+//   const topicDiscussionObj: TopicCountObj = {}
+
+//   theme_analysis_raw.forEach((item: RawThemeAnalysis) => {
+//     item.advantage.forEach((advantage: RawAdvantage) => {
+//       const topic = advantage.summary_topic
+//       const count = advantage.uuid.reduce((acc, uuid) => {
+//         const post = posts[uuid]
+//         if (post) {
+//           return acc + 1
+//         }
+//         return acc
+//       }, 0)
+
+//       if (topicDiscussionObj[topic]) {
+//         topicDiscussionObj[topic]['count'] += count
+//       } else {
+//         topicDiscussionObj[topic] = { count, isAdvantage: true }
+//       }
+//     })
+
+//     item.disadvantage.forEach((disadvantage: RawAdvantage) => {
+//       const topic = disadvantage.summary_topic
+//       const count = disadvantage.uuid.reduce((acc, uuid) => {
+//         const post = posts[uuid]
+//         if (post) {
+//           return acc + 1
+//         }
+//         return acc
+//       }, 0)
+
+//       if (topicDiscussionObj[topic]) {
+//         topicDiscussionObj[topic]['count'] += count
+//       } else {
+//         topicDiscussionObj[topic] = { count, isAdvantage: false }
+//       }
+//     })
+//   })
+
+//   const topicDiscussionArray: TopicCount[] = Object.entries(topicDiscussionObj)
+//     .map(([topic, item]) => {
+//       const count = item.count
+//       const isAdvantage = item.isAdvantage
+//       return {
+//         topic,
+//         isAdvantage,
+//         postsCount: count,
+//       }
+//     })
+//     .sort((a, b) => b.postsCount - a.postsCount)
+
+//   return topicDiscussionArray
+// }
 
 export function getScenarioAnalysisData(
   res_module: PostInfo[],
@@ -319,34 +393,58 @@ export function getPostsWithUuid(res_module: PostInfo[]) {
 }
 export function getThemeAnalysisData(
   posts: Record<string, string>,
-  theme_analysis_raw: RawThemeAnalysis[],
+  mergedThemeAnalysis: MergedThemeAnalysis[],
+  platforms: string[],
 ) {
-  const themeAnalysisData: ThemeAnalysisData[] = theme_analysis_raw.map(
-    (item: RawThemeAnalysis) => {
-      return {
-        theme: item.theme,
-        advantages: item.advantage.map((advantage: RawAdvantage) => {
-          return {
-            summary: advantage.summary,
-            content: advantage.uuid
-              .map((uuid: string) => posts[uuid])
-              .filter((content) => !!content),
-            keywords: advantage.keywords,
-          }
-        }),
-        disadvantages: item.disadvantage.map((disadvantage: RawAdvantage) => {
-          return {
-            summary: disadvantage.summary,
-            content: disadvantage.uuid
-              .map((uuid: string) => posts[uuid])
-              .filter((content) => !!content),
-            keywords: disadvantage.keywords,
-          }
-        }),
+  const processAdvantageData = (data: MergedAdvantage) => {
+    // 检查是否有交集
+    const platformDataKeys = Object.keys(data.platform_data)
+    const hasOverlap = platforms.some((platform) =>
+      platformDataKeys.includes(platform),
+    )
+
+    // 如果没有交集返回 null
+    if (!hasOverlap) {
+      return null
+    }
+
+    const content: string[] = []
+    const keywords: string[] = []
+
+    platforms.forEach((platform) => {
+      if (platformDataKeys.includes(platform)) {
+        const platformData = data.platform_data[platform]
+        platformData.uuid
+          .map((uuid) => posts[uuid])
+          .filter(Boolean)
+          .forEach((post) => content.push(post))
+
+        keywords.push(...platformData.keywords)
       }
-    },
-  )
-  return themeAnalysisData
+    })
+
+    return {
+      summary: data.summary,
+      content,
+      keywords,
+    }
+  }
+
+  return mergedThemeAnalysis.map((item) => ({
+    theme: item.theme,
+    advantages: item.advantage
+      .map(processAdvantageData)
+      .filter(
+        (item): item is NonNullable<typeof item> =>
+          item !== null && item !== undefined,
+      ),
+    disadvantages: item.disadvantage
+      .map(processAdvantageData)
+      .filter(
+        (item): item is NonNullable<typeof item> =>
+          item !== null && item !== undefined,
+      ),
+  }))
 }
 
 export function mergeThemeAnalysisData(

@@ -4,17 +4,19 @@ import MultiDimensionAnalysis from '@/components/MultiDimensionAnalysis'
 import ScenarioAnalysis from '@/components/ScenarioAnalysis'
 import TopicAnalysis from '@/components/TopicAnalysis'
 import UserReviewsTable from '@/components/UserReviewsTable'
-import { AllData, PostInfo, RawThemeAnalysis, ScenarioRawData } from '@/types'
-import { mergeThemeAnalysisData } from '@/utils.client'
+import { AllData, MergedThemeAnalysis, PostInfo } from '@/types'
 import { useEffect, useState } from 'react'
 
 export default function Page() {
   const [allData, setAllData] = useState<AllData>()
   const [res_module, setRes_module] = useState<PostInfo[]>([])
   const [filteredResModule, setFilteredResModule] = useState<PostInfo[]>([])
-  const [theme_analysis_raw, setTheme_analysis_raw] = useState<
-    RawThemeAnalysis[]
+  const [mergedThemeAnalysis, setMergedThemeAnalysis] = useState<
+    MergedThemeAnalysis[]
   >([])
+  const [allThemeAnalysis, setAllThemeAnalysis] = useState<
+    Record<string, MergedThemeAnalysis[]>
+  >({})
   const [platforms, setPlatforms] = useState<string[]>(['dongchedi'])
   const [productName, setProductName] = useState('yinhe_e8')
   const [granularity, setGranularity] = useState<'month' | 'day'>('month')
@@ -48,66 +50,84 @@ export default function Page() {
   }, [productName, granularity])
 
   useEffect(() => {
-    const fetchFirstData = async () => {
+    const fetchDongchediData = async () => {
+      try {
+        const response = await fetch('/api/dongchedi')
+        if (!response.ok) throw new Error('Failed to fetch dongchedi data')
+        const result = await response.json()
+
+        setAllData((prevData) => ({
+          ...prevData,
+          dongchedi: result.dongchedi,
+        }))
+        setRes_module(result.dongchedi.yinhe_e8.res_module)
+        setFilteredResModule(result.dongchedi.yinhe_e8.res_module)
+
+        return result
+      } catch (error) {
+        console.error('Error fetching dongchedi data:', error)
+        throw error
+      }
+    }
+
+    const fetchThemeAnalysis = async () => {
+      try {
+        const response = await fetch('/api/theme_analysis')
+        if (!response.ok) throw new Error('Failed to fetch theme analysis')
+        const data = await response.json()
+
+        setAllThemeAnalysis(data)
+        setMergedThemeAnalysis(data[productName])
+
+        return data
+      } catch (error) {
+        console.error('Error fetching theme analysis:', error)
+        throw error
+      }
+    }
+
+    const fetchPlatformData = async (platform: string) => {
+      try {
+        const response = await fetch(`/api/${platform}`)
+        if (!response.ok) throw new Error(`Failed to fetch ${platform} data`)
+        const result = await response.json()
+
+        setAllData((prevData) => ({
+          ...prevData,
+          [platform]: result[platform],
+        }))
+
+        return result
+      } catch (error) {
+        console.error(`Error fetching ${platform} data:`, error)
+        throw error
+      }
+    }
+
+    const initializeData = async () => {
       setLoading(true)
 
       try {
-        const response = await fetch('/api/dongchedi')
-        if (!response.ok) {
-          throw new Error('Failed to fetch data')
-        }
-        const result = await response.json()
-        setAllData((prevData) => {
-          return {
-            ...prevData,
-            ['dongchedi']: result['dongchedi'],
-          }
-        })
-        setRes_module(result['dongchedi']['yinhe_e8']['res_module'])
-        setFilteredResModule(result['dongchedi']['yinhe_e8']['res_module'])
-        setTheme_analysis_raw(
-          result['dongchedi']['yinhe_e8']['theme_analysis_raw'],
+        // 并行请求主要数据
+        await Promise.all([fetchDongchediData(), fetchThemeAnalysis()])
+
+        // 并行请求其他平台数据
+        const otherPlatforms = ['autohome', 'bili', 'weibo']
+        await Promise.all(
+          otherPlatforms.map((platform) => fetchPlatformData(platform)),
         )
       } catch (error) {
-        console.error('Error fetching data:', error)
+        console.error('Error initializing data:', error)
       } finally {
         setLoading(false)
       }
     }
 
-    const fetchData = async (platform: string) => {
-      try {
-        const response = await fetch(`/api/${platform}`)
-        if (!response.ok) {
-          throw new Error('Failed to fetch data')
-        }
-        const result = await response.json()
-        return result[platform]
-      } catch (error) {
-        console.error('Error fetching data:', error)
-      }
-    }
-    const fetchOtherData = async () => {
-      const platforms = ['autohome', 'bili', 'weibo']
-      for (const platform of platforms) {
-        const data = await fetchData(platform)
-        setAllData((prevData) => {
-          return {
-            ...prevData,
-            [platform]: data,
-          }
-        })
-      }
-    }
-
-    fetchFirstData()
-    fetchOtherData()
+    initializeData()
   }, [])
 
   useEffect(() => {
     const resModules: PostInfo[] = []
-    const themeAnalysisRaws: RawThemeAnalysis[][] = []
-    const scenarioAnalysisRaws: ScenarioRawData[][] = []
 
     platforms.forEach((platform) => {
       if (
@@ -117,19 +137,13 @@ export default function Page() {
         allData[platform][productName]
       ) {
         resModules.push(...allData[platform][productName]['res_module'])
-        themeAnalysisRaws.push(
-          allData[platform][productName]['theme_analysis_raw'],
-        )
-        scenarioAnalysisRaws.push(
-          allData[platform][productName]['scenario_analysis_raw'],
-        )
       }
     })
     setRes_module(resModules)
     setFilteredResModule(resModules)
 
-    setTheme_analysis_raw(mergeThemeAnalysisData(themeAnalysisRaws))
-  }, [platforms, productName, allData])
+    setMergedThemeAnalysis(allThemeAnalysis[productName])
+  }, [platforms, productName, allData, allThemeAnalysis])
 
   useEffect(() => {
     const startDate = `${startYear || '2016'}-${StartMonth || '01'}-${startDay || '01'}`
@@ -413,13 +427,15 @@ export default function Page() {
       </div>
       <UserReviewsTable resModule={filteredResModule} />
       <TopicAnalysis
-        themeAnalysisRaw={theme_analysis_raw}
+        mergedThemeAnalysis={mergedThemeAnalysis}
+        platforms={platforms}
         resModule={filteredResModule}
       />
       <MultiDimensionAnalysis
         releaseDate={releaseDate}
         resModule={filteredResModule}
-        themeAnalysisRaw={theme_analysis_raw}
+        mergedThemeAnalysis={mergedThemeAnalysis}
+        platforms={platforms}
         granularity={granularity}
         productName={productName}
       />

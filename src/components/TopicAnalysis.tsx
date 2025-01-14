@@ -1,19 +1,25 @@
 'use client'
 
-import { PostInfo, RawThemeAnalysis } from '@/types'
+import { MergedThemeAnalysis, PostInfo } from '@/types'
 import { getPostsWithUuid, getTopicDiscussionArray } from '@/utils.client'
 import WordCloudComponent from './WordCloud'
 
 export default function TopicAnalysis({
-  themeAnalysisRaw,
   resModule,
+  mergedThemeAnalysis,
+  platforms,
 }: {
-  themeAnalysisRaw: RawThemeAnalysis[]
   resModule: PostInfo[]
+  mergedThemeAnalysis: MergedThemeAnalysis[]
+  platforms: string[]
 }) {
   const posts = getPostsWithUuid(resModule)
 
-  const topicDiscussionArray = getTopicDiscussionArray(themeAnalysisRaw, posts)
+  const topicDiscussionArray = getTopicDiscussionArray(
+    mergedThemeAnalysis,
+    posts,
+    platforms,
+  )
 
   const wordsCount = topicDiscussionArray.reduce(
     (acc, cur) => acc + cur.postsCount,

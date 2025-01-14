@@ -2,8 +2,8 @@
 
 import {
   DimensionRatingChartFiled,
+  MergedThemeAnalysis,
   PostInfo,
-  RawThemeAnalysis,
   ThemeAnalysisData,
 } from '@/types'
 import {
@@ -29,13 +29,15 @@ import ThemeDiscussionTrendingChart from './ThemeDiscussionTrendingChart'
 
 export default function MultiDimensionAnalysis({
   resModule,
-  themeAnalysisRaw,
+  mergedThemeAnalysis,
+  platforms,
   granularity,
   releaseDate,
   productName,
 }: {
   resModule: PostInfo[]
-  themeAnalysisRaw: RawThemeAnalysis[]
+  mergedThemeAnalysis: MergedThemeAnalysis[]
+  platforms: string[]
   granularity: 'month' | 'day'
   releaseDate: string
   productName: string
@@ -67,7 +69,8 @@ export default function MultiDimensionAnalysis({
 
   const themeAnalysisData: ThemeAnalysisData[] = getThemeAnalysisData(
     posts,
-    themeAnalysisRaw,
+    mergedThemeAnalysis,
+    platforms,
   ).sort((a, b) => indexMap.get(a.theme)! - indexMap.get(b.theme)!)
 
   const themeRating: Record<string, number> = {}
@@ -192,14 +195,16 @@ export default function MultiDimensionAnalysis({
                         </span>
                       </div>
                       <div className="flex gap-2 overflow-auto py-1 pl-2">
-                        {advantage.keywords.slice(0, 5).map((keyword) => (
-                          <span
-                            key={keyword}
-                            className="flex items-center justify-center text-nowrap rounded-xl px-2 text-sm font-semibold ring-1 ring-gray-300"
-                          >
-                            {keyword}
-                          </span>
-                        ))}
+                        {advantage.keywords
+                          .slice(0, 5)
+                          .map((keyword, index) => (
+                            <span
+                              key={index}
+                              className="flex items-center justify-center text-nowrap rounded-xl px-2 text-sm font-semibold ring-1 ring-gray-300"
+                            >
+                              {keyword}
+                            </span>
+                          ))}
                       </div>
                       <div className="flex flex-col gap-2 italic text-gray-600">
                         {advantage.content.length > 0 ? (
@@ -245,14 +250,16 @@ export default function MultiDimensionAnalysis({
                         </span>
                       </div>
                       <div className="flex gap-2 overflow-auto py-1 pl-2">
-                        {disadvantage.keywords.slice(0, 5).map((keyword) => (
-                          <span
-                            key={keyword}
-                            className="flex items-center justify-center text-nowrap rounded-xl px-2 text-sm font-semibold ring-1 ring-gray-300"
-                          >
-                            {keyword}
-                          </span>
-                        ))}
+                        {disadvantage.keywords
+                          .slice(0, 5)
+                          .map((keyword, index) => (
+                            <span
+                              key={index}
+                              className="flex items-center justify-center text-nowrap rounded-xl px-2 text-sm font-semibold ring-1 ring-gray-300"
+                            >
+                              {keyword}
+                            </span>
+                          ))}
                       </div>
                       <div className="flex flex-col gap-2 italic text-gray-600">
                         {disadvantage.content.length > 0 ? (

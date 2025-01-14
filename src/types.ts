@@ -82,6 +82,23 @@ export interface RawThemeAnalysis {
   disadvantage: RawAdvantage[]
 }
 
+export interface MergedAdvantage {
+  summary: string
+  summary_topic: string
+  platform_data: {
+    [platform: string]: {
+      keywords: string[]
+      uuid: string[]
+    }
+  }
+}
+
+export interface MergedThemeAnalysis {
+  theme: string
+  advantage: MergedAdvantage[]
+  disadvantage: MergedAdvantage[]
+}
+
 export interface ScenarioData {
   scenario: string
   percentage: number
@@ -113,8 +130,6 @@ export interface AllData {
   [platform: string]: {
     [productName: string]: {
       res_module: PostInfo[]
-      theme_analysis_raw: RawThemeAnalysis[]
-      scenario_analysis_raw: ScenarioRawData[]
     }
   }
 }
