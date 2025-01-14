@@ -1,6 +1,6 @@
 export interface ReviewProp {
   username: string
-  user_type: '车主' | '试驾' | '意向买家'
+  user_type: string
   content: string
   keywords: string[]
   themes: string[]
