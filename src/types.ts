@@ -24,6 +24,7 @@ export interface PostInfo {
   uuid: string
   username: string
   post: string
+  positioning: string
 }
 
 export interface ThemeCount {

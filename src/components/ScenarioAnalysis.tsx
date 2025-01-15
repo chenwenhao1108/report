@@ -17,33 +17,48 @@ export default function ScenarioAnalysis({
 }) {
   const scenarios = [
     {
-      scenario: '城市通勤',
-      description: '用于日常上下班、短途出行等城市内活动。',
+      scenario: '日常通勤',
+      description: '用于工作日上下班、城市内短途代步等日常出行场景。',
       posts: [],
     },
     {
-      scenario: '年轻个性',
-      description: '用于展示个性、社交、短途旅行等。',
+      scenario: '接送孩子',
+      description: '用于接送孩子上下学、参加课外活动、看病就医等家庭育儿场景。',
       posts: [],
     },
     {
-      scenario: '家庭出行',
-      description: '用于日常通勤、周末郊游、长途旅行等家庭活动。',
+      scenario: '商务出行',
+      description: '用于商务会议、客户拜访、机场接送等专业商务场合。',
       posts: [],
     },
     {
-      scenario: '户外探险',
-      description: '用于越野、露营、长途自驾等户外活动。',
+      scenario: '周末休闲/自驾游',
+      description: '用于周末郊游、景点游览、长途自驾等休闲娱乐活动。',
       posts: [],
     },
     {
-      scenario: '商务接待',
-      description: '用于接送客户、商务会议、出差等正式场合。',
+      scenario: '网约车/共享出行',
+      description: '用于网络预约载客、共享用车等现代化出行服务场景。',
       posts: [],
     },
     {
-      scenario: '高端奢华',
-      description: '用于展示身份、享受驾驶乐趣、参加高端社交活动。',
+      scenario: '物流配送',
+      description: '用于快递配送、商品运输、同城配送等物流服务场景。',
+      posts: [],
+    },
+    {
+      scenario: '户外运动',
+      description: '用于越野探险、露营自驾、户外运动等休闲娱乐活动。',
+      posts: [],
+    },
+    {
+      scenario: '城市社交',
+      description: '用于朋友聚会、约会交友、休闲娱乐等社交活动场景。',
+      posts: [],
+    },
+    {
+      scenario: '老年代步',
+      description: '用于老年人购物、看病、探亲访友等日常出行场景。',
       posts: [],
     },
   ]
@@ -66,8 +81,8 @@ export default function ScenarioAnalysis({
     }
   })
 
-  const scenarioDataArray = scenarios.map(
-    (scenario: { scenario: string; description: string }) => {
+  const scenarioDataArray = scenarios
+    .map((scenario: { scenario: string; description: string }) => {
       const percentage = scenarioCount[scenario.scenario]
         ? (scenarioCount[scenario.scenario] / resModule.length) * 100
         : 0
@@ -77,14 +92,14 @@ export default function ScenarioAnalysis({
         description: scenario.description,
         posts: scenarioPosts[scenario.scenario] || [],
       }
-    },
-  )
+    })
+    .sort((a, b) => b.percentage - a.percentage)
 
   const data = scenarioDataArray.map((scenarioData) => {
     const percentage = scenarioData.percentage
     return {
       scenario: scenarioData.scenario,
-      value: percentage,
+      value: Math.ceil(percentage),
     }
   })
 
@@ -96,6 +111,8 @@ export default function ScenarioAnalysis({
     '#6A5ACD',
     '#32CD32',
     '#8B4513',
+    '#f38181',
+    '#95e1d3',
   ]
   return (
     <div>
