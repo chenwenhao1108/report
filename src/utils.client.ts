@@ -7,7 +7,6 @@ import {
   RawAdvantage,
   RawThemeAnalysis,
   ReviewProp,
-  ScenarioData,
   ScenarioRawData,
   ThemeCount,
   TopicCount,
@@ -122,101 +121,6 @@ export function getTopicDiscussionArray(
     .sort((a, b) => b.postsCount - a.postsCount)
 
   return topicDiscussionArray
-}
-
-// export function getTopicDiscussionArray(
-//   theme_analysis_raw: RawThemeAnalysis[],
-//   posts: Record<string, string>,
-// ) {
-//   const topicDiscussionObj: TopicCountObj = {}
-
-//   theme_analysis_raw.forEach((item: RawThemeAnalysis) => {
-//     item.advantage.forEach((advantage: RawAdvantage) => {
-//       const topic = advantage.summary_topic
-//       const count = advantage.uuid.reduce((acc, uuid) => {
-//         const post = posts[uuid]
-//         if (post) {
-//           return acc + 1
-//         }
-//         return acc
-//       }, 0)
-
-//       if (topicDiscussionObj[topic]) {
-//         topicDiscussionObj[topic]['count'] += count
-//       } else {
-//         topicDiscussionObj[topic] = { count, isAdvantage: true }
-//       }
-//     })
-
-//     item.disadvantage.forEach((disadvantage: RawAdvantage) => {
-//       const topic = disadvantage.summary_topic
-//       const count = disadvantage.uuid.reduce((acc, uuid) => {
-//         const post = posts[uuid]
-//         if (post) {
-//           return acc + 1
-//         }
-//         return acc
-//       }, 0)
-
-//       if (topicDiscussionObj[topic]) {
-//         topicDiscussionObj[topic]['count'] += count
-//       } else {
-//         topicDiscussionObj[topic] = { count, isAdvantage: false }
-//       }
-//     })
-//   })
-
-//   const topicDiscussionArray: TopicCount[] = Object.entries(topicDiscussionObj)
-//     .map(([topic, item]) => {
-//       const count = item.count
-//       const isAdvantage = item.isAdvantage
-//       return {
-//         topic,
-//         isAdvantage,
-//         postsCount: count,
-//       }
-//     })
-//     .sort((a, b) => b.postsCount - a.postsCount)
-
-//   return topicDiscussionArray
-// }
-
-export function getScenarioAnalysisData(
-  res_module: PostInfo[],
-  scenario_analysis_raw: ScenarioRawData[],
-  posts: Record<string, string>,
-) {
-  const postsCount = res_module.length
-
-  const scenarioCount: Record<string, number> = {}
-
-  res_module.forEach((item: PostInfo) => {
-    if (scenarioCount[item.scenario]) {
-      scenarioCount[item.scenario] += 1
-    } else {
-      scenarioCount[item.scenario] = 1
-    }
-  })
-
-  const scenarioAnalysisArray: ScenarioData[] = scenario_analysis_raw.map(
-    (item: ScenarioRawData) => {
-      const scenarioPosts = item.uuid.map((uuid: string) => posts[uuid])
-
-      return {
-        scenario: item.scenario,
-        percentage: Math.ceil(
-          (scenarioCount[item.scenario] / postsCount) * 100,
-        ),
-        description: item.description,
-        overall_score: item.overall_score,
-        keywords: item.keywords,
-        dimensions: item.dimensions,
-        posts: scenarioPosts,
-      }
-    },
-  )
-
-  return scenarioAnalysisArray.sort((a, b) => b.percentage - a.percentage)
 }
 
 export function getChartData(
