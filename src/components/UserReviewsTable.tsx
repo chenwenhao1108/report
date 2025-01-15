@@ -29,6 +29,126 @@ const UserReviewsTable = ({ resModule }: { resModule: PostInfo[] }) => {
     }
   }
 
+  const [jumpToPage, setJumpToPage] = useState<string>('')
+
+  const handleJumpToPage = () => {
+    const pageNumber = parseInt(jumpToPage)
+    if (!isNaN(pageNumber) && pageNumber >= 1 && pageNumber <= totalPages) {
+      setCurrentPage(pageNumber)
+      setJumpToPage('')
+    } else {
+      alert('请输入有效的页码！')
+    }
+  }
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleJumpToPage()
+    }
+  }
+
+  const renderPagination = () => {
+    // 如果总页数小于等于5，直接显示所有页码
+    if (totalPages <= 5) {
+      return Array.from({ length: totalPages }, (_, i) => i + 1).map(
+        (pageNum) => (
+          <button
+            key={pageNum}
+            onClick={() => setCurrentPage(pageNum)}
+            className={`rounded-lg px-4 py-2 text-sm font-medium ${
+              currentPage === pageNum
+                ? 'bg-gray-100 shadow-inner'
+                : 'shadow-md hover:bg-gray-100'
+            }`}
+          >
+            {pageNum}
+          </button>
+        ),
+      )
+    }
+
+    const elements = []
+
+    // 添加前三页
+    for (let i = 1; i <= 3; i++) {
+      elements.push(
+        <button
+          key={i}
+          onClick={() => setCurrentPage(i)}
+          className={`rounded-lg px-4 py-2 text-sm font-medium ${
+            currentPage === i
+              ? 'bg-gray-100 shadow-inner'
+              : 'shadow-md hover:bg-gray-100'
+          }`}
+        >
+          {i}
+        </button>,
+      )
+    }
+
+    // 添加第一个省略号
+    elements.push(
+      <span key="ellipsis1" className="px-2">
+        ...
+      </span>,
+    )
+
+    // 如果当前页不在前三页也不在后两页，显示当前页
+    if (currentPage > 3 && currentPage < totalPages - 1) {
+      elements.push(
+        <button
+          key={currentPage}
+          onClick={() => setCurrentPage(currentPage)}
+          className="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium shadow-inner"
+        >
+          {currentPage}
+        </button>,
+      )
+    }
+
+    // 添加跳转功能和第二个省略号
+    elements.push(
+      <div key="jump" className="flex items-center gap-2">
+        <input
+          type="text"
+          value={jumpToPage}
+          onChange={(e) => setJumpToPage(e.target.value)}
+          onKeyDown={handleKeyPress}
+          className="w-16 rounded-lg border border-gray-300 px-2 py-1 text-center text-sm"
+          placeholder={`1-${totalPages}`}
+        />
+        <button
+          onClick={handleJumpToPage}
+          className="rounded-lg px-4 py-2 text-sm font-medium shadow-md hover:bg-gray-100"
+        >
+          跳转
+        </button>
+      </div>,
+      <span key="ellipsis2" className="px-2">
+        ...
+      </span>,
+    )
+
+    // 添加最后两页
+    for (let i = totalPages - 1; i <= totalPages; i++) {
+      elements.push(
+        <button
+          key={i}
+          onClick={() => setCurrentPage(i)}
+          className={`rounded-lg px-4 py-2 text-sm font-medium ${
+            currentPage === i
+              ? 'bg-gray-100 shadow-inner'
+              : 'shadow-md hover:bg-gray-100'
+          }`}
+        >
+          {i}
+        </button>,
+      )
+    }
+
+    return elements
+  }
+
   return (
     <div className="w-full font-normal">
       <h1 className="text-2xl font-bold">用户评论数据展示</h1>
@@ -131,18 +251,20 @@ const UserReviewsTable = ({ resModule }: { resModule: PostInfo[] }) => {
             ))}
         </tbody>
       </table>
-      <div className="mt-4 flex justify-center gap-8">
+      <div className="mt-4 flex items-center justify-center gap-2">
         <button
           onClick={handlePrevPage}
-          className="rounded-lg px-4 py-2 text-sm font-medium shadow-md hover:bg-gray-100"
+          className="rounded-lg px-4 py-2 text-sm font-medium shadow-md hover:bg-gray-100 disabled:opacity-50"
           disabled={currentPage === 1}
         >
           上一页
         </button>
 
+        {renderPagination()}
+
         <button
           onClick={handleNextPage}
-          className="rounded-lg px-4 py-2 text-sm font-medium shadow-md hover:bg-gray-100"
+          className="rounded-lg px-4 py-2 text-sm font-medium shadow-md hover:bg-gray-100 disabled:opacity-50"
           disabled={currentPage === totalPages}
         >
           下一页
