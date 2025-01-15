@@ -65,26 +65,32 @@ export default function ScenarioAnalysis({
 
   const scenarioPosts: Record<string, string[]> = {}
   const scenarioCount: Record<string, number> = {}
-  resModule.forEach((item: PostInfo) => {
-    if (scenarios.map((item) => item.scenario).includes(item.scenario)) {
-      if (scenarioCount[item.scenario]) {
-        scenarioCount[item.scenario]++
-      } else {
-        scenarioCount[item.scenario] = 1
-      }
+  const scenarioTitles = scenarios.map((item) => item.scenario)
+  const ownerPosts = resModule.filter(
+    (item: PostInfo) => item.user_type === '车主',
+  )
+  ownerPosts.forEach((item: PostInfo) => {
+    item.scenario.forEach((scenario) => {
+      if (scenarioTitles.includes(scenario)) {
+        if (scenarioCount[scenario]) {
+          scenarioCount[scenario]++
+        } else {
+          scenarioCount[scenario] = 1
+        }
 
-      if (scenarioPosts[item.scenario]) {
-        scenarioPosts[item.scenario].push(item.post)
-      } else {
-        scenarioPosts[item.scenario] = [item.post]
+        if (scenarioPosts[scenario]) {
+          scenarioPosts[scenario].push(item.post)
+        } else {
+          scenarioPosts[scenario] = [item.post]
+        }
       }
-    }
+    })
   })
 
   const scenarioDataArray = scenarios
     .map((scenario: { scenario: string; description: string }) => {
       const percentage = scenarioCount[scenario.scenario]
-        ? (scenarioCount[scenario.scenario] / resModule.length) * 100
+        ? (scenarioCount[scenario.scenario] / ownerPosts.length) * 100
         : 0
       return {
         scenario: scenario.scenario,
@@ -120,7 +126,10 @@ export default function ScenarioAnalysis({
       <div className="my-4 flex flex-col gap-2">
         <span className="text-lg">数据说明：</span>
         <span className="pl-8">
-          根据每条评论内容判断评论人的购车场景，得出场景分布。
+          根据每条车主评论内容判断车主的购车场景，得出场景分布，由于部分车主评论中没有明确提及场景，因此场景分布数值综合可能不足100%。
+        </span>
+        <span className="pl-8">
+          车主占比：{Math.ceil((ownerPosts.length / resModule.length) * 100)}%
         </span>
       </div>
       <div className="mb-4 flex h-[500px] flex-col rounded-lg p-4 ring-2 ring-gray-200">

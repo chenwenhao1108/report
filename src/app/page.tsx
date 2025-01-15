@@ -1,6 +1,7 @@
 'use client'
 
 import MultiDimensionAnalysis from '@/components/MultiDimensionAnalysis'
+import PositionAnalysis from '@/components/PositionAnalysis'
 import ScenarioAnalysis from '@/components/ScenarioAnalysis'
 import TopicAnalysis from '@/components/TopicAnalysis'
 import UserReviewsTable from '@/components/UserReviewsTable'
@@ -38,7 +39,7 @@ export default function Page() {
     yinhe_e8: '2024-01-05',
     wenjie_m7: '2023-09-12',
     byd_han: '2020-07-12',
-    lixiang_l6: '2024-4-18',
+    lixiang_l6: '2024-04-18',
   }
 
   useEffect(() => {
@@ -440,6 +441,7 @@ export default function Page() {
         productName={productName}
       />
       <ScenarioAnalysis resModule={filteredResModule} />
+      <PositionAnalysis resModule={filteredResModule} />
     </div>
   )
 }

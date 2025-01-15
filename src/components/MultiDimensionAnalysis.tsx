@@ -299,7 +299,7 @@ export default function MultiDimensionAnalysis({
             <Tooltip />
             {productName === 'byd_han' && (
               <ReferenceLine
-                x={granularity === 'month' ? '2022-04' : '2022-04-15'}
+                x={granularity === 'month' ? '2022-06' : '2022-06-15'}
                 stroke="red"
                 strokeDasharray="3 3"
                 label={{
@@ -366,7 +366,7 @@ export default function MultiDimensionAnalysis({
               <Bar dataKey="售后服务" stackId="a" fill="#722ED1" />
               {productName === 'byd_han' && (
                 <ReferenceLine
-                  x={granularity === 'day' ? '2022-04-15' : '2022-04'}
+                  x="2022-06-15"
                   stroke="red"
                   strokeDasharray="3 3"
                   label={{
@@ -420,7 +420,7 @@ export default function MultiDimensionAnalysis({
             <Bar dataKey="positive" stackId="a" fill="#86efac" />
             {productName === 'byd_han' && (
               <ReferenceLine
-                x={granularity === 'day' ? '2022-03-15' : '2022-03'}
+                x={granularity === 'day' ? '2022-06-15' : '2022-06'}
                 stroke="red"
                 strokeDasharray="3 3"
                 label={{

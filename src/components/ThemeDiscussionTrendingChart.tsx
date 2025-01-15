@@ -101,7 +101,7 @@ const ThemeDiscussionTrendingChart = ({
           ))}
           {productName === 'byd_han' && (
             <ReferenceLine
-              x="2022-03"
+              x="2022-06"
               stroke="red"
               strokeDasharray="3 3"
               label={{

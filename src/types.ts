@@ -11,7 +11,7 @@ export interface ReviewProp {
 }
 
 export interface PostInfo {
-  scenario: string
+  scenario: string[]
   user_type: string
   is_valuable: string
   reason: string
@@ -24,7 +24,7 @@ export interface PostInfo {
   uuid: string
   username: string
   post: string
-  positioning: string
+  positioning: string[]
 }
 
 export interface ThemeCount {
