@@ -1,22 +1,14 @@
 'use client'
-import { PostInfo, ReviewProp } from '@/types'
-import { getReviewsTableData } from '@/utils.client'
+
+import { PostInfo } from '@/types'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const UserReviewsTable = ({ resModule }: { resModule: PostInfo[] }) => {
-  const reviews = getReviewsTableData(resModule)
-
-  const [filteredReviews, setFilteredReviews] = useState<ReviewProp[]>(reviews)
-  const [currentPage, setCurrentPage] = useState(2)
+  const [currentPage, setCurrentPage] = useState(1)
   const [reviewsPerPage] = useState(8)
 
-  useEffect(() => {
-    const reviews = getReviewsTableData(resModule)
-    setFilteredReviews(reviews)
-  }, [resModule])
-
-  const totalPages = Math.ceil(filteredReviews.length / reviewsPerPage)
+  const totalPages = Math.ceil(resModule.length / reviewsPerPage)
   const handlePrevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1)
@@ -165,6 +157,9 @@ const UserReviewsTable = ({ resModule }: { resModule: PostInfo[] }) => {
               用户类型
             </th>
             <th className="text-nowrap px-4 py-3 text-left text-sm font-semibold">
+              评论时间
+            </th>
+            <th className="text-nowrap px-4 py-3 text-left text-sm font-semibold">
               原文
             </th>
             <th className="text-nowrap px-4 py-3 text-left text-sm font-semibold">
@@ -188,7 +183,7 @@ const UserReviewsTable = ({ resModule }: { resModule: PostInfo[] }) => {
           </tr>
         </thead>
         <tbody className="text-sm">
-          {filteredReviews
+          {resModule
             .slice(
               currentPage * reviewsPerPage - reviewsPerPage,
               currentPage * reviewsPerPage,
@@ -206,8 +201,13 @@ const UserReviewsTable = ({ resModule }: { resModule: PostInfo[] }) => {
                       : review.user_type}
                   </span>
                 </td>
+                <td className="px-4 py-5">
+                  <span className="text-nowrap px-2 py-0.5 text-sm font-normal text-gray-400">
+                    {review.timestamp}
+                  </span>
+                </td>
                 <td className="line-clamp-3 max-w-xl px-4 py-5">
-                  {review.content}
+                  {review.post}
                 </td>
                 <td className="px-4 py-5">
                   <div className="flex flex-wrap gap-1">
@@ -234,7 +234,7 @@ const UserReviewsTable = ({ resModule }: { resModule: PostInfo[] }) => {
                 <td className="px-4 py-5">{review.language}</td>
                 <td className="px-4 py-5">
                   <span className="rounded-3xl px-4 py-2 font-semibold ring-2 ring-gray-100">
-                    {review.hasNoMeaningComment}
+                    {review.is_valuable === 'True' ? '否' : '是'}
                   </span>
                 </td>
                 <td className="px-4 py-5">

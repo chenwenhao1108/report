@@ -33,14 +33,10 @@ export default function TopicAnalysis({
 
   return (
     <div>
-      <h1 className="my-4 text-2xl font-bold">话题分析</h1>
+      <h1 className="my-4 text-2xl font-bold">关键词分析</h1>
       <div className="flex w-full flex-grow justify-start gap-8">
         <div className="w-1/5 min-w-[400px] rounded-lg p-4 ring-2 ring-gray-200">
-          <h2 className="text-xl font-bold">热点话题讨论度</h2>
-          <div className="flex w-full justify-between py-4">
-            <span className="text-lg font-semibold">维度分析优缺点</span>
-            <span className="text-lg font-semibold">评论数量</span>
-          </div>
+          <h2 className="text-xl font-bold">关键词讨论度</h2>
           <ul>
             {topicDiscussionArray.slice(0, 10).map((item) => (
               <li key={item.topic} className="flex w-full justify-between py-4">

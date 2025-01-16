@@ -18,7 +18,12 @@ export default function Page() {
   const [allThemeAnalysis, setAllThemeAnalysis] = useState<
     Record<string, MergedThemeAnalysis[]>
   >({})
-  const [platforms, setPlatforms] = useState<string[]>(['dongchedi'])
+  const [platforms, setPlatforms] = useState<string[]>([
+    'dongchedi',
+    'autohome',
+    'bili',
+    'weibo',
+  ])
   const [productName, setProductName] = useState('yinhe_e8')
   const [granularity, setGranularity] = useState<'month' | 'day'>('month')
 

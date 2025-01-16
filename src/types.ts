@@ -1,15 +1,3 @@
-export interface ReviewProp {
-  username: string
-  user_type: string
-  content: string
-  keywords: string[]
-  themes: string[]
-  sentiment: '中立' | '正面' | '负面'
-  language: string
-  hasNoMeaningComment: '是' | '否'
-  url: string
-}
-
 export interface PostInfo {
   scenario: string[]
   user_type: string

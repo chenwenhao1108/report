@@ -6,7 +6,6 @@ import {
   PostInfo,
   RawAdvantage,
   RawThemeAnalysis,
-  ReviewProp,
   ScenarioRawData,
   ThemeCount,
   TopicCount,
@@ -256,34 +255,6 @@ export function getChartData(
     themeDiscussionTrendingChart: sortedThemeDiscussionTrendingChart,
     themeAttitudeTrendingChart: sortedThemeAttitudeTrendingChart,
   }
-}
-
-export function getReviewsTableData(res_module: PostInfo[]) {
-  const reviews: ReviewProp[] = []
-
-  res_module.forEach((item: PostInfo) => {
-    let sentiment: '中立' | '正面' | '负面' = '中立'
-    if (item.sentiment === 'negative') {
-      sentiment = '负面'
-    } else if (item.sentiment === 'positive') {
-      sentiment = '正面'
-    }
-
-    const review: ReviewProp = {
-      username: item.username,
-      user_type: item.user_type,
-      content: item.post,
-      keywords: item.keywords,
-      themes: item.themes,
-      sentiment,
-      language: item.language,
-      hasNoMeaningComment: item.is_valuable === 'False' ? '是' : '否',
-      url: item.url,
-    }
-    reviews.push(review)
-  })
-
-  return reviews
 }
 
 export function getPostsWithUuid(res_module: PostInfo[]) {
