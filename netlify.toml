@@ -1,3 +1,5 @@
-[functions]
-  # 直接为路由设置超时
-  "app/api/*.ts" = { timeout = 120 }
+[build]
+command = "next build"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
