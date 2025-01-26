@@ -76,10 +76,9 @@ export default function Page() {
       try {
         const response = await fetch(`/api/${platform}`)
         if (!response.ok) throw new Error(`Failed to fetch ${platform} data`)
-        const text = await response.text()
-        const lines = text.split('\n') // 按行分割
-        const lastLines = lines.slice(-5) // 获取最后10行
-        console.log(lastLines.join('\n'))
+        const text = await response.text() // 按行分割
+        const lastLines = text.slice(-200) // 获取最后10行
+        console.log(lastLines)
         const result = await response.json()
 
         setAllData((prevData) => ({
