@@ -4,19 +4,6 @@ import { getRawData } from '@/utils.server'
 export async function GET() {
   const data = await getAllRawData()
 
-  const jsonString = JSON.stringify(data)
-  const chunkSize = 1024 * 1024 // 1MB chunks
-
-  const stream = new ReadableStream({
-    start(controller) {
-      for (let i = 0; i < jsonString.length; i += chunkSize) {
-        const chunk = jsonString.slice(i, i + chunkSize)
-        controller.enqueue(new TextEncoder().encode(chunk))
-      }
-      controller.close()
-    },
-  })
-
   if (!data) {
     return new Response(
       JSON.stringify({ error: 'No data found for the query' }),
@@ -24,11 +11,8 @@ export async function GET() {
     )
   }
 
-  return new Response(stream, {
-    headers: {
-      'Content-Type': 'application/json',
-      'Transfer-Encoding': 'chunked',
-    },
+  return new Response(JSON.stringify(data), {
+    headers: { 'Content-Type': 'application/json' },
   })
 }
 
