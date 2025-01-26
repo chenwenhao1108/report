@@ -48,10 +48,6 @@ export default function Page() {
   }
 
   useEffect(() => {
-    console.log(res_module.length)
-  }, [res_module])
-
-  useEffect(() => {
     if (granularity === 'day') {
       setReleaseDate(releaseDates[productName])
     } else {
@@ -83,6 +79,7 @@ export default function Page() {
           receivedData += chunk
         }
 
+        receivedData += decoder.decode()
         const result = JSON.parse(receivedData)
 
         setAllData((prevData) => ({

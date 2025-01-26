@@ -4,18 +4,18 @@ import { getRawData } from '@/utils.server'
 export async function GET() {
   const data = await getAllRawData()
 
-  const encoder = new TextEncoder()
+  const jsonString = JSON.stringify(data)
+  const chunkSize = 1024 * 1024 // 1MB chunks
 
   const stream = new ReadableStream({
     start(controller) {
-      // 分块发送数据
-      const jsonChunks = JSON.stringify(data).match(/.{1,10000}/g) || []
 
-      jsonChunks.forEach((chunk) => {
-        controller.enqueue(encoder.encode(chunk))
-      })
-
+      for (let i = 0; i < jsonString.length; i += chunkSize) {
+        const chunk = jsonString.slice(i, i + chunkSize)
+        controller.enqueue(new TextEncoder().encode(chunk))
+      }
       controller.close()
+
     },
   })
 
