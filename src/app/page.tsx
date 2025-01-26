@@ -56,46 +56,6 @@ export default function Page() {
   }, [productName, granularity])
 
   useEffect(() => {
-    const fetchDongchediData = async () => {
-      try {
-        const response = await fetch('/api/dongchedi')
-        if (!response.ok) throw new Error('Failed to fetch dongchedi data')
-
-        if (!response.body) {
-          throw new Error('No response body')
-        }
-
-        const reader = response.body.getReader()
-        const decoder = new TextDecoder()
-        let receivedData = ''
-
-        while (true) {
-          const { done, value } = await reader.read()
-
-          if (done) break
-
-          // 将每个数据块解码并累加
-          const chunk = decoder.decode(value, { stream: true })
-          receivedData += chunk
-        }
-
-        receivedData += decoder.decode()
-        const result = JSON.parse(receivedData)
-
-        setAllData((prevData) => ({
-          ...prevData,
-          dongchedi: result.dongchedi,
-        }))
-        setRes_module(result.dongchedi.yinhe_e8.res_module)
-        setFilteredResModule(result.dongchedi.yinhe_e8.res_module)
-
-        return result
-      } catch (error) {
-        console.error('Error fetching dongchedi data:', error)
-        throw error
-      }
-    }
-
     const fetchThemeAnalysis = async () => {
       try {
         const response = await fetch('/api/theme_analysis')
@@ -135,10 +95,10 @@ export default function Page() {
 
       try {
         // 并行请求主要数据
-        await Promise.all([fetchDongchediData(), fetchThemeAnalysis()])
+        await Promise.all([fetchThemeAnalysis()])
 
         // 并行请求其他平台数据
-        const otherPlatforms = ['autohome', 'bili', 'weibo']
+        const otherPlatforms = ['dongchedi', 'autohome', 'bili', 'weibo']
         await Promise.all(
           otherPlatforms.map((platform) => fetchPlatformData(platform)),
         )

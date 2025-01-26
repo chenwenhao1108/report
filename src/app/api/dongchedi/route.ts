@@ -9,13 +9,11 @@ export async function GET() {
 
   const stream = new ReadableStream({
     start(controller) {
-
       for (let i = 0; i < jsonString.length; i += chunkSize) {
         const chunk = jsonString.slice(i, i + chunkSize)
         controller.enqueue(new TextEncoder().encode(chunk))
       }
       controller.close()
-
     },
   })
 
