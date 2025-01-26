@@ -181,7 +181,7 @@ export default function MultiDimensionAnalysis({
                     >
                       <div className="flex justify-between">
                         <h3 className="text-base font-bold">
-                          {advantage.summary}
+                          {advantage.summary_topic}
                         </h3>
                         <span className="ml-2 h-fit text-nowrap rounded-xl px-2 font-semibold ring-1 ring-gray-300">
                           讨论度
@@ -235,7 +235,7 @@ export default function MultiDimensionAnalysis({
                     >
                       <div className="flex justify-between">
                         <h3 className="text-base font-bold">
-                          {disadvantage.summary}
+                          {disadvantage.summary_topic}
                         </h3>
                         <span className="ml-2 h-fit text-nowrap rounded-xl px-2 font-semibold ring-1 ring-gray-300">
                           讨论度
