@@ -5,19 +5,22 @@ import PositionAnalysis from '@/components/PositionAnalysis'
 import ScenarioAnalysis from '@/components/ScenarioAnalysis'
 import TopicAnalysis from '@/components/TopicAnalysis'
 import UserReviewsTable from '@/components/UserReviewsTable'
+import { res_module_data, theme_analysis } from '@/data'
 import { AllData, MergedThemeAnalysis, PostInfo } from '@/types'
 import { useEffect, useState } from 'react'
-
 export default function Page() {
+  const typedThemeAnalysis = theme_analysis as Record<
+    string,
+    MergedThemeAnalysis[]
+  >
   const [allData, setAllData] = useState<AllData>()
   const [res_module, setRes_module] = useState<PostInfo[]>([])
   const [filteredResModule, setFilteredResModule] = useState<PostInfo[]>([])
   const [mergedThemeAnalysis, setMergedThemeAnalysis] = useState<
     MergedThemeAnalysis[]
   >([])
-  const [allThemeAnalysis, setAllThemeAnalysis] = useState<
-    Record<string, MergedThemeAnalysis[]>
-  >({})
+  const [allThemeAnalysis] =
+    useState<Record<string, MergedThemeAnalysis[]>>(typedThemeAnalysis)
   const [platforms, setPlatforms] = useState<string[]>([
     'dongchedi',
     'autohome',
@@ -36,10 +39,9 @@ export default function Page() {
 
   const [userType, setUserType] = useState('')
 
-  const [loading, setLoading] = useState(true)
-
   const [releaseDate, setReleaseDate] = useState('')
 
+  const [loading, setLoading] = useState(true)
   const releaseDates: Record<string, string> = {
     yinhe_e8: '2024-01-05',
     wenjie_m7: '2023-09-12',
@@ -56,64 +58,18 @@ export default function Page() {
   }, [productName, granularity])
 
   useEffect(() => {
-    const fetchThemeAnalysis = async () => {
-      try {
-        const response = await fetch('/api/theme_analysis')
-        if (!response.ok) throw new Error('Failed to fetch theme analysis')
-        const data = await response.json()
+    setMergedThemeAnalysis(typedThemeAnalysis[productName])
+  }, [typedThemeAnalysis, productName])
 
-        setAllThemeAnalysis(data)
-        setMergedThemeAnalysis(data[productName])
-
-        return data
-      } catch (error) {
-        console.error('Error fetching theme analysis:', error)
-        throw error
-      }
-    }
-
-    const fetchPlatformData = async (platform: string) => {
-      try {
-        const response = await fetch(`/api/${platform}`)
-        if (!response.ok) throw new Error(`Failed to fetch ${platform} data`)
-        const text = await response.text() // 按行分割
-        const lastLines = text.slice(-200) // 获取最后10行
-        console.log(lastLines)
-        const result = await response.json()
-
-        setAllData((prevData) => ({
-          ...prevData,
-          [platform]: result[platform],
-        }))
-
-        return result
-      } catch (error) {
-        console.error(`Error fetching ${platform} data:`, error)
-        throw error
-      }
-    }
-
-    const initializeData = async () => {
-      setLoading(true)
-
-      try {
-        // 并行请求主要数据
-        await Promise.all([fetchThemeAnalysis()])
-
-        // 并行请求其他平台数据
-        const otherPlatforms = ['dongchedi', 'autohome', 'bili', 'weibo']
-        await Promise.all(
-          otherPlatforms.map((platform) => fetchPlatformData(platform)),
-        )
-      } catch (error) {
-        console.error('Error initializing data:', error)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    initializeData()
+  useEffect(() => {
+    setAllData(res_module_data)
   }, [])
+
+  useEffect(() => {
+    if (res_module.length > 0) {
+      setLoading(false)
+    }
+  }, [res_module])
 
   useEffect(() => {
     const resModules: PostInfo[] = []
@@ -125,7 +81,7 @@ export default function Page() {
         allData[platform] &&
         allData[platform][productName]
       ) {
-        resModules.push(...allData[platform][productName]['res_module'])
+        resModules.push(...allData[platform][productName])
       }
     })
     setRes_module(resModules)

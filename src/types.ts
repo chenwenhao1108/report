@@ -118,9 +118,8 @@ export interface TrendingChartField {
 
 export interface AllData {
   [platform: string]: {
-    [productName: string]: {
-      res_module: PostInfo[]
-    }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [productName: string]: any
   }
 }
 
