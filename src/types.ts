@@ -55,6 +55,7 @@ export interface RawAdvantage {
 
 export interface Advantage {
   summary: string
+  summary_topic: string
   content: string[]
   keywords: string[]
 }
