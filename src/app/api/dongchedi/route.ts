@@ -2,8 +2,22 @@ import { AllData } from '@/types'
 import { getRawData } from '@/utils.server'
 
 export async function GET() {
-  // const data = await getDataBasedOnQuery(productName, platforms)
   const data = await getAllRawData()
+
+  const encoder = new TextEncoder()
+
+  const stream = new ReadableStream({
+    start(controller) {
+      // 分块发送数据
+      const jsonChunks = JSON.stringify(data).match(/.{1,10000}/g) || []
+
+      jsonChunks.forEach((chunk) => {
+        controller.enqueue(encoder.encode(chunk))
+      })
+
+      controller.close()
+    },
+  })
 
   if (!data) {
     return new Response(
@@ -12,8 +26,11 @@ export async function GET() {
     )
   }
 
-  return new Response(JSON.stringify(data), {
-    headers: { 'Content-Type': 'application/json' },
+  return new Response(stream, {
+    headers: {
+      'Content-Type': 'application/json',
+      'Transfer-Encoding': 'chunked',
+    },
   })
 }
 

@@ -64,7 +64,26 @@ export default function Page() {
       try {
         const response = await fetch('/api/dongchedi')
         if (!response.ok) throw new Error('Failed to fetch dongchedi data')
-        const result = await response.json()
+
+        if (!response.body) {
+          throw new Error('No response body')
+        }
+
+        const reader = response.body.getReader()
+        const decoder = new TextDecoder()
+        let receivedData = ''
+
+        while (true) {
+          const { done, value } = await reader.read()
+
+          if (done) break
+
+          // 将每个数据块解码并累加
+          const chunk = decoder.decode(value, { stream: true })
+          receivedData += chunk
+        }
+
+        const result = JSON.parse(receivedData)
 
         setAllData((prevData) => ({
           ...prevData,
