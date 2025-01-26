@@ -221,7 +221,7 @@
         "theme": "智能系统",
         "advantage": [
             {
-                "summary": "理想L6的语音助手功能强大，可以方便地控制导航、音乐、空调等功能，并支持OTA升级，不断更新功能。",
+                "summary": "理想L6的智能座舱体验出色，车机系统流畅，语音助手功能强大，可以方便地控制导航、音乐、空调等功能，并支持OTA升级，不断更新功能。",
                 "summary_topic": "车机流畅功能多",
                 "platform_data": {
                     "bili": {
@@ -299,14 +299,7 @@
                             "7da9b994-c958-4bc4-990e-d75b95708b68",
                             "5065d0ea-cc03-4ab2-8fa1-81c17acf35d5",
                             "984d40c8-b8e6-49d5-84c1-807f923f3c86",
-                            "206f6be8-9383-443a-bbba-9ca169dd72eb",
-                            "0ae084c6-1e46-47f4-aabd-ab778926e439",
-                            "353f22ae-5276-4b3e-98fa-069234e1a562",
-                            "5fe73475-ea57-4dd8-9890-f65f020a7912",
-                            "cc1e8cfa-3c1f-4f64-8746-4e6d30a3e46e",
-                            "4d9c9fdf-c1a6-4b0e-8916-315f9d13fd78",
-                            "ce0019ad-249d-4275-a824-b5bb6c81b208",
-                            "299cf523-b697-484f-a13e-e9debeca9b25"
+                            "206f6be8-9383-443a-bbba-9ca169dd72eb"
                         ]
                     }
                 }
@@ -350,12 +343,7 @@
                             "c6cff131-8f53-4ed4-b45c-44116a55363a",
                             "d7e8d1c6-5bd3-4c07-81c1-c5d62903bb74",
                             "f25b6bf5-944f-4da0-bbc9-efff32c64d51",
-                            "fba47f1e-1cb9-4f81-bc6f-63865d18a6de",
-                            "63583886-d091-41db-adb2-3c0ded1ac6e2",
-                            "9ca442b8-aae1-48bf-8d86-c9d6adeaa996",
-                            "554b8c35-d30a-4918-9382-17ef4b6b17b4",
-                            "7d88a53e-fa45-4c94-b4df-36fad6dc6c92",
-                            "1d4e03b9-0f4b-4b5d-a6d5-dbc8fdf47c85"
+                            "fba47f1e-1cb9-4f81-bc6f-63865d18a6de"
                         ]
                     },
                     "dongchedi": {
@@ -373,9 +361,7 @@
                             "b31ef72a-b3c6-435d-b3e6-168f1148a5d7",
                             "6951fcca-0999-446f-9042-4b9c0764a64f",
                             "d31410ef-4d1d-4442-9b22-e81655a5f02c",
-                            "f2f95a55-4631-45f1-a0f2-a38728f34e64",
-                            "f2f95a55-4631-45f1-a0f2-a38728f34e64",
-                            "78426052-5165-418f-b48a-d63921ecad44"
+                            "f2f95a55-4631-45f1-a0f2-a38728f34e64"
                         ]
                     },
                     "autohome": {
@@ -396,11 +382,47 @@
                             "c6a2c08d-afa0-49a9-835c-e4819b3fe45a",
                             "7da9b994-c958-4bc4-990e-d75b95708b68",
                             "206f6be8-9383-443a-bbba-9ca169dd72eb",
-                            "9e1dc8dc-1b48-48c3-acc6-a070ba9ec6bb",
-                            "e5caba4d-7e1c-4f3d-bbd9-e49bbb63db92",
-                            "71463ed3-d053-4e94-827a-5747cc550827",
-                            "e092080b-ab49-4d96-84e6-b020d1a49bf9",
-                            "66da35dc-591f-4b2d-9057-4ba0af0bc215"
+                            "9e1dc8dc-1b48-48c3-acc6-a070ba9ec6bb"
+                        ]
+                    }
+                }
+            },
+            {
+                "summary": "华为的智能驾驶系统被广泛认为是市场上的领先者，反应灵敏，用户体验良好。",
+                "summary_topic": "华为智驾强",
+                "platform_data": {
+                    "bili": {
+                        "keywords": [
+                            "领先",
+                            "反应灵敏",
+                            "华为智驾"
+                        ],
+                        "uuid": [
+                            "a71ca13c-cb26-4e6e-ae4d-d46c8bd7254c",
+                            "35010991-a4c7-4e61-90ab-b5dcf8ebfa07",
+                            "1a2afaa8-45ea-49e3-b497-5e75711b1d42"
+                        ]
+                    }
+                }
+            },
+            {
+                "summary": "理想HUD的雪地模式在冬季提供了更好的可视性和安全性，橙色显示在雪地中更加清晰。",
+                "summary_topic": "HUD显示好",
+                "platform_data": {
+                    "weibo": {
+                        "keywords": [
+                            "安全",
+                            "清晰",
+                            "雪地模式",
+                            "橙色显示",
+                            "HUD"
+                        ],
+                        "uuid": [
+                            "63583886-d091-41db-adb2-3c0ded1ac6e2",
+                            "9ca442b8-aae1-48bf-8d86-c9d6adeaa996",
+                            "554b8c35-d30a-4918-9382-17ef4b6b17b4",
+                            "7d88a53e-fa45-4c94-b4df-36fad6dc6c92",
+                            "1d4e03b9-0f4b-4b5d-a6d5-dbc8fdf47c85"
                         ]
                     }
                 }
@@ -409,22 +431,6 @@
                 "summary": "理想L6的智能驾驶辅助系统，例如NOA和LCC，在高速和快速路上使用体验良好，可以减轻驾驶疲劳，提高驾驶安全性。",
                 "summary_topic": "智驾辅助好用",
                 "platform_data": {
-                    "weibo": {
-                        "keywords": [
-                            "反打方向",
-                            "端到端",
-                            "智驾行驶",
-                            "智能驾驶",
-                            "冰面过弯"
-                        ],
-                        "uuid": [
-                            "d14b7eca-1e46-46c5-beb1-0a49c8a08781",
-                            "f335c57e-361b-4185-b415-be8cb5f6ba8b",
-                            "3fff5ee2-259a-4cdc-8d62-01d0c2f64d50",
-                            "293eab1b-ddd2-45ac-bcdb-5923bc596bcd",
-                            "cf78593c-2a5d-44f0-93a1-9a42fb1e26a5"
-                        ]
-                    },
                     "dongchedi": {
                         "keywords": [
                             "ETC自动选择",
@@ -464,13 +470,7 @@
                             "0ee236b0-c6ec-48f5-a81f-31b089eaefc3",
                             "a16b6794-341f-41e9-bfe1-c2f88bb0952e",
                             "afbd7baa-af4f-4cf4-ab38-d0e41613bcca",
-                            "9e1dc8dc-1b48-48c3-acc6-a070ba9ec6bb",
-                            "e2ba328d-3580-4466-bc29-50382cec3f74",
-                            "013d4c5a-846e-4783-bfde-fb3a5bbf0b1a",
-                            "54c2739c-0189-494a-8aaf-b8bde4d9bda3",
-                            "2c0ca3b0-df76-473e-b855-6b124b0cb222",
-                            "cf099fdc-23ee-4858-9059-d1ca5bead450",
-                            "2c458655-395c-487d-97be-cd36bda321f8"
+                            "9e1dc8dc-1b48-48c3-acc6-a070ba9ec6bb"
                         ]
                     }
                 }
@@ -502,12 +502,38 @@
                         ]
                     }
                 }
+            },
+            {
+                "summary": "理想L6的智能化配置丰富，例如任务大师、调音大师等功能，可以根据个人需求进行设置，提升用车体验。",
+                "summary_topic": "智能配置丰富",
+                "platform_data": {
+                    "autohome": {
+                        "keywords": [
+                            "个性化设置",
+                            "调音大师",
+                            "智能配置",
+                            "任务大师"
+                        ],
+                        "uuid": [
+                            "0ae084c6-1e46-47f4-aabd-ab778926e439",
+                            "353f22ae-5276-4b3e-98fa-069234e1a562",
+                            "5fe73475-ea57-4dd8-9890-f65f020a7912",
+                            "cc1e8cfa-3c1f-4f64-8746-4e6d30a3e46e",
+                            "4d9c9fdf-c1a6-4b0e-8916-315f9d13fd78",
+                            "0ee236b0-c6ec-48f5-a81f-31b089eaefc3",
+                            "2c0ca3b0-df76-473e-b855-6b124b0cb222",
+                            "ce0019ad-249d-4275-a824-b5bb6c81b208",
+                            "299cf523-b697-484f-a13e-e9debeca9b25",
+                            "206f6be8-9383-443a-bbba-9ca169dd72eb"
+                        ]
+                    }
+                }
             }
         ],
         "disadvantage": [
             {
                 "summary": "理想L6的智能驾驶在某些情况下表现不佳，特别是在复杂路况下的表现需要改进。",
-                "summary_topic": "复杂路况智驾表现不佳",
+                "summary_topic": "智能驾驶欠佳",
                 "platform_data": {
                     "bili": {
                         "keywords": [
@@ -586,7 +612,7 @@
             },
             {
                 "summary": "智能驾驶系统在某些情况下会出现误判，导致驾驶体验不佳。",
-                "summary_topic": "智驾出现误判",
+                "summary_topic": "误判体验差",
                 "platform_data": {
                     "bili": {
                         "keywords": [
@@ -619,7 +645,7 @@
             },
             {
                 "summary": "理想L6的高配版图片中取消了激光雷达，导致用户对智能驾驶的期待落空。",
-                "summary_topic": "智驾配置无激光雷达",
+                "summary_topic": "智驾配置差",
                 "platform_data": {
                     "dongchedi": {
                         "keywords": [
@@ -637,7 +663,7 @@
             },
             {
                 "summary": "部分用户反馈理想L6的车机系统存在一些bug，例如热点失效、驻车照片透明等问题。",
-                "summary_topic": "车机系统bug多",
+                "summary_topic": "车机系统bug",
                 "platform_data": {
                     "autohome": {
                         "keywords": [
@@ -741,6 +767,28 @@
                         ],
                         "uuid": [
                             "ce08e8c0-4081-48ec-a6a6-2a76a2f1a673"
+                        ]
+                    }
+                }
+            },
+            {
+                "summary": "理想汽车的舒适性和家用功能吸引了许多家庭用户，尤其是带孩子的家庭。",
+                "summary_topic": "家用舒适好",
+                "platform_data": {
+                    "bili": {
+                        "keywords": [
+                            "家用",
+                            "理想",
+                            "舒适",
+                            "家庭",
+                            "带娃"
+                        ],
+                        "uuid": [
+                            "bfb531c1-b5e1-46c2-9226-6c5a25c0c2d0",
+                            "22ba4701-3b2b-472a-b1ee-cf4389f432dc",
+                            "876d3a36-38c9-4c0b-8604-73256accdf54",
+                            "6c51d652-98e6-42fc-9c6c-25671da57ffe",
+                            "9e1d3812-3b4a-495e-94c4-0c5a76f447a2"
                         ]
                     }
                 }
@@ -885,7 +933,7 @@
             },
             {
                 "summary": "提车过程不复杂，交付人员细心，现场服务周到，包括保险办理和免税登记。",
-                "summary_topic": "交付服务便利",
+                "summary_topic": "交付服务好",
                 "platform_data": {
                     "autohome": {
                         "keywords": [
@@ -902,6 +950,28 @@
             }
         ],
         "disadvantage": [
+            {
+                "summary": "部分用户对车辆的安全性表示担忧，认为宣传与实际安全性不符。",
+                "summary_topic": "安全性担忧",
+                "platform_data": {
+                    "bili": {
+                        "keywords": [
+                            "车祸",
+                            "安全",
+                            "宣传",
+                            "实际",
+                            "担忧"
+                        ],
+                        "uuid": [
+                            "e11d903d-6be9-4587-b7a4-dd2b354969a1",
+                            "be221c84-c777-4708-b1e0-43b8bf795721",
+                            "503cd9d1-d69b-4ce0-9965-e9a0ffbfecec",
+                            "10d224ad-a215-46d6-8ccb-f01f210897fe",
+                            "5319591-1a15-46c8-9a4b-299b7a2a1f84"
+                        ]
+                    }
+                }
+            },
             {
                 "summary": "一些用户对提车周期过长表示不满，影响了购买体验。",
                 "summary_topic": "提车周期长",
@@ -964,6 +1034,24 @@
                             "d12b42ff-1f02-41b0-a737-c6e5c2ae6686",
                             "d71e181c-1e51-4e75-a990-7395585330f2",
                             "0f74a50c-31fd-446f-ab6f-6c8a7b61380f"
+                        ]
+                    }
+                }
+            },
+            {
+                "summary": "购车贷款压力大，需分期购买。",
+                "summary_topic": "贷款压力大",
+                "platform_data": {
+                    "bili": {
+                        "keywords": [
+                            "压力",
+                            "贷款",
+                            "理想"
+                        ],
+                        "uuid": [
+                            "458f30c8-6bb0-4724-88f5-2cb4a2287b60",
+                            "834a4f59-c0fe-48ea-8766-f04deb6bc3d2",
+                            "c3ecab72-5688-40e8-85e4-b6ad19da4e9d"
                         ]
                     }
                 }
@@ -1073,7 +1161,29 @@
                             "71c9ffef-2c18-4d33-b2ca-2f170f03f831",
                             "b5dd4810-d0a2-42d4-b571-30d172d8594d"
                         ]
-                    },
+                    }
+                }
+            },
+            {
+                "summary": "部分用户对理想L6的购车政策不满，尤其是在老车主的复购权益上，认为政策不够友好。",
+                "summary_topic": "购车政策差",
+                "platform_data": {
+                    "weibo": {
+                        "keywords": [
+                            "老车主",
+                            "政策不友好",
+                            "复购权益"
+                        ],
+                        "uuid": [
+                            "52b73111-e6df-4117-973b-9c14ba1afb16"
+                        ]
+                    }
+                }
+            },
+            {
+                "summary": "购买过程中赠品少，消费者对赠品不满意。",
+                "summary_topic": "赠品不足",
+                "platform_data": {
                     "dongchedi": {
                         "keywords": [
                             "礼品",
@@ -1127,12 +1237,7 @@
                             "5006cc7e-ca36-4f4c-a874-47add6c7a355",
                             "660341e3-9071-491b-9b3c-82ba1b071929",
                             "c0e82d0c-1273-48e1-9816-8e0d3da46789",
-                            "831613a5-0268-44cf-9910-fc892cba1735",
-                            "429efc17-77d8-45ab-9ec0-709a9dec0b8a",
-                            "2f326f85-0cf7-474f-a789-8824ca32d917",
-                            "0f800485-27b1-418b-ae7d-3880137e999c",
-                            "b4990ecb-e691-4d2c-bb05-19ce8cb7805e",
-                            "f422367c-e68f-4f6d-86f6-61f5be87bc94"
+                            "831613a5-0268-44cf-9910-fc892cba1735"
                         ]
                     },
                     "weibo": {
@@ -1148,9 +1253,7 @@
                             "c3aaf3cf-cc68-4e9c-bbef-c2a9d7bdd2b5",
                             "bbafd589-2b98-4ee8-93a8-cc8a6922f440",
                             "cb84384c-6a18-490b-8331-882571ef14de",
-                            "e78d032d-864f-430d-a226-d16050e0b05d",
-                            "8d07641c-c73f-47f9-9622-e8aa6255ed4a",
-                            "d4f6229d-a8a1-47c9-9b41-4baa673d8136"
+                            "e78d032d-864f-430d-a226-d16050e0b05d"
                         ]
                     },
                     "dongchedi": {
@@ -1195,6 +1298,39 @@
                             "04c0f87c-c015-4ecd-85bc-cea8f87059ef",
                             "2dd74742-9b4b-48f5-9504-75571deb97dc",
                             "894bffae-20bc-40b8-b3da-8bd474694b76"
+                        ]
+                    }
+                }
+            },
+            {
+                "summary": "外观设计好看",
+                "summary_topic": "外观设计好",
+                "platform_data": {
+                    "bili": {
+                        "keywords": [
+                            "外观不错",
+                            "好看",
+                            "外观",
+                            "颜值",
+                            "设计"
+                        ],
+                        "uuid": [
+                            "429efc17-77d8-45ab-9ec0-709a9dec0b8a",
+                            "2f326f85-0cf7-474f-a789-8824ca32d917",
+                            "0f800485-27b1-418b-ae7d-3880137e999c",
+                            "b4990ecb-e691-4d2c-bb05-19ce8cb7805e",
+                            "f422367c-e68f-4f6d-86f6-61f5be87bc94"
+                        ]
+                    },
+                    "weibo": {
+                        "keywords": [
+                            "视觉吸引力",
+                            "辨识度",
+                            "星环大灯"
+                        ],
+                        "uuid": [
+                            "8d07641c-c73f-47f9-9622-e8aa6255ed4a",
+                            "d4f6229d-a8a1-47c9-9b41-4baa673d8136"
                         ]
                     }
                 }
@@ -1330,6 +1466,33 @@
                 }
             },
             {
+                "summary": "HUD抬头显示清晰，信息丰富，提升驾驶安全性。",
+                "summary_topic": "HUD清晰又实用",
+                "platform_data": {
+                    "autohome": {
+                        "keywords": [
+                            "信息丰富",
+                            "驾驶安全",
+                            "HUD抬头显示",
+                            "转向影像",
+                            "清晰"
+                        ],
+                        "uuid": [
+                            "e5caba4d-7e1c-4f3d-bbd9-e49bbb63db92",
+                            "71463ed3-d053-4e94-827a-5747cc550827",
+                            "e092080b-ab49-4d96-84e6-b020d1a49bf9",
+                            "66da35dc-591f-4b2d-9057-4ba0af0bc215",
+                            "013d4c5a-846e-4783-bfde-fb3a5bbf0b1a",
+                            "a2808f74-e0d1-4997-b29a-5041b359b41c",
+                            "a16b6794-341f-41e9-bfe1-c2f88bb0952e",
+                            "40c8bd61-2f29-4b1b-a765-8ca106696f2d",
+                            "7da9b994-c958-4bc4-990e-d75b95708b68",
+                            "4d9c9fdf-c1a6-4b0e-8916-315f9d13fd78"
+                        ]
+                    }
+                }
+            },
+            {
                 "summary": "全景天窗视野开阔，增强车内空间感，提升乘坐体验。",
                 "summary_topic": "全景天窗视野好",
                 "platform_data": {
@@ -1359,7 +1522,7 @@
         "disadvantage": [
             {
                 "summary": "M7的外观被普遍认为丑陋，设计上缺乏吸引力。",
-                "summary_topic": "外观设计丑陋",
+                "summary_topic": "外观设计差",
                 "platform_data": {
                     "bili": {
                         "keywords": [
@@ -1398,7 +1561,7 @@
             },
             {
                 "summary": "理想的外观被一些消费者认为过于中庸和普通，缺乏个性。",
-                "summary_topic": "外观中庸，缺乏个性",
+                "summary_topic": "外观中庸差",
                 "platform_data": {
                     "bili": {
                         "keywords": [
@@ -1467,8 +1630,8 @@
                 }
             },
             {
-                "summary": "方向盘设计不对称，影响驾驶体验。",
-                "summary_topic": "方向盘设计不对称",
+                "summary": "方向盘设计不佳",
+                "summary_topic": "方向盘设计差",
                 "platform_data": {
                     "bili": {
                         "keywords": [
@@ -1530,7 +1693,7 @@
             },
             {
                 "summary": "理想L6的内饰被认为有减配现象，部分材质显得廉价。",
-                "summary_topic": "内饰减配，材质廉价",
+                "summary_topic": "内饰减配现象",
                 "platform_data": {
                     "dongchedi": {
                         "keywords": [
@@ -1547,41 +1710,24 @@
                 }
             },
             {
+                "summary": "理想L6的后视镜模块较大，影响车内视线。",
+                "summary_topic": "视线受阻碍",
+                "platform_data": {
+                    "dongchedi": {
+                        "keywords": [
+                            "视线受阻",
+                            "后视镜模块"
+                        ],
+                        "uuid": [
+                            "6fe31cfb-093e-4969-b85d-c15bf72f9a0d"
+                        ]
+                    }
+                }
+            },
+            {
                 "summary": "后排容易进灰，尤其是雨天泥沙飞溅，影响车内清洁。",
                 "summary_topic": "后排容易进灰尘",
                 "platform_data": {
-                    "bili": {
-                        "keywords": [
-                            "车内清洁",
-                            "进灰",
-                            "舒适性"
-                        ],
-                        "uuid": [
-                            "fe3df3c4-4160-43a1-b310-bf5f8f329d83",
-                            "115062e5-886d-405f-983d-4d04086f1acc",
-                            "4ddeac9f-3926-44aa-a76a-8c361c2f996c",
-                            "54b0b0c6-9f3d-46a4-8e09-b8ca3e90ff5a",
-                            "121e7905-4a9b-43eb-86d4-cf265f007090",
-                            "2e45e681-2369-4bf1-bb8f-614f8ff4adab",
-                            "4ba8312c-bd48-4147-9a0c-7d243fa187db",
-                            "cc62acef-6ab0-445a-8099-3ba9918b553f",
-                            "3a165630-552c-4dab-9c6d-6699712033a4",
-                            "fbaecb3d-30fe-4abd-a9e3-d09e68f01501"
-                        ]
-                    },
-                    "dongchedi": {
-                        "keywords": [
-                            "后门",
-                            "问题",
-                            "进灰",
-                            "密封"
-                        ],
-                        "uuid": [
-                            "e93a886f-73f1-472c-9df8-2eb75ce62df2",
-                            "067fe1f2-1946-482c-afef-5573831bdb86",
-                            "8c23792d-6682-455d-8b08-4b5996fcb78c"
-                        ]
-                    },
                     "autohome": {
                         "keywords": [
                             "泥沙",
@@ -1598,6 +1744,24 @@
                         ]
                     }
                 }
+            },
+            {
+                "summary": "车门存在一些问题，如车门较软容易刮蹭，车门难关需要大力。",
+                "summary_topic": "车门偏软难关闭",
+                "platform_data": {
+                    "autohome": {
+                        "keywords": [
+                            "难关",
+                            "大力",
+                            "车门软",
+                            "刮蹭"
+                        ],
+                        "uuid": [
+                            "6e73256b-3291-49e1-b223-a85f311c0cae",
+                            "69205527-181a-4d1e-a1d7-98f1fffab60c"
+                        ]
+                    }
+                }
             }
         ]
     },
@@ -1606,7 +1770,7 @@
         "advantage": [
             {
                 "summary": "理想L6的空间表现出色，适合家庭使用，尤其是后排空间宽敞，乘坐舒适。",
-                "summary_topic": "空间宽敞，适合家庭",
+                "summary_topic": "空间宽敞舒适",
                 "platform_data": {
                     "bili": {
                         "keywords": [
@@ -1627,7 +1791,6 @@
                         ],
                         "uuid": [
                             "fcaf5e7c-95c2-4eea-a8bd-24b0b7f65613",
-                            "bfb531c1-b5e1-46c2-9226-6c5a25c0c2d0",
                             "292f880c-02df-4fe2-95ea-bed0bad2a855",
                             "d15fb988-2a5c-4e3b-aef1-19034a87d8fb",
                             "888a52e9-7b6d-4e2d-b060-46775e5e22f3",
@@ -1646,11 +1809,7 @@
                             "0cef09ac-50a3-4db9-8820-36192ecd36f5",
                             "6215b974-5f45-488f-b415-de216536d4e1",
                             "217028a5-fc56-468e-9228-860d7e9dbe1e",
-                            "f9c458ef-a0a2-41d3-bdaa-c399e0bf27e5",
-                            "22ba4701-3b2b-472a-b1ee-cf4389f432dc",
-                            "876d3a36-38c9-4c0b-8604-73256accdf54",
-                            "6c51d652-98e6-42fc-9c6c-25671da57ffe",
-                            "9e1d3812-3b4a-495e-94c4-0c5a76f447a2"
+                            "f9c458ef-a0a2-41d3-bdaa-c399e0bf27e5"
                         ]
                     },
                     "weibo": {
@@ -1666,10 +1825,7 @@
                             "250c3724-d858-4cdf-a9e7-f8f2e3f2b97d",
                             "89bcba48-dfe7-4487-9075-ab718605a335",
                             "d2182def-da14-47c5-afd0-f0d548e9c260",
-                            "318d9ab7-8712-44ad-8e85-e15679793a30",
-                            "318d9ab7-8712-44ad-8e85-e15679793a30",
-                            "43876a27-8977-4115-bf5e-34cbd4e03a05",
-                            "52419edc-0a26-4715-afba-f16cad7e5e46"
+                            "318d9ab7-8712-44ad-8e85-e15679793a30"
                         ]
                     },
                     "dongchedi": {
@@ -1696,14 +1852,7 @@
                             "c7d148ee-5a3c-4b1d-bb13-9cdd89ae6ef6",
                             "57b71feb-6c7b-403a-8db0-415f463cb9f2",
                             "c534e539-9d37-4174-888e-c5babfd61cfe",
-                            "ab22229e-60fe-4747-b956-63131483f90c",
-                            "bbf66df4-5695-4526-a3fc-076b9429b252",
-                            "d31410ef-4d1d-4442-9b22-e81655a5f02c",
-                            "d5898fb9-79cc-4a0d-b4fa-8c5bc22a1898",
-                            "42a81bf4-ad47-4373-8e1b-55b41a14b992",
-                            "28153476-224f-4a45-b00c-c30ab31537c5",
-                            "474f3003-32d3-49a5-98dd-96be3d3dd166",
-                            "7bfc91ac-5180-4ce0-8fa0-3a1b400c3503"
+                            "ab22229e-60fe-4747-b956-63131483f90c"
                         ]
                     },
                     "autohome": {
@@ -1736,7 +1885,7 @@
             },
             {
                 "summary": "理想的座椅设计提供了极高的舒适度，尤其是后排座椅的舒适性得到了用户的认可。",
-                "summary_topic": "座椅舒适",
+                "summary_topic": "座椅舒适好",
                 "platform_data": {
                     "bili": {
                         "keywords": [
@@ -1751,6 +1900,24 @@
                             "7c0e36fd-dbbf-4815-ab6f-f3b1004ccebd",
                             "888a52e9-7b6d-4e2d-b060-46775e5e22f3",
                             "48738199-9355-4a88-9d72-106e3379b30c"
+                        ]
+                    }
+                }
+            },
+            {
+                "summary": "理想L6的车内空间设计合理，适合长途旅行。",
+                "summary_topic": "长途舒适好",
+                "platform_data": {
+                    "weibo": {
+                        "keywords": [
+                            "长途旅行",
+                            "舒适",
+                            "车内空间"
+                        ],
+                        "uuid": [
+                            "318d9ab7-8712-44ad-8e85-e15679793a30",
+                            "43876a27-8977-4115-bf5e-34cbd4e03a05",
+                            "52419edc-0a26-4715-afba-f16cad7e5e46"
                         ]
                     }
                 }
@@ -1776,8 +1943,52 @@
         ],
         "disadvantage": [
             {
+                "summary": "理想L6存在后排进灰的问题，影响车内清洁和舒适性。",
+                "summary_topic": "后排进灰问题",
+                "platform_data": {
+                    "bili": {
+                        "keywords": [
+                            "车内清洁",
+                            "进灰",
+                            "舒适性",
+                            "下降",
+                            "后排",
+                            "高速",
+                            "灰尘",
+                            "晕车",
+                            "密封"
+                        ],
+                        "uuid": [
+                            "fe3df3c4-4160-43a1-b310-bf5f8f329d83",
+                            "115062e5-886d-405f-983d-4d04086f1acc",
+                            "4ddeac9f-3926-44aa-a76a-8c361c2f996c",
+                            "54b0b0c6-9f3d-46a4-8e09-b8ca3e90ff5a",
+                            "121e7905-4a9b-43eb-86d4-cf265f007090",
+                            "2e45e681-2369-4bf1-bb8f-614f8ff4adab",
+                            "4ba8312c-bd48-4147-9a0c-7d243fa187db",
+                            "cc62acef-6ab0-445a-8099-3ba9918b553f",
+                            "3a165630-552c-4dab-9c6d-6699712033a4",
+                            "fbaecb3d-30fe-4abd-a9e3-d09e68f01501"
+                        ]
+                    },
+                    "dongchedi": {
+                        "keywords": [
+                            "后门",
+                            "问题",
+                            "进灰",
+                            "密封"
+                        ],
+                        "uuid": [
+                            "e93a886f-73f1-472c-9df8-2eb75ce62df2",
+                            "067fe1f2-1946-482c-afef-5573831bdb86",
+                            "8c23792d-6682-455d-8b08-4b5996fcb78c"
+                        ]
+                    }
+                }
+            },
+            {
                 "summary": "部分用户反映理想车型在行驶过程中后排容易晕车，尤其是在颠簸路段时。",
-                "summary_topic": "后排容易晕车",
+                "summary_topic": "后排晕车差",
                 "platform_data": {
                     "bili": {
                         "keywords": [
@@ -1867,8 +2078,41 @@
                 }
             },
             {
+                "summary": "理想L6车身较大，停车不便。",
+                "summary_topic": "停车不便",
+                "platform_data": {
+                    "weibo": {
+                        "keywords": [
+                            "停车不便",
+                            "碰撞",
+                            "车身宽",
+                            "狭窄停车位",
+                            "宽大",
+                            "车身较大"
+                        ],
+                        "uuid": [
+                            "06cbc271-4d24-4229-b58e-d1a5fa4622ef",
+                            "581b433e-998f-4a71-93f0-64dbd1ee8ec2",
+                            "1cbba0fd-b647-42ad-ba07-6dcdbcbb2e3f"
+                        ]
+                    },
+                    "autohome": {
+                        "keywords": [
+                            "车位不够大",
+                            "理想车太大",
+                            "车大不太好停车"
+                        ],
+                        "uuid": [
+                            "4adb643d-c53f-4dfc-b601-b2f16de128c3",
+                            "2c0ca3b0-df76-473e-b855-6b124b0cb222",
+                            "666e8972-582d-4ec6-a5b4-062e32c13683"
+                        ]
+                    }
+                }
+            },
+            {
                 "summary": "理想L6后备箱空间虽然够用，但不算特别大。",
-                "summary_topic": "后备箱够用但不大",
+                "summary_topic": "后备箱不大",
                 "platform_data": {
                     "autohome": {
                         "keywords": [
@@ -1882,7 +2126,7 @@
             },
             {
                 "summary": "理想L6的中控下方储物空间有限。",
-                "summary_topic": "中控储物空间小",
+                "summary_topic": "储物空间小",
                 "platform_data": {
                     "autohome": {
                         "keywords": [
@@ -1929,24 +2173,6 @@
     {
         "theme": "价格成本",
         "advantage": [
-            {
-                "summary": "购车贷款压力大，需分期购买。",
-                "summary_topic": "贷款压力大",
-                "platform_data": {
-                    "bili": {
-                        "keywords": [
-                            "压力",
-                            "贷款",
-                            "理想"
-                        ],
-                        "uuid": [
-                            "458f30c8-6bb0-4724-88f5-2cb4a2287b60",
-                            "c3ecab72-5688-40e8-85e4-b6ad19da4e9d",
-                            "834a4f59-c0fe-48ea-8766-f04deb6bc3d2"
-                        ]
-                    }
-                }
-            },
             {
                 "summary": "理想L6的价格定位在25万左右，性价比高，适合预算有限但追求高配置的消费者。",
                 "summary_topic": "性价比高",
@@ -2298,7 +2524,7 @@
             },
             {
                 "summary": "理想L6的低价定位可能影响品牌的豪华定位和利润。",
-                "summary_topic": "低位定价影响品牌定位",
+                "summary_topic": "品牌定位低",
                 "platform_data": {
                     "bili": {
                         "keywords": [
@@ -2401,7 +2627,7 @@
             },
             {
                 "summary": "理想L6的价格竞争激烈，面临其他品牌的挑战。",
-                "summary_topic": "价格竞争面临挑战",
+                "summary_topic": "价格竞争强",
                 "platform_data": {
                     "weibo": {
                         "keywords": [
@@ -2422,7 +2648,7 @@
             },
             {
                 "summary": "降价背刺老车主，贷款利息损失大。",
-                "summary_topic": "降价背刺老车主",
+                "summary_topic": "降价背刺老",
                 "platform_data": {
                     "autohome": {
                         "keywords": [
@@ -2470,7 +2696,7 @@
         "advantage": [
             {
                 "summary": "理想L6的驾驶表现被多次提及为优秀，尤其是在城市和高速上的表现。其底盘质感、操控性和舒适性被认为是同级别中的佼佼者。",
-                "summary_topic": "底盘质感好",
+                "summary_topic": "驾驶表现优",
                 "platform_data": {
                     "bili": {
                         "keywords": [
@@ -2573,7 +2799,7 @@
             },
             {
                 "summary": "理想L6的驾驶体验被普遍认为舒适且豪华，适合家庭出行，尤其在长途驾驶中表现出色。",
-                "summary_topic": "长途驾驶体验出色",
+                "summary_topic": "驾驶体验好",
                 "platform_data": {
                     "bili": {
                         "keywords": [
@@ -2601,6 +2827,71 @@
                             "e5d28bbf-5a78-4589-b73f-97f601015801",
                             "3ed6f7e7-9f60-46a4-959e-ec4e94921d65",
                             "d0f196db-4c0d-485a-bc9b-4a8cd0fc6a93"
+                        ]
+                    }
+                }
+            },
+            {
+                "summary": "高速NOA智能驾驶辅助功能便捷好用，减轻驾驶负担。",
+                "summary_topic": "高速NOA好用",
+                "platform_data": {
+                    "weibo": {
+                        "keywords": [
+                            "反打方向",
+                            "端到端",
+                            "智驾行驶",
+                            "智能驾驶",
+                            "冰面过弯"
+                        ],
+                        "uuid": [
+                            "d14b7eca-1e46-46c5-beb1-0a49c8a08781",
+                            "f335c57e-361b-4185-b415-be8cb5f6ba8b",
+                            "3fff5ee2-259a-4cdc-8d62-01d0c2f64d50",
+                            "293eab1b-ddd2-45ac-bcdb-5923bc596bcd",
+                            "cf78593c-2a5d-44f0-93a1-9a42fb1e26a5"
+                        ]
+                    },
+                    "autohome": {
+                        "keywords": [
+                            "智驾",
+                            "省心",
+                            "便捷",
+                            "高速",
+                            "智能辅助驾驶",
+                            "NOA",
+                            "LCC",
+                            "轻松"
+                        ],
+                        "uuid": [
+                            "e2ba328d-3580-4466-bc29-50382cec3f74",
+                            "0ee236b0-c6ec-48f5-a81f-31b089eaefc3",
+                            "013d4c5a-846e-4783-bfde-fb3a5bbf0b1a",
+                            "54c2739c-0189-494a-8aaf-b8bde4d9bda3",
+                            "a16b6794-341f-41e9-bfe1-c2f88bb0952e",
+                            "2c0ca3b0-df76-473e-b855-6b124b0cb222",
+                            "cf099fdc-23ee-4858-9059-d1ca5bead450",
+                            "2c458655-395c-487d-97be-cd36bda321f8",
+                            "9e647f1a-b87d-41b9-9070-8d51354a812b",
+                            "9e1dc8dc-1b48-48c3-acc6-a070ba9ec6bb"
+                        ]
+                    }
+                }
+            },
+            {
+                "summary": "理想L6的HUD显示清晰，信息丰富，提升了驾驶的便利性和安全性。",
+                "summary_topic": "HUD体验好",
+                "platform_data": {
+                    "dongchedi": {
+                        "keywords": [
+                            "驾驶便利",
+                            "信息丰富",
+                            "显示清晰",
+                            "HUD"
+                        ],
+                        "uuid": [
+                            "b31ef72a-b3c6-435d-b3e6-168f1148a5d7",
+                            "f2f95a55-4631-45f1-a0f2-a38728f34e64",
+                            "78426052-5165-418f-b48a-d63921ecad44"
                         ]
                     }
                 }
@@ -2668,7 +2959,7 @@
         "disadvantage": [
             {
                 "summary": "理想L6在某些情况下会出现晃动，尤其是在变道和过弯时，影响驾驶稳定性。",
-                "summary_topic": "高速变道和过弯时晃动",
+                "summary_topic": "驾驶稳定差",
                 "platform_data": {
                     "bili": {
                         "keywords": [
@@ -2810,6 +3101,53 @@
                 }
             },
             {
+                "summary": "理想L6的自动驾驶系统在高速行驶中不够稳定，存在突然退出或错误识别的情况，影响安全性。",
+                "summary_topic": "自动驾驶差",
+                "platform_data": {
+                    "weibo": {
+                        "keywords": [
+                            "自动驾驶",
+                            "低速",
+                            "接管能力",
+                            "追尾"
+                        ],
+                        "uuid": [
+                            "1118d35a-9196-4738-a806-cbfd770c4032",
+                            "9b4bbaf4-4e84-4c6f-8c8f-ed9999e8b072"
+                        ]
+                    },
+                    "dongchedi": {
+                        "keywords": [
+                            "自动驾驶",
+                            "高速",
+                            "安全",
+                            "退出"
+                        ],
+                        "uuid": [
+                            "e493e57e-5ba7-4aae-9641-a36c31644f80",
+                            "a6ee55c6-e04c-404f-a9be-3900c9d6ee98",
+                            "9a5e20ab-698c-4784-a8bc-4541ad5a4b4d"
+                        ]
+                    }
+                }
+            },
+            {
+                "summary": "理想L6在高温排气管的隔热保护方面不如竞争对手，可能存在安全隐患。",
+                "summary_topic": "隔热保护差",
+                "platform_data": {
+                    "weibo": {
+                        "keywords": [
+                            "高温排气管",
+                            "安全隐患",
+                            "隔热保护"
+                        ],
+                        "uuid": [
+                            "d97ef8cf-5c66-441f-afd4-99ca7f4198c2"
+                        ]
+                    }
+                }
+            },
+            {
                 "summary": "理想L6在高速行驶时噪音较大，尤其是增程器启动时的噪音明显，影响驾驶舒适性。",
                 "summary_topic": "高速噪音大",
                 "platform_data": {
@@ -2865,23 +3203,7 @@
                             "666e8972-582d-4ec6-a5b4-062e32c13683",
                             "6cbd8b33-008e-436b-b2c1-c664f344f582",
                             "2c0ca3b0-df76-473e-b855-6b124b0cb222",
-                            "73057066-5e56-40f6-ae50-c3775e070c9f",
-                            "4adb643d-c53f-4dfc-b601-b2f16de128c3"
-                        ]
-                    },
-                    "weibo": {
-                        "keywords": [
-                            "停车不便",
-                            "碰撞",
-                            "车身宽",
-                            "狭窄停车位",
-                            "宽大",
-                            "车身较大"
-                        ],
-                        "uuid": [
-                            "06cbc271-4d24-4229-b58e-d1a5fa4622ef",
-                            "581b433e-998f-4a71-93f0-64dbd1ee8ec2",
-                            "1cbba0fd-b647-42ad-ba07-6dcdbcbb2e3f"
+                            "73057066-5e56-40f6-ae50-c3775e070c9f"
                         ]
                     }
                 }
@@ -3064,6 +3386,34 @@
                         ]
                     }
                 }
+            },
+            {
+                "summary": "理想L6的舒适性和空间设计受到消费者的广泛好评，尤其适合家庭使用。",
+                "summary_topic": "舒适空间优",
+                "platform_data": {
+                    "dongchedi": {
+                        "keywords": [
+                            "乘坐体验",
+                            "家庭用车",
+                            "舒适性",
+                            "性价比",
+                            "大沙发",
+                            "家庭",
+                            "空间",
+                            "理想L6"
+                        ],
+                        "uuid": [
+                            "c78889e2-2b08-4a63-becf-e9fddf24d341",
+                            "bbf66df4-5695-4526-a3fc-076b9429b252",
+                            "d31410ef-4d1d-4442-9b22-e81655a5f02c",
+                            "d5898fb9-79cc-4a0d-b4fa-8c5bc22a1898",
+                            "42a81bf4-ad47-4373-8e1b-55b41a14b992",
+                            "28153476-224f-4a45-b00c-c30ab31537c5",
+                            "474f3003-32d3-49a5-98dd-96be3d3dd166",
+                            "7bfc91ac-5180-4ce0-8fa0-3a1b400c3503"
+                        ]
+                    }
+                }
             }
         ],
         "disadvantage": [
@@ -3094,6 +3444,114 @@
                 }
             },
             {
+                "summary": "理想L6的天窗玻璃易开裂，用户对其质量表示担忧。",
+                "summary_topic": "天窗玻璃易裂",
+                "platform_data": {
+                    "bili": {
+                        "keywords": [
+                            "假人数据",
+                            "碰撞",
+                            "碰撞测试",
+                            "理想",
+                            "后排",
+                            "安全性"
+                        ],
+                        "uuid": [
+                            "3cc5643d-7b22-4d83-baed-e42c84e94246",
+                            "7afbaed5-80d2-4227-9301-cdb3288e6ea9",
+                            "4ac67654-8134-4c8e-b10d-08faf13c0eed",
+                            "500ade7f-2578-409d-a9a6-d2271981763b",
+                            "c7e05c5f-a2a0-4220-917c-228d8a39fc2a",
+                            "d74322b7-236f-476c-8572-e084edb20f68"
+                        ]
+                    },
+                    "dongchedi": {
+                        "keywords": [
+                            "质量问题",
+                            "用户担忧",
+                            "碰撞",
+                            "理想",
+                            "气囊",
+                            "安全性",
+                            "天窗",
+                            "玻璃开裂"
+                        ],
+                        "uuid": [
+                            "93cf75f0-d479-4f20-ad91-0279c039c3c6",
+                            "a7624fa9-4855-4657-9bce-c164a49a2b89",
+                            "0b0de46f-0f37-47fd-bee4-d5e2cd24a0c3",
+                            "966e6bef-00b3-41c4-be1a-09ae3f0b4303",
+                            "8bd87958-6dc3-4ed1-ae7a-20e10246e6e6",
+                            "b52ef64f-f188-4590-91c9-1606b6679684",
+                            "a64bec8b-9565-417c-a4ac-30170db5cec4",
+                            "425bea82-38ea-40b9-a449-ecaa2d4b396a"
+                        ]
+                    }
+                }
+            },
+            {
+                "summary": "理想L6的售后服务存在问题，用户反馈处理不及时，影响品牌形象。",
+                "summary_topic": "售后服务差",
+                "platform_data": {
+                    "bili": {
+                        "keywords": [
+                            "网络口碑",
+                            "理想",
+                            "喷",
+                            "批评"
+                        ],
+                        "uuid": [
+                            "96e64bfc-5ffb-4bd7-a661-05528c4ae1d5",
+                            "c60809c7-0a05-44aa-a8a1-2bee694006f4",
+                            "e973effb-d7d2-457d-ad07-ad3e24b083a3"
+                        ]
+                    },
+                    "weibo": {
+                        "keywords": [
+                            "裁员",
+                            "纯电产品",
+                            "成本",
+                            "品牌形象"
+                        ],
+                        "uuid": [
+                            "f76e6855-059b-4319-b513-472edeaeea6b"
+                        ]
+                    },
+                    "dongchedi": {
+                        "keywords": [
+                            "负面评价",
+                            "售后服务",
+                            "理想",
+                            "处理不及时",
+                            "用户反馈",
+                            "质量",
+                            "品牌形象"
+                        ],
+                        "uuid": [
+                            "d044836e-79a5-4fe9-8f2e-09c3c8ae07a9",
+                            "4699b3e4-a813-424a-a271-bd4d79ba0c92",
+                            "4562b6f4-fcde-4f6c-bfb4-521f9cb97608",
+                            "68b2f2ab-f563-48c9-a315-99ee0dd97103",
+                            "a97e97f7-5fa7-48ef-8a32-c3b501e05e1f",
+                            "5f7b37ec-e9d4-4093-bb3d-84e3d30f0d34",
+                            "bd97b6ca-3ebd-469d-a8c5-a895a08a9ac7",
+                            "b820306e-65c5-436c-a40e-a4034e81f764"
+                        ]
+                    },
+                    "autohome": {
+                        "keywords": [
+                            "设计风格",
+                            "理想L6",
+                            "套娃式风格",
+                            "成本"
+                        ],
+                        "uuid": [
+                            "493f8bfd-96d9-4ba4-8e28-47207beb7553"
+                        ]
+                    }
+                }
+            },
+            {
                 "summary": "理想汽车在应对恶性公关方面缺乏经验，曾在MEGA遭遇公关危机时得到小米的帮助。",
                 "summary_topic": "公关经验不足",
                 "platform_data": {
@@ -3116,7 +3574,7 @@
             },
             {
                 "summary": "理想汽车在2024年未能完成季度交付指引，尤其是MEGA的表现不及预期。",
-                "summary_topic": "交付指引未达预期",
+                "summary_topic": "交付指引未达",
                 "platform_data": {
                     "weibo": {
                         "keywords": [
@@ -3137,7 +3595,7 @@
             },
             {
                 "summary": "理想汽车的利润表现不佳，尽管销量不错，但公司经营利润出现亏损，影响品牌的盈利能力。",
-                "summary_topic": "利润表现差，影响品牌盈利",
+                "summary_topic": "利润表现差",
                 "platform_data": {
                     "weibo": {
                         "keywords": [
@@ -3155,7 +3613,7 @@
             },
             {
                 "summary": "理想L6被认为诚意不足，配置减配，价格高于预期，影响品牌形象。",
-                "summary_topic": "诚意不足，影响品牌形象",
+                "summary_topic": "配置减配差",
                 "platform_data": {
                     "dongchedi": {
                         "keywords": [

@@ -1,0 +1,1215 @@
+[
+    {
+        "advantage": [
+            {
+                "summary": "合作带来音乐的魅力",
+                "summary_topic": "音乐合作的魅力",
+                "uuid": [
+                    "8d79c012-4eed-428c-84a4-96a8b9d1b545",
+                    "a8fcc3fd-25a1-459b-a01e-ad2263f200c2",
+                    "b5ca61ad-2918-42ac-8c61-d8f7f091543a",
+                    "ed22e49f-2e51-41a8-89e2-9eedc636e51c"
+                ],
+                "keywords": [
+                    "合作",
+                    "音乐",
+                    "Bruno",
+                    "Rosé",
+                    "歌曲"
+                ]
+            },
+            {
+                "summary": "引发公众关注与讨论",
+                "summary_topic": "公众关注",
+                "uuid": [
+                    "72342e95-3096-4d3f-9bd3-41f03620d477",
+                    "22adab31-3041-4d03-a5f1-fd2ffa57c2b2"
+                ],
+                "keywords": [
+                    "宣传",
+                    "公众",
+                    "营销"
+                ]
+            },
+            {
+                "summary": "带来高质量的表演",
+                "summary_topic": "高质量表演",
+                "uuid": [
+                    "01f6dff7-6b37-40d0-8099-2459faa53b9c",
+                    "ed22e49f-2e51-41a8-89e2-9eedc636e51c"
+                ],
+                "keywords": [
+                    "演出",
+                    "classy performance",
+                    "Good Music"
+                ]
+            },
+            {
+                "summary": "展现多元文化的融合",
+                "summary_topic": "文化融合",
+                "uuid": [
+                    "fd78814f-0b03-498d-b386-cc741ade7c46"
+                ],
+                "keywords": [
+                    "interracial",
+                    "collaboration",
+                    "love"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "合作可能被视为商业炒作",
+                "summary_topic": "商业炒作",
+                "uuid": [
+                    "72342e95-3096-4d3f-9bd3-41f03620d477",
+                    "22adab31-3041-4d03-a5f1-fd2ffa57c2b2"
+                ],
+                "keywords": [
+                    "宣传",
+                    "销售",
+                    "营销",
+                    "$$$"
+                ]
+            },
+            {
+                "summary": "歌曲可能缺乏持久吸引力",
+                "summary_topic": "吸引力不足",
+                "uuid": [
+                    "5a454a58-9db7-42ec-a3e4-07995231094d"
+                ],
+                "keywords": [
+                    "catchy song",
+                    "repetitive"
+                ]
+            },
+            {
+                "summary": "对某些艺术家的负面评价",
+                "summary_topic": "负面评价",
+                "uuid": [
+                    "9b292fbc-14fc-42a6-9068-08d6f885dce0"
+                ],
+                "keywords": [
+                    "Rose",
+                    "Bruno",
+                    "歌曲",
+                    "音乐"
+                ]
+            }
+        ],
+        "theme": "品牌合作效果"
+    },
+    {
+        "advantage": [
+            {
+                "summary": "舞台表演展现了极高的专业性和魅力",
+                "summary_topic": "专业性与魅力",
+                "uuid": [
+                    "20b58b30-0745-4e17-b4f8-169398fc1f5c",
+                    "1a3d0625-b5c4-42fc-b13f-178507b8e7c1",
+                    "6b4dec2d-9531-4f30-88c1-6d1c2ccf889d",
+                    "8a1de301-b579-4820-b2a7-0ff07dbb142c",
+                    "d6acf216-0fd3-4ac6-bb1e-a6f9787591a3"
+                ],
+                "keywords": [
+                    "舞步",
+                    "完美表演",
+                    "表演",
+                    "精彩",
+                    "美丽"
+                ]
+            },
+            {
+                "summary": "舞台表演激发了观众的情感共鸣",
+                "summary_topic": "情感共鸣",
+                "uuid": [
+                    "5d9e8b95-18a5-41e5-a346-169a2f7b711d",
+                    "4bcc5c49-09c3-494a-8d8e-5886764ce46e",
+                    "64f3ae18-365b-4915-8799-8b6431023616"
+                ],
+                "keywords": [
+                    "强大",
+                    "情感",
+                    "鸡皮疙瘩",
+                    "感动"
+                ]
+            },
+            {
+                "summary": "舞台表演展现了多样的舞蹈风格",
+                "summary_topic": "多样舞蹈风格",
+                "uuid": [
+                    "d10241ad-af4c-4887-ae99-9f2777371792",
+                    "e0d8de95-aee5-4e92-b48c-fc0e78b49eb5",
+                    "f180b69a-c405-4b45-b2d5-9378936452d0"
+                ],
+                "keywords": [
+                    "舞蹈",
+                    "风格",
+                    "表演",
+                    "印度舞蹈"
+                ]
+            },
+            {
+                "summary": "舞台表演增强了团队的凝聚力",
+                "summary_topic": "团队凝聚力",
+                "uuid": [
+                    "c6b658d3-243e-47e3-9afa-b6555a32df2b",
+                    "239b86ed-61ca-458e-a76a-3bb0af3834ea"
+                ],
+                "keywords": [
+                    "团队",
+                    "合作",
+                    "舞台化学"
+                ]
+            },
+            {
+                "summary": "舞台表演吸引了广泛的观众关注",
+                "summary_topic": "观众关注",
+                "uuid": [
+                    "c8fff0aa-6693-4918-9b93-1fedb0f1561d",
+                    "57ff9552-0ee0-4b97-b96b-22984599fcc8"
+                ],
+                "keywords": [
+                    "现场表演",
+                    "期待",
+                    "观众"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "舞台表演的工作强度较高",
+                "summary_topic": "工作强度",
+                "uuid": [
+                    "c6b658d3-243e-47e3-9afa-b6555a32df2b"
+                ],
+                "keywords": [
+                    "工作强度",
+                    "舞蹈",
+                    "BLACKPINK"
+                ]
+            },
+            {
+                "summary": "舞台表演可能存在技术失误",
+                "summary_topic": "技术失误",
+                "uuid": [
+                    "f70b6591-5454-4dfe-a26e-9be1a62fc021"
+                ],
+                "keywords": [
+                    "镜头",
+                    "观看体验",
+                    "错误"
+                ]
+            },
+            {
+                "summary": "舞台表演中可能会有不适合儿童的内容",
+                "summary_topic": "不适合儿童",
+                "uuid": [
+                    "ed22e49f-2e51-41a8-89e2-9eedc636e51c"
+                ],
+                "keywords": [
+                    "classy performance",
+                    "shock value"
+                ]
+            },
+            {
+                "summary": "舞台表演可能导致过度的观众期待",
+                "summary_topic": "观众期待",
+                "uuid": [
+                    "b650ced7-0fdc-4985-b80f-cdcb57e6a8c2"
+                ],
+                "keywords": [
+                    "concert",
+                    "期待"
+                ]
+            },
+            {
+                "summary": "舞台表演可能引发对舞者的过度关注",
+                "summary_topic": "过度关注舞者",
+                "uuid": [
+                    "177f464c-1370-4624-b880-175781410e6d"
+                ],
+                "keywords": [
+                    "back dancers",
+                    "cute"
+                ]
+            }
+        ],
+        "theme": "舞台表演魅力"
+    },
+    {
+        "advantage": [
+            {
+                "summary": "BLACKPINK在全球范围内的影响力不断提升",
+                "summary_topic": "国际影响力",
+                "uuid": [
+                    "c7882f89-3636-49b6-bd66-32592cafc16",
+                    "832e2745-57a9-405c-973e-2b2814f22192",
+                    "c3904d4f-a0fa-46f5-ba8c-9025d126b8db"
+                ],
+                "keywords": [
+                    "BLACKPINK",
+                    "全球",
+                    "女团",
+                    "认可"
+                ]
+            },
+            {
+                "summary": "粉丝支持和热情使得BLACKPINK的知名度持续上升",
+                "summary_topic": "粉丝支持",
+                "uuid": [
+                    "b942c385-b97f-403f-9653-5602d07bed3f",
+                    "e1d81b06-439a-4468-a7dd-5e8f3c8e17d5",
+                    "db4df458-573c-47d0-95a2-09f33ae9f8fe"
+                ],
+                "keywords": [
+                    "粉丝",
+                    "支持",
+                    "BLACKPINK"
+                ]
+            },
+            {
+                "summary": "通过社交媒体和音乐平台的广泛传播，BLACKPINK的作品获得了大量的观看和播放",
+                "summary_topic": "广泛传播",
+                "uuid": [
+                    "cf2eeb0c-28de-46a6-9838-5828ce1ebafb",
+                    "f4f017f6-abc3-4f63-9daf-80aeb9f9b6c8",
+                    "e3ca66ae-06d1-4c55-aa4d-b5101c56bfd3"
+                ],
+                "keywords": [
+                    "观看次数",
+                    "播放",
+                    "社交媒体"
+                ]
+            },
+            {
+                "summary": "BLACKPINK的音乐和形象吸引了全球各地的粉丝",
+                "summary_topic": "全球吸引力",
+                "uuid": [
+                    "58d17db1-2c73-4bcc-94dd-fe5587625b4b",
+                    "6cf878ac-766a-4499-965a-93dbba6558fb",
+                    "d1d3b860-c183-4629-ad77-fc097076164d"
+                ],
+                "keywords": [
+                    "粉丝",
+                    "全球",
+                    "音乐"
+                ]
+            },
+            {
+                "summary": "BLACKPINK的回归引发了粉丝的高度期待和关注",
+                "summary_topic": "回归期待",
+                "uuid": [
+                    "c8bb6231-db8e-45c0-b203-e1e60bc05083",
+                    "7a8d6d29-1484-4a8b-a532-84339901df30",
+                    "5cf555bb-e813-499e-a613-f2cb01eeac42"
+                ],
+                "keywords": [
+                    "回归",
+                    "期待",
+                    "BLACKPINK"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "BLACKPINK的回归时间较长，导致部分粉丝感到失望",
+                "summary_topic": "回归时间",
+                "uuid": [
+                    "adbca123-8495-4006-9543-8c6d06dd1f44",
+                    "7b1b688d-e461-4b7e-a3df-11e87717d251",
+                    "efbb17f6-828b-410b-b3ab-9b31a4101122"
+                ],
+                "keywords": [
+                    "回归",
+                    "失望",
+                    "等待"
+                ]
+            },
+            {
+                "summary": "随着知名度的提升，竞争压力也随之增加",
+                "summary_topic": "竞争压力",
+                "uuid": [
+                    "be90ae33-ff6d-44e6-b1ee-c71f9c4f29f2",
+                    "5bd18f4c-387b-4d98-8855-903ee96f23fb",
+                    "c9df1975-e03a-4ad0-b60b-8d4230700bf2"
+                ],
+                "keywords": [
+                    "竞争",
+                    "压力",
+                    "知名度"
+                ]
+            },
+            {
+                "summary": "部分粉丝对BLACKPINK的未来发展表示担忧",
+                "summary_topic": "未来担忧",
+                "uuid": [
+                    "56049fa4-85e4-4595-a789-7af9196689d8",
+                    "9b038c1d-822d-438a-85be-a899bfcbf2b8",
+                    "fc7f4654-55fa-4091-b4ea-17e97948012c"
+                ],
+                "keywords": [
+                    "未来",
+                    "担忧",
+                    "发展"
+                ]
+            },
+            {
+                "summary": "社交媒体上的负面评论可能影响BLACKPINK的形象",
+                "summary_topic": "负面影响",
+                "uuid": [
+                    "5a028161-b36d-4a4e-8c37-fea86fa0bd84",
+                    "c6029d6c-8897-4579-8358-dd2807f3594a",
+                    "1aade67a-93f0-4503-9d78-375edcc753da"
+                ],
+                "keywords": [
+                    "负面评论",
+                    "形象",
+                    "社交媒体"
+                ]
+            },
+            {
+                "summary": "由于全球化的影响，BLACKPINK面临文化适应的挑战",
+                "summary_topic": "文化挑战",
+                "uuid": [
+                    "2b83a9e9-e310-400a-95f7-1c985fddbfbe",
+                    "fc55867d-85bc-4c8e-ac60-3de132a77bc9",
+                    "291441da-05f2-4780-9fc6-d4490e5a2f32"
+                ],
+                "keywords": [
+                    "全球化",
+                    "文化",
+                    "适应"
+                ]
+            }
+        ],
+        "theme": "国际知名度提升"
+    },
+    {
+        "advantage": [
+            {
+                "summary": "视觉艺术呈现美丽",
+                "summary_topic": "视觉艺术的美",
+                "uuid": [
+                    "901c1844-d6d6-4c00-8b75-0352c9221af0",
+                    "f9284aca-af3d-400a-984a-b25b91c97cf1",
+                    "e2395c49-624f-4330-b2fd-0547453e5b28",
+                    "4a11eaa8-91e8-492b-b845-83f6850f7e2f",
+                    "954f3a81-bd1e-4774-89fe-6f505ef7b893"
+                ],
+                "keywords": [
+                    "美丽",
+                    "漂亮",
+                    "视觉",
+                    "艺术"
+                ]
+            },
+            {
+                "summary": "视频中的创意和独特性",
+                "summary_topic": "创意与独特",
+                "uuid": [
+                    "d21306ed-aef0-46b7-bd10-fd73d5a42d5a",
+                    "0896f912-f86c-47da-90c2-d9e758a3d47f",
+                    "1b3bd59d-0cba-434a-9acf-9d3ea7407b40"
+                ],
+                "keywords": [
+                    "创意",
+                    "独特",
+                    "视觉艺术"
+                ]
+            },
+            {
+                "summary": "引人入胜的表现",
+                "summary_topic": "吸引观众",
+                "uuid": [
+                    "d05c094f-c59f-411d-95f5-efc02d3d7a54",
+                    "d82ffce1-5d5c-4f48-811b-1906451fa9c7",
+                    "bc791076-86b0-4560-8409-734585f84f06"
+                ],
+                "keywords": [
+                    "引人入胜",
+                    "表现",
+                    "吸引"
+                ]
+            },
+            {
+                "summary": "音乐与视觉的完美结合",
+                "summary_topic": "音乐与视觉结合",
+                "uuid": [
+                    "68a373bc-e473-4cfd-b9b1-fb9c9ab1abfe",
+                    "521bd485-bbf1-4cf0-bca7-921e4bfba154",
+                    "bd7b82e7-213b-45bc-aa1b-c6421dc1cdf5"
+                ],
+                "keywords": [
+                    "音乐",
+                    "视觉",
+                    "结合"
+                ]
+            },
+            {
+                "summary": "高质量的视觉效果",
+                "summary_topic": "视觉效果质量",
+                "uuid": [
+                    "0cc86dfa-ef41-4c5d-9a2c-14c1e0fef4b7",
+                    "f24832fc-4c6e-454f-9e87-29952b45a743",
+                    "9c8d96af-4fa2-4b54-aad2-03c422c8984e"
+                ],
+                "keywords": [
+                    "高质量",
+                    "视觉效果",
+                    "清晰"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "视觉元素可能过于复杂",
+                "summary_topic": "复杂的视觉元素",
+                "uuid": [
+                    "62c4af63-4eeb-4964-9390-dd0306e0ee92",
+                    "f70b6591-5454-4dfe-a26e-9be1a62fc021"
+                ],
+                "keywords": [
+                    "复杂",
+                    "视觉元素",
+                    "理解"
+                ]
+            },
+            {
+                "summary": "部分服装设计不受欢迎",
+                "summary_topic": "服装设计问题",
+                "uuid": [
+                    "86e144d0-2de3-4149-a0ce-990ea8c7a40e"
+                ],
+                "keywords": [
+                    "服装",
+                    "设计",
+                    "不受欢迎"
+                ]
+            },
+            {
+                "summary": "某些场景可能引发争议",
+                "summary_topic": "争议场景",
+                "uuid": [
+                    "306b859f-bcf1-4f5d-b5d4-8a8d8375f283"
+                ],
+                "keywords": [
+                    "争议",
+                    "场景",
+                    "评论"
+                ]
+            }
+        ],
+        "theme": "视觉艺术呈现"
+    },
+    {
+        "advantage": [
+            {
+                "summary": "成员们的个性魅力",
+                "summary_topic": "个性魅力",
+                "uuid": [
+                    "3b276e66-419c-442b-a233-c295b52151f1",
+                    "f1278e24-cc45-4885-b295-f251af342ee5",
+                    "544c3b83-a005-4521-bd37-6c6239ab70cb",
+                    "107100a9-fe9a-456b-ba95-ef13aa7906f4",
+                    "d38c18e0-4a04-4c39-b90a-b4307790e217"
+                ],
+                "keywords": [
+                    "个性",
+                    "魅力",
+                    "声音",
+                    "舞蹈",
+                    "表现"
+                ]
+            },
+            {
+                "summary": "成员们的支持与爱",
+                "summary_topic": "支持与爱",
+                "uuid": [
+                    "5ad1d0de-3bcb-4659-b69d-7b26bb08a539",
+                    "9d781611-754e-4111-bcee-726bf8ccc3c5",
+                    "c5e01c54-7514-47aa-93ea-e50d775cf801",
+                    "c90fab26-998b-4d3d-b42f-a88efb29b0cc",
+                    "fd7dd706-5626-4aee-b3c7-875ee17db089"
+                ],
+                "keywords": [
+                    "支持",
+                    "爱",
+                    "粉丝",
+                    "情感"
+                ]
+            },
+            {
+                "summary": "成员们的舞台表现",
+                "summary_topic": "舞台表现",
+                "uuid": [
+                    "1a3d0625-b5c4-42fc-b13f-178507b8e7c1",
+                    "ffcf7927-238f-41e8-9c40-32e4b4d96f00",
+                    "d38c18e0-4a04-4c39-b90a-b4307790e217",
+                    "9b2b064e-c030-4ecf-93b2-7e92edb3c0de",
+                    "6a613e48-45fe-4a46-83f2-b480c72ea146"
+                ],
+                "keywords": [
+                    "舞台",
+                    "表现",
+                    "舞蹈",
+                    "音乐",
+                    "演出"
+                ]
+            },
+            {
+                "summary": "成员们的多样性",
+                "summary_topic": "多样性",
+                "uuid": [
+                    "ae59ad92-c248-4862-aea4-4fb63d0a4d00",
+                    "9a93e6b5-b2a1-437e-a869-826921f6a562",
+                    "c1facd04-f532-4104-8d10-427480720e36",
+                    "f16bd099-f138-478e-b809-f854116af73f",
+                    "f9284aca-af3d-400a-984a-b25b91c97cf1"
+                ],
+                "keywords": [
+                    "多样性",
+                    "个性",
+                    "风格",
+                    "特征"
+                ]
+            },
+            {
+                "summary": "成员们的情感表达",
+                "summary_topic": "情感表达",
+                "uuid": [
+                    "c1da1946-1714-4da3-9c73-6619da03f3b9",
+                    "6b7d76b9-8044-4ea9-ba3e-a4203e0d1791",
+                    "9a89dcfd-68df-4db6-b2d2-cff7b4a32128",
+                    "d1b8136b-16aa-48f5-acb9-34b5fa8bcd1a",
+                    "a1ed5287-13b8-4ae1-9d9b-c79e654d3388"
+                ],
+                "keywords": [
+                    "情感",
+                    "表达",
+                    "支持",
+                    "爱"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "成员间的比较与争议",
+                "summary_topic": "比较与争议",
+                "uuid": [
+                    "3187ae72-2f3f-4e33-bef0-26b89748680f",
+                    "6038aea4-ca4b-40a7-ace2-a151dd62ca7f",
+                    "e8be6f4b-4cc4-41f5-bfe4-1ff0eb719349",
+                    "9dc50d6f-5f39-4c9f-89e0-52efd295c7d3",
+                    "2e1f8717-c075-4e20-82d3-fbd9457cd581"
+                ],
+                "keywords": [
+                    "比较",
+                    "争议",
+                    "成员",
+                    "表现"
+                ]
+            },
+            {
+                "summary": "成员的曝光度不均",
+                "summary_topic": "曝光度不均",
+                "uuid": [
+                    "ffcf7927-238f-41e8-9c40-32e4b4d96f00",
+                    "6038aea4-ca4b-40a7-ace2-a151dd62ca7f",
+                    "1bc401ac-03ac-4404-9923-9df6cf850250",
+                    "9dc50d6f-5f39-4c9f-89e0-52efd295c7d3",
+                    "2e1f8717-c075-4e20-82d3-fbd9457cd581"
+                ],
+                "keywords": [
+                    "曝光度",
+                    "不均",
+                    "成员",
+                    "表现"
+                ]
+            },
+            {
+                "summary": "负面评价与争议",
+                "summary_topic": "负面评价",
+                "uuid": [
+                    "3187ae72-2f3f-4e33-bef0-26b89748680f",
+                    "6038aea4-ca4b-40a7-ace2-a151dd62ca7f",
+                    "1bc401ac-03ac-4404-9923-9df6cf850250",
+                    "2e1f8717-c075-4e20-82d3-fbd9457cd581",
+                    "2bc8f4bd-c340-4494-a8a7-b0f6d5ef3301"
+                ],
+                "keywords": [
+                    "负面评价",
+                    "争议",
+                    "评论",
+                    "情感"
+                ]
+            },
+            {
+                "summary": "成员的压力与期望",
+                "summary_topic": "压力与期望",
+                "uuid": [
+                    "2bc8f4bd-c340-4494-a8a7-b0f6d5ef3301",
+                    "9dc50d6f-5f39-4c9f-89e0-52efd295c7d3",
+                    "3b309fc8-7b54-4378-99e9-bf0d0d091641",
+                    "2e1f8717-c075-4e20-82d3-fbd9457cd581",
+                    "2bc8f4bd-c340-4494-a8a7-b0f6d5ef3301"
+                ],
+                "keywords": [
+                    "压力",
+                    "期望",
+                    "表现",
+                    "成员"
+                ]
+            },
+            {
+                "summary": "成员的个人生活曝光",
+                "summary_topic": "个人生活曝光",
+                "uuid": [
+                    "2bc8f4bd-c340-4494-a8a7-b0f6d5ef3301",
+                    "9dc50d6f-5f39-4c9f-89e0-52efd295c7d3",
+                    "2e1f8717-c075-4e20-82d3-fbd9457cd581",
+                    "2bc8f4bd-c340-4494-a8a7-b0f6d5ef3301",
+                    "3b309fc8-7b54-4378-99e9-bf0d0d091641"
+                ],
+                "keywords": [
+                    "个人生活",
+                    "曝光",
+                    "成员",
+                    "情感"
+                ]
+            }
+        ],
+        "theme": "成员个人特色"
+    },
+    {
+        "advantage": [
+            {
+                "summary": "歌曲质量高，深受喜爱",
+                "summary_topic": "音乐受欢迎",
+                "uuid": [
+                    "f600b206-9adc-4613-b9e9-0782b7ea5bb1",
+                    "fa5f40e0-090e-4de6-8ee5-608eaaae3d85",
+                    "b31a6089-9c53-40d2-b100-df5b5f7ab931",
+                    "e3ca66ae-06d1-4c55-aa4d-b5101c56bfd3",
+                    "e13e3c25-4991-4113-b7bc-fd17c41b3bb0"
+                ],
+                "keywords": [
+                    "歌曲",
+                    "美丽",
+                    "喜爱",
+                    "最好",
+                    "BLACKPINK"
+                ]
+            },
+            {
+                "summary": "音乐作品具有感染力",
+                "summary_topic": "音乐感染力",
+                "uuid": [
+                    "d9ca647c-1aff-46de-ac78-9e84b1126138",
+                    "910f71fa-1a96-4ee4-98a3-0911e8102af1",
+                    "67a7b703-ed91-46c6-b15d-778fdd43782d",
+                    "e26a94d5-d727-4efb-b078-82bacf440080",
+                    "5edabb59-5efb-406f-b83d-a2fab88d742c"
+                ],
+                "keywords": [
+                    "情感",
+                    "灵感",
+                    "能量",
+                    "masterpiece",
+                    "banger"
+                ]
+            },
+            {
+                "summary": "音乐的旋律和节奏吸引人",
+                "summary_topic": "旋律和节奏",
+                "uuid": [
+                    "4ed146f7-146a-4e94-8683-ce50bd5ace86",
+                    "80c0dd51-4594-44f8-8354-b6e33dba07bb",
+                    "c1da1946-1714-4da3-9c73-6619da03f3b9",
+                    "5f369219-8d2b-405c-bb64-45a5e10ae866",
+                    "c688f8e4-86e2-4c18-9647-4b59f2d2d576"
+                ],
+                "keywords": [
+                    "旋律",
+                    "节奏",
+                    "catchy",
+                    "temazo",
+                    "音乐视频"
+                ]
+            },
+            {
+                "summary": "歌词富有情感，传达深意",
+                "summary_topic": "歌词情感",
+                "uuid": [
+                    "d7f3ffd5-5be7-4054-838a-229804512785",
+                    "0b4d232d-f904-4f7f-aa09-60f90137fddb",
+                    "9c52ce29-d196-4e44-8d4d-31d8104cce76",
+                    "54deb3b3-351a-4e6a-80c9-297a93a175c5",
+                    "a672e51f-72db-496e-96b6-5498cef79256"
+                ],
+                "keywords": [
+                    "歌词",
+                    "情感",
+                    "宽恕",
+                    "美好岁月",
+                    "毒性关系"
+                ]
+            },
+            {
+                "summary": "音乐创作过程受到重视",
+                "summary_topic": "创作过程",
+                "uuid": [
+                    "6dd3ebcd-291a-4c72-a748-486af61607b7",
+                    "8e513657-fd2b-4720-99d4-33a93d156a1b",
+                    "ffc8f4bd-c340-4494-a8a7-b0f6d5ef3301",
+                    "e9903bba-dff5-4833-8d8a-310dad857028",
+                    "1f1b67af-43d8-4edf-9578-cbdf76b0e42e"
+                ],
+                "keywords": [
+                    "制作过程",
+                    "努力",
+                    "艺术家",
+                    "认可",
+                    "音乐"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "歌曲内容引发争议",
+                "summary_topic": "内容争议",
+                "uuid": [
+                    "527b41c2-a062-43d3-aead-04a4c4175bcb",
+                    "39e93a3a-d48e-46eb-8cce-f586d5251764",
+                    "9b292fbc-14fc-42a6-9068-08d6f885dce0",
+                    "0f78384b-92e9-4fa2-ba94-4ba45a6146ce",
+                    "6e1992dd-ce19-4973-9b15-cc6093ed4105"
+                ],
+                "keywords": [
+                    "不尊重",
+                    "过誉",
+                    "争议",
+                    "歌词",
+                    "歌曲内容"
+                ]
+            },
+            {
+                "summary": "音乐质量被批评",
+                "summary_topic": "音乐质量",
+                "uuid": [
+                    "a36b08e4-82a7-445b-87eb-1e93b19a9a70",
+                    "fdafbf4b-e8f5-4c8d-876b-a82636646893",
+                    "3ad203f4-3e00-43d7-b1fc-1abfd2e848b3",
+                    "5a454a58-9db7-42ec-a3e4-07995231094d",
+                    "b0adde91-a795-49ef-b963-5aa6ac91e9d4"
+                ],
+                "keywords": [
+                    "质量",
+                    "批评",
+                    "重复性",
+                    "无聊",
+                    "糟糕"
+                ]
+            },
+            {
+                "summary": "歌曲容易让人厌倦",
+                "summary_topic": "易厌倦",
+                "uuid": [
+                    "5a454a58-9db7-42ec-a3e4-07995231094d",
+                    "e6d9a5bf-dcc0-4891-bad1-78cd9931b0c4",
+                    "e51d740e-c527-4cc7-9f36-0b3ded6ad640",
+                    "5d37fc3e-1d89-4e69-a778-b409166fa4ef",
+                    "b8e8abe0-8e4e-4c6b-bd2c-4c8c8c9e5e1"
+                ],
+                "keywords": [
+                    "厌倦",
+                    "重复",
+                    "流行",
+                    "时间",
+                    "歌曲"
+                ]
+            },
+            {
+                "summary": "对音乐的期望未能实现",
+                "summary_topic": "期望未达",
+                "uuid": [
+                    "9bc1519d-91cb-415c-8509-f17351d3e9e0",
+                    "1bf842a6-046a-4d02-8ba4-451b06e2adda",
+                    "e6d9a5bf-dcc0-4891-bad1-78cd9931b0c4",
+                    "8cb05f08-3639-4733-84ec-a43549c4d0dc",
+                    "e234ede3-8ac4-48d3-8620-522fdad81c34"
+                ],
+                "keywords": [
+                    "期望",
+                    "未实现",
+                    "失望",
+                    "音乐",
+                    "质量"
+                ]
+            },
+            {
+                "summary": "歌曲的风格缺乏创新",
+                "summary_topic": "风格缺乏创新",
+                "uuid": [
+                    "6fecdfb8-dc53-48d1-aad0-bb160fe42147",
+                    "2c5e74d1-f908-4b7c-b265-4b4dfec4dc9",
+                    "5fd80f98-316c-4470-a4d0-7cb0b19c0c97",
+                    "fa06f16a-f38e-4969-950d-8c445e26188d",
+                    "8e41d95c-0eb8-46c2-b37b-e80d5cc7b167"
+                ],
+                "keywords": [
+                    "风格",
+                    "缺乏",
+                    "创新",
+                    "重复",
+                    "音乐"
+                ]
+            }
+        ],
+        "theme": "音乐创作质量"
+    },
+    {
+        "advantage": [
+            {
+                "summary": "社交媒体增强了粉丝互动",
+                "summary_topic": "粉丝互动增强",
+                "uuid": [
+                    "b1d1b680-f762-432b-81e8-2c41ba22d1f6",
+                    "ad8d2035-71f3-4c8f-a06d-914ad7dccc9c",
+                    "c51d298f-21bf-4bdc-aa47-9d8207767a7e",
+                    "5d08412f-ee63-4005-b8f9-598175074cbe",
+                    "c732f2fd-2cca-4116-80bc-08a9e4ea8462"
+                ],
+                "keywords": [
+                    "互动",
+                    "粉丝",
+                    "社交媒体"
+                ]
+            },
+            {
+                "summary": "社交媒体提升了音乐曝光率",
+                "summary_topic": "音乐曝光率提升",
+                "uuid": [
+                    "089f0eb1-b251-4b6c-aed9-5d5b9118640b",
+                    "6571e1f4-7848-4f31-82fb-ed27c20b8e2c",
+                    "4d866d4f-aca2-47f2-9e07-741482f3fad8",
+                    "40eca6b3-1694-456d-afce-7e79d0319112",
+                    "f0c16472-78c2-4b6b-a4da-3ebc8efa6817"
+                ],
+                "keywords": [
+                    "观看次数",
+                    "流媒体",
+                    "曝光"
+                ]
+            },
+            {
+                "summary": "社交媒体促进了全球粉丝群体",
+                "summary_topic": "全球粉丝群体",
+                "uuid": [
+                    "c4d31cb2-d92e-482d-a739-9dd44ce85b0e",
+                    "c51d298f-21bf-4bdc-aa47-9d8207767a7e",
+                    "6ee9f0e4-26b0-45ee-82df-ef7fbf277811",
+                    "9fd4ffe3-01b6-456e-9c69-d2fa17ed190a",
+                    "6f7dcf9a-c361-431d-be30-febd4bc5b505"
+                ],
+                "keywords": [
+                    "全球",
+                    "粉丝",
+                    "社交媒体"
+                ]
+            },
+            {
+                "summary": "社交媒体提升了音乐的传播速度",
+                "summary_topic": "传播速度提升",
+                "uuid": [
+                    "d1e64050-8ab2-4ac6-a72f-c7fba86f9ade",
+                    "8c320888-abaa-49f7-9fdc-093523c24936",
+                    "d1e64050-8ab2-4ac6-a72f-c7fba86f9ade",
+                    "e6d9a5bf-dcc0-4891-bad1-78cd9931b0c4",
+                    "d1e64050-8ab2-4ac6-a72f-c7fba86f9ade"
+                ],
+                "keywords": [
+                    "传播",
+                    "速度",
+                    "社交媒体"
+                ]
+            },
+            {
+                "summary": "社交媒体促进了音乐的讨论",
+                "summary_topic": "音乐讨论促进",
+                "uuid": [
+                    "7a6e9c86-f94d-4344-ae49-3082d01339b7",
+                    "6ffd3040-d56c-495a-95fe-e4fda017efb4",
+                    "6cb98f18-b208-4817-af4b-63fc3ca0af6d",
+                    "a9ceb488-48c9-4cb6-9a60-6e0eb22c9db2",
+                    "8c320888-abaa-49f7-9fdc-093523c24936"
+                ],
+                "keywords": [
+                    "讨论",
+                    "社交媒体",
+                    "音乐"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "社交媒体可能导致负面评论",
+                "summary_topic": "负面评论问题",
+                "uuid": [
+                    "6acff8ae-0085-41bc-bfaf-e961359d6fcf",
+                    "39e93a3a-d48e-46eb-8cce-f586d5251764",
+                    "5d37fc3e-1d89-4e69-a778-b409166fa4ef",
+                    "0f1cad37-8da5-48a2-8d07-ab2b4ac29fe8",
+                    "c9df1975-e03a-4ad0-b60b-8d4230700bf2"
+                ],
+                "keywords": [
+                    "负面评论",
+                    "社交媒体",
+                    "影响"
+                ]
+            },
+            {
+                "summary": "社交媒体可能引发误解",
+                "summary_topic": "误解问题",
+                "uuid": [
+                    "b1dd1511-7b37-4563-b962-4b8bb1492ea6",
+                    "ec8c5290-c0ae-42f0-bab9-0a7dd1dc5793",
+                    "d9c59ca0-94c9-4194-bf12-ece64af4df7a",
+                    "375b555f-66da-4057-8b12-e90641cb73f7",
+                    "d839c350-201b-4ef2-b389-f0224b29dd79"
+                ],
+                "keywords": [
+                    "误解",
+                    "社交媒体",
+                    "文化差异"
+                ]
+            },
+            {
+                "summary": "社交媒体可能导致过度关注",
+                "summary_topic": "过度关注问题",
+                "uuid": [
+                    "c2dc1199-0469-4df4-ac50-0c5011719edc",
+                    "d9c59ca0-94c9-4194-bf12-ece64af4df7a",
+                    "d839c350-201b-4ef2-b389-f0224b29dd79",
+                    "d6f59b34-7420-48d9-8ca4-5643845c24e0",
+                    "375b555f-66da-4057-8b12-e90641cb73f7"
+                ],
+                "keywords": [
+                    "过度关注",
+                    "社交媒体",
+                    "影响"
+                ]
+            },
+            {
+                "summary": "社交媒体可能导致隐私问题",
+                "summary_topic": "隐私问题",
+                "uuid": [
+                    "6f621a03-1e3b-48f7-baf2-023431373bd0",
+                    "d6c01e53-e233-4895-a8c1-f1b021fb4a4b",
+                    "d9c59ca0-94c9-4194-bf12-ece64af4df7a",
+                    "d839c350-201b-4ef2-b389-f0224b29dd79",
+                    "ec8c5290-c0ae-42f0-bab9-0a7dd1dc5793"
+                ],
+                "keywords": [
+                    "隐私",
+                    "社交媒体",
+                    "问题"
+                ]
+            },
+            {
+                "summary": "社交媒体可能导致误导性信息",
+                "summary_topic": "误导性信息",
+                "uuid": [
+                    "c3e54ce6-5bd4-4af3-893a-72dc17473eee",
+                    "cc6f4ba7-254b-4065-be82-b0f33e836667",
+                    "f8eb4c3d-ece6-45d5-8bd9-83c22e8fc60f",
+                    "d9c59ca0-94c9-4194-bf12-ece64af4df7a",
+                    "d839c350-201b-4ef2-b389-f0224b29dd79"
+                ],
+                "keywords": [
+                    "误导性信息",
+                    "社交媒体",
+                    "影响"
+                ]
+            }
+        ],
+        "theme": "社交媒体影响力"
+    },
+    {
+        "advantage": [
+            {
+                "summary": "粉丝对BLACKPINK的热爱与支持",
+                "summary_topic": "热爱与支持",
+                "uuid": [
+                    "2647a600-cc8b-4f92-ab6d-643b329990fd",
+                    "7d82587b-8399-4c29-ba2e-1eaf00d59c69",
+                    "e79cb47d-5ee2-47eb-ad32-bdec433d2166",
+                    "901c1844-d6d6-4c00-8b75-0352c9221af0",
+                    "b942c385-b97f-403f-9653-5602d07bed3f"
+                ],
+                "keywords": [
+                    "喜爱",
+                    "支持",
+                    "粉丝",
+                    "BLACKPINK"
+                ]
+            },
+            {
+                "summary": "粉丝社区的互动与参与",
+                "summary_topic": "互动与参与",
+                "uuid": [
+                    "5ad1d0de-3bcb-4659-b69d-7b26bb08a539",
+                    "f1278e24-cc45-4885-b295-f251af342ee5",
+                    "d213b5c5-aa0c-412b-9a85-49f18b574bd3",
+                    "c7882f89-3636-49b6-bd66-32592cafc16",
+                    "8c3bec91-29ab-4f77-8e79-0cdf1f4fabee"
+                ],
+                "keywords": [
+                    "互动",
+                    "参与",
+                    "评论",
+                    "支持"
+                ]
+            },
+            {
+                "summary": "粉丝对歌曲的热情与喜爱",
+                "summary_topic": "歌曲热情",
+                "uuid": [
+                    "c5e01c54-7514-47aa-93ea-e50d775cf801",
+                    "afec357a-80a6-4dea-bb6d-1f39af003fc2",
+                    "d38c18e0-4a04-4c39-b90a-b4307790e217",
+                    "d1e64050-8ab2-4ac6-a72f-c7fba86f9ade",
+                    "9d8c1adc-bb55-4bb1-a185-bce732e08326"
+                ],
+                "keywords": [
+                    "歌曲",
+                    "热情",
+                    "喜爱",
+                    "支持"
+                ]
+            },
+            {
+                "summary": "粉丝对未来活动的期待",
+                "summary_topic": "未来期待",
+                "uuid": [
+                    "c51d298f-21bf-4bdc-aa47-9d8207767a7e",
+                    "66aa934f-01d4-425e-ae9a-8e92c0da32f0",
+                    "e1d81b06-439a-4468-a7dd-5e8f3c8e17d5",
+                    "5cf555bb-e813-499e-a613-f2cb01eeac42",
+                    "c87b1c4b-c42c-49ed-94a7-80890f92182b"
+                ],
+                "keywords": [
+                    "期待",
+                    "活动",
+                    "回归",
+                    "未来"
+                ]
+            },
+            {
+                "summary": "粉丝对成员的喜爱与支持",
+                "summary_topic": "成员喜爱",
+                "uuid": [
+                    "3b276e66-419c-442b-a233-c295b52151f1",
+                    "544c3b83-a005-4521-bd37-6c6239ab70cb",
+                    "c90fab26-998b-4d3d-b42f-a88efb29b0cc",
+                    "9b2b064e-c030-4ecf-93b2-7e92edb3c0de",
+                    "d385cc30-b853-41b3-8788-02d31e54da2e"
+                ],
+                "keywords": [
+                    "成员",
+                    "喜爱",
+                    "支持",
+                    "BLACKPINK"
+                ]
+            }
+        ],
+        "disadvantage": [
+            {
+                "summary": "对BLACKPINK活动的期待与焦虑",
+                "summary_topic": "期待与焦虑",
+                "uuid": [
+                    "07e93ff5-ca09-4813-9c54-55342d4a8e98",
+                    "c87b1c4b-c42c-49ed-94a7-80890f92182b",
+                    "ef039b10-88b7-4159-8f75-ceefedc30990",
+                    "9f92753b-7ad8-47ec-bf9a-d4b70f8253b7",
+                    "c51d298f-21bf-4bdc-aa47-9d8207767a7e"
+                ],
+                "keywords": [
+                    "期待",
+                    "焦虑",
+                    "回归",
+                    "活动"
+                ]
+            },
+            {
+                "summary": "对粉丝行为的负面评价",
+                "summary_topic": "负面行为评价",
+                "uuid": [
+                    "729d0f4c-27d3-4632-9ae7-1f018b124dd6",
+                    "2817fb37-9deb-4532-8a71-d8f9f85de113",
+                    "9d9fc7d3-253a-47bb-ac21-c3bd8db0914f",
+                    "c8bb6231-db8e-45c0-b203-e1e60bc05083",
+                    "3f1d63b2-194d-40e0-a271-a5f88c8b41c9"
+                ],
+                "keywords": [
+                    "负面",
+                    "行为",
+                    "评论",
+                    "粉丝"
+                ]
+            },
+            {
+                "summary": "对未来活动的不确定性",
+                "summary_topic": "未来不确定性",
+                "uuid": [
+                    "9f12cb0c-8b38-4e4c-86f6-b7e42db4787a",
+                    "93a55b67-fd3d-4515-9c23-127700b73362",
+                    "f9ed776b-ed3e-4be1-b11a-3dc3d78eb3f2",
+                    "c8bb6231-db8e-45c0-b203-e1e60bc05083",
+                    "8e6bf739-2c27-464f-985a-768fdb3e2f0c"
+                ],
+                "keywords": [
+                    "不确定性",
+                    "期待",
+                    "回归",
+                    "2025"
+                ]
+            },
+            {
+                "summary": "对粉丝行为的压力",
+                "summary_topic": "粉丝行为压力",
+                "uuid": [
+                    "b4891bcc-b493-4dd8-9d09-c1cc9594ae16",
+                    "5f1d63b2-194d-40e0-a271-a5f88c8b41c9",
+                    "04c01715-dbf5-47a2-b800-4d825d8fdcd2",
+                    "3e2de3f8-8a96-4538-a8bd-1c366a7e0930",
+                    "f9ed776b-ed3e-4be1-b11a-3dc3d78eb3f2"
+                ],
+                "keywords": [
+                    "压力",
+                    "行为",
+                    "粉丝",
+                    "流媒体"
+                ]
+            },
+            {
+                "summary": "对新歌发布的期待与焦虑",
+                "summary_topic": "新歌期待",
+                "uuid": [
+                    "e85335da-37f3-4bbd-ba26-95d015c844d1",
+                    "9ee32057-c95a-4f11-912e-2ff44a00d738",
+                    "3f1d63b2-194d-40e0-a271-a5f88c8b41c9",
+                    "f9ed776b-ed3e-4be1-b11a-3dc3d78eb3f2",
+                    "93a55b67-fd3d-4515-9c23-127700b73362"
+                ],
+                "keywords": [
+                    "期待",
+                    "新歌",
+                    "焦虑",
+                    "发布"
+                ]
+            }
+        ],
+        "theme": "粉丝社区活力"
+    }
+]

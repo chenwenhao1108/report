@@ -300,7 +300,6 @@ export function getThemeAnalysisData(
 
     return {
       summary: data.summary,
-      summary_topic: data.summary_topic,
       content,
       keywords,
     }

@@ -1,0 +1,265 @@
+[
+    {
+        "overall_score": 83.75,
+        "dimensions": [
+            {
+                "dimension": "粉丝参与度",
+                "score": 90
+            },
+            {
+                "dimension": "近距离接触",
+                "score": 85
+            },
+            {
+                "dimension": "签名获取机会",
+                "score": 80
+            },
+            {
+                "dimension": "活动期待感",
+                "score": 80
+            }
+        ],
+        "keywords": [
+            "近距离接触",
+            "合影",
+            "签名",
+            "粉丝",
+            "活动"
+        ],
+        "uuid": [
+            "dcf6b978-4170-462b-8ccb-7a3ab3f647c6",
+            "89d68589-d180-441e-be11-e69dbfdb9454",
+            "218023c5-7af0-4d33-a760-702885f029ca",
+            "c8ce8f32-71db-4ef0-9fdb-3c439db67839",
+            "6a4625cc-1ac2-4455-9960-fc2dfbc46904"
+        ],
+        "scenario": "参加线下见面会",
+        "description": "粉丝前往活动现场争取近距离接触BLACKPINK成员的机会，获取签名或合影留念。"
+    },
+    {
+        "overall_score": 85.0,
+        "dimensions": [
+            {
+                "dimension": "支持团队",
+                "score": 90
+            },
+            {
+                "dimension": "购买意愿",
+                "score": 85
+            },
+            {
+                "dimension": "展示忠诚度",
+                "score": 80
+            }
+        ],
+        "keywords": [
+            "购买",
+            "忠诚度",
+            "官方",
+            "支持",
+            "商品"
+        ],
+        "uuid": [
+            "d189612a-159a-4797-af52-745aa05bf3ae",
+            "20be553c-36df-4d66-84ae-fdbf4f738e34",
+            "b9be5c85-1051-4e24-8dfd-b87cc2ccc72b",
+            "dd9b1dd1-7bbc-4fd9-9522-a882cd7bebf3",
+            "7258ae4d-c808-4f00-965a-b60d992ac5e2"
+        ],
+        "scenario": "购买官方周边",
+        "description": "支持团队并展示忠诚度，购买由官方授权制作的各类商品。"
+    },
+    {
+        "overall_score": 81.66666666666667,
+        "dimensions": [
+            {
+                "dimension": "创作灵感",
+                "score": 90
+            },
+            {
+                "dimension": "分享互动",
+                "score": 80
+            },
+            {
+                "dimension": "技术难度",
+                "score": 75
+            }
+        ],
+        "keywords": [
+            "BLACKPINK",
+            "二次创作",
+            "分享",
+            "灵感",
+            "互动"
+        ],
+        "uuid": [
+            "d2fd6fc8-66f6-452f-a4b4-8c091ff8d39e",
+            "6eaf40bc-38ae-4fec-85c7-e19fd4037732",
+            "c8fff0aa-6693-4918-9b93-1fedb0f1561d",
+            "e1ab192c-2236-4f61-9087-8f4c46233abf",
+            "9b45a732-36a4-45b6-beca-8f2dcee66caa"
+        ],
+        "scenario": "二次创作分享",
+        "description": "创作者基于BLACKPINK的内容进行二次创作，并上传至网络平台与他人分享。"
+    },
+    {
+        "overall_score": 82.5,
+        "dimensions": [
+            {
+                "dimension": "表演质量",
+                "score": 90
+            },
+            {
+                "dimension": "情感共鸣",
+                "score": 85
+            },
+            {
+                "dimension": "观看体验",
+                "score": 80
+            },
+            {
+                "dimension": "技术表现",
+                "score": 75
+            }
+        ],
+        "keywords": [
+            "表演质量",
+            "直播平台",
+            "线上演唱会",
+            "BLACKPINK",
+            "观看体验"
+        ],
+        "uuid": [
+            "8adf6228-0cde-46df-acd1-7f3036dc011f",
+            "f180b69a-c405-4b45-b2d5-9378936452d0",
+            "c3457897-5843-492b-b5ee-818862ddf015",
+            "6b4dec2d-9531-4f30-88c1-6d1c2ccf889d",
+            "64f3ae18-365b-4915-8799-8b6431023616"
+        ],
+        "scenario": "线上演唱会观看",
+        "description": "在家中或任何地点通过直播平台观看BLACKPINK的音乐会演出。"
+    },
+    {
+        "overall_score": 82.5,
+        "dimensions": [
+            {
+                "dimension": "新歌发布",
+                "score": 90
+            },
+            {
+                "dimension": "团体发展动向",
+                "score": 85
+            },
+            {
+                "dimension": "MV预告",
+                "score": 80
+            },
+            {
+                "dimension": "个人发展动向",
+                "score": 75
+            }
+        ],
+        "keywords": [
+            "新歌",
+            "BLACKPINK",
+            "MV",
+            "粉丝讨论",
+            "回归"
+        ],
+        "uuid": [
+            "b4b510f7-fc74-42d3-be8c-7653d9164af0",
+            "66aa934f-01d4-425e-ae9a-8e92c0da32f0",
+            "c688f8e4-86e2-4c18-9647-4b59f2d2d576",
+            "c8bb6231-db8e-45c0-b203-e1e60bc05083",
+            "7a8d6d29-1484-4a8b-a532-84339901df30"
+        ],
+        "scenario": "讨论最新动态",
+        "description": "社交媒体上，粉丝们热衷于讨论BLACKPINK的新歌发布、MV预告、团体和个人的发展动向。"
+    },
+    {
+        "overall_score": 82.375,
+        "dimensions": [
+            {
+                "dimension": "情感表达",
+                "score": 90
+            },
+            {
+                "dimension": "粉丝互动",
+                "score": 90
+            },
+            {
+                "dimension": "全球粉丝交流",
+                "score": 85
+            },
+            {
+                "dimension": "情感共鸣",
+                "score": 85
+            },
+            {
+                "dimension": "互动频率",
+                "score": 80
+            }
+        ],
+        "keywords": [
+            "交流",
+            "Lisa",
+            "Rosé",
+            "支持",
+            "情感"
+        ],
+        "uuid": [
+            "0b0d0cb2-fa64-46e6-8fe7-a7a8e2063312",
+            "0bfa80be-fe01-48f9-9afc-3ac790d34210",
+            "e53ba4f5-1422-4058-bc5a-555fed33aa7e",
+            "6a631292-cd55-4fd8-9023-587a2145489d",
+            "6e67838d-7629-4df9-ab8c-4f180ab61f98",
+            "dc847e1a-610b-48e6-8971-3417b86af159",
+            "6c10c70c-b6f8-4f36-badb-274d992d3f85",
+            "9306f13d-2663-498b-ac30-30eada3a9133",
+            "59e74101-dae2-4412-a8fd-89c7a47606a8",
+            "245c08f0-e9be-438d-a91e-17f925c68388",
+            "69e49330-8ef5-48e5-82f7-75f4c18b2bac",
+            "d510e809-143d-43f5-9ab5-2855162fcb71",
+            "efbb17f6-828b-410b-b3ab-9b31a4101122",
+            "96a7a025-7997-4a31-a1f2-9f84d7cb66ae",
+            "e44ee800-2915-420c-92d1-f2d925637e19",
+            "b5c466d1-b549-4818-a8e0-b83d2a04f4e5",
+            "7f4c3df3-7b66-44d5-8fb5-5624e257976f",
+            "65d7403c-c963-4c17-a609-76fcb45cdb11",
+            "586ec2b5-b2e3-4d46-8955-b90671c91709",
+            "4bfd31ff-dcb5-43d2-a27c-1ea0e6698d90",
+            "51c91a9b-85d5-4602-9e55-262434b9b451",
+            "13b244fa-8eb5-4269-9149-8b8558f83a76",
+            "a994fec7-0725-487f-a48b-6dada8ebc4ab",
+            "7d82587b-8399-4c29-ba2e-1eaf00d59c69",
+            "4f042d5d-ae52-4482-ae15-5501e8859c30",
+            "7d1917ad-7078-491d-9bfc-d18493107deb",
+            "0ffb7838-e169-4120-a5ec-f556984a8ea5",
+            "1ca5be21-7f7d-45cf-ad53-e865b06f6e45",
+            "d8d401c3-937a-44b2-b42f-a337c3cc136e",
+            "3a0b1ea5-c407-43d7-b627-c7e93d274c28",
+            "d004eb48-d896-44c3-9cdc-eb3191c081ab",
+            "2647a600-cc8b-4f92-ab6d-643b329990fd",
+            "be3d7869-efd0-47c0-8fc7-e2252cad9437",
+            "13831ac2-df01-4f0c-8519-930c3ddf8089",
+            "38c127d2-72ee-4c76-b06b-dfac411c3a7a",
+            "7bc06565-d306-4b64-b7f7-16b21611fcb2",
+            "544c3b83-a005-4521-bd37-6c6239ab70cb",
+            "22bda875-3fb2-4ded-86ed-4c8489b86fbf",
+            "d419b2db-7690-488f-a12c-1c354fe1d56d",
+            "f1cc578f-9957-44a1-9751-f8dd05c66195",
+            "3e862e25-dc75-4536-950b-d47ad4dffd38",
+            "2878a9aa-f07a-41e2-9cc3-2cb91ca45f89",
+            "b311e6fb-5506-4021-a579-e1a82ae54f5d",
+            "d6f9a5aa-76ae-44b5-a3a0-a19a0322c0a3",
+            "b441f88a-fabf-49e9-bab8-5280758a963b",
+            "91f10f4e-6572-4c92-a941-cf6fc21b7541",
+            "d1e64050-8ab2-4ac6-a72f-c7fba86f9ade",
+            "f684dc01-824b-424d-b35d-81f7e4f4fd85",
+            "54deb3b3-351a-4e6a-80c9-297a93a175c5",
+            "a984355c-a8f8-4190-bff9-0d3d8146cce1"
+        ],
+        "scenario": "社交媒体互动",
+        "description": "粉丝们通过社交平台分享和讨论BLACKPINK相关内容，与全球其他粉丝交流。"
+    }
+]
