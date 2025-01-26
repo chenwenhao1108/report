@@ -1,0 +1,3 @@
+[functions]
+  "app/api/*.ts"
+    timeout = 120
