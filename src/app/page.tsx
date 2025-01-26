@@ -48,6 +48,10 @@ export default function Page() {
   }
 
   useEffect(() => {
+    console.log(res_module.length)
+  }, [res_module])
+
+  useEffect(() => {
     if (granularity === 'day') {
       setReleaseDate(releaseDates[productName])
     } else {
